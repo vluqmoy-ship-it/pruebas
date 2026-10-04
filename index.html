@@ -3,46 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SerElpis · Habilidades Emocionales</title>
-  <meta name="description" content="SerElpis · Acompañamiento y entrenamiento en habilidades emocionales con Vanessa Luque, educadora social y terapeuta contextual. Regulación emocional, clarificación de valores y flexibilidad psicológica." />
+  <title>SerElpis · Habilidades Emocionales y Terapias Contextuales</title>
+  <meta name="description" content="Acompañamiento y entrenamiento online en habilidades emocionales con Vanessa Luque. Un enfoque contextual, riguroso y humano para construir una vida con sentido." />
   <meta name="author" content="Vanessa Luque" />
-  <meta property="og:title" content="SerElpis · Habilidades Emocionales" />
-  <meta property="og:description" content="Sesiones individuales online de entrenamiento en habilidades emocionales con Vanessa Luque. Enfoque contextual basado en evidencia." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.serelpis.com" />
-  <meta property="og:locale" content="es_ES" />
-  <link rel="canonical" href="https://www.serelpis.com" />
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.serelpis.com",
-        "name": "SerElpis",
-        "url": "https://www.serelpis.com",
-        "email": "contacto@serelpis.com",
-        "description": "Proyecto de educación emocional online con enfoque contextual. Sesiones individuales de regulación emocional, clarificación de valores y flexibilidad psicológica.",
-        "serviceType": "Emotional skills training",
-        "areaServed": "España",
-        "availableLanguage": "Spanish"
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.serelpis.com/#vanessa-luque",
-        "name": "Vanessa Luque",
-        "jobTitle": "Educadora social y terapeuta contextual",
-        "email": "contacto@serelpis.com",
-        "url": "https://www.serelpis.com"
-      }
-    ]
-  }
-  </script>
 
+  <!-- Fuentes tipográficas -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -53,9 +21,9 @@
       --rosa-pale:   #F5D9E2;
       --rosa-blush:  #FDF0F4;
       --cream:       #FBF7F4;
-      --text-dark:   #1E121B;
-      --text-mid:    #3A2434;
-      --text-light:  #5C3D54;
+      --sand:        #F3ECE7;
+      --text-dark:   #231520;
+      --text-mid:    #422B3B;
       --white:       #FFFFFF;
 
       --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -71,56 +39,52 @@
       color: var(--text-dark);
       overflow-x: hidden;
       font-size: 17px;
-      font-weight: 400;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* TYPOGRAPHY OVERRIDES */
-    h1, h2, h3, h4, .serif {
-      font-family: var(--font-serif);
-    }
-
-    /* NAVIGATION */
-    nav {
+    /* HEADER / NAV */
+    header {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 200;
-      background: rgba(251, 247, 244, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(107, 62, 94, 0.08);
-      transition: all 0.3s ease;
       padding: 1.2rem 2rem;
+      transition: all 0.3s ease;
     }
-    nav.scrolled {
-      padding: 0.9rem 2rem;
-      background: rgba(251, 247, 244, 0.95);
-      box-shadow: 0 10px 30px rgba(74, 42, 64, 0.05);
+    header.scrolled {
+      background: rgba(251, 247, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107, 62, 94, 0.08);
+      padding: 0.8rem 2rem;
+      box-shadow: 0 4px 20px rgba(74, 42, 64, 0.04);
     }
     .nav-container {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
-      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .nav-logo {
+    .logo {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 600;
-      letter-spacing: -0.01em;
       color: var(--plum-deep);
       text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .logo span {
+      font-style: italic;
+      color: var(--plum-soft);
+      font-weight: 400;
     }
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2.2rem;
       list-style: none;
       align-items: center;
     }
     .nav-links a {
-      font-family: var(--font-sans);
       font-size: 0.95rem;
       font-weight: 500;
       color: var(--text-mid);
@@ -128,1038 +92,722 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--plum); }
-    .nav-cta {
+    .nav-btn {
       background: var(--plum);
       color: var(--white) !important;
-      font-weight: 500 !important;
       padding: 0.6rem 1.4rem;
       border-radius: 100px;
       transition: all 0.25s ease !important;
-      box-shadow: 0 4px 14px rgba(107, 62, 94, 0.2);
+      box-shadow: 0 4px 14px rgba(107, 62, 94, 0.18);
     }
-    .nav-cta:hover {
+    .nav-btn:hover {
       background: var(--plum-deep) !important;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(74, 42, 64, 0.3);
+      box-shadow: 0 6px 20px rgba(74, 42, 64, 0.25);
     }
 
-    #menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .hamburger-line {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--plum-deep);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-
-    /* HERO SECTION REDESIGNED */
+    /* HERO SECTION - ESTRUCTURA ASIMÉTRICA Y ACOGEDORA */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 9rem 2rem 5rem;
+      padding: 10rem 2rem 6rem;
       position: relative;
       background: linear-gradient(180deg, var(--rosa-blush) 0%, var(--cream) 100%);
     }
-    .hero-container {
-      max-width: 1200px;
+    .hero-wrapper {
+      max-width: 1140px;
       margin: 0 auto;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-    }
-    .hero-top-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 4rem;
-      align-items: end;
+      align-items: center;
     }
-    .hero-tag {
+    .badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
       background: var(--white);
       border: 1px solid var(--rosa-pale);
-      padding: 0.4rem 1rem;
+      padding: 0.4rem 1.1rem;
       border-radius: 100px;
       font-size: 0.85rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       color: var(--plum);
       margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(107, 62, 94, 0.04);
     }
-    .hero-tag-dot {
-      width: 8px;
-      height: 8px;
+    .badge-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--rosa);
     }
-    .hero-title {
+    .hero h1 {
       font-family: var(--font-serif);
-      font-size: clamp(3.2rem, 5vw, 5.2rem);
+      font-size: clamp(2.8rem, 4.5vw, 4.4rem);
       font-weight: 400;
-      line-height: 1.05;
+      line-height: 1.12;
       color: var(--plum-deep);
-      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
     }
-    .hero-title em {
+    .hero h1 em {
       font-style: italic;
       color: var(--plum-soft);
-      font-weight: 300;
+      font-weight: 400;
     }
-    .hero-lead-side {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .hero-lead-text {
-      font-size: 1.25rem;
-      line-height: 1.6;
+    .hero-p {
+      font-size: 1.18rem;
       color: var(--text-mid);
+      margin-bottom: 2.2rem;
+      max-width: 520px;
       font-weight: 300;
     }
     .hero-actions {
       display: flex;
       gap: 1rem;
       align-items: center;
-    }
-
-    /* HERO MARQUEE / SKILLS BANNER */
-    .hero-skills-strip {
-      background: var(--white);
-      border: 1px solid rgba(107, 62, 94, 0.08);
-      border-radius: 24px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 10px 30px rgba(107, 62, 94, 0.03);
-    }
-    .hero-skills-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--plum-soft);
-      margin-bottom: 1.2rem;
-    }
-    .hero-skills-flex {
-      display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem 1.5rem;
     }
-    .hero-skill-chip {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.98rem;
-      font-weight: 500;
-      color: var(--text-dark);
-    }
-    .hero-skill-chip::before {
-      content: '✦';
-      color: var(--rosa);
-      font-size: 0.8rem;
-    }
-
-    /* BUTTONS */
     .btn-primary {
       background: var(--plum-deep);
       color: var(--white);
       padding: 1rem 2.2rem;
       border-radius: 100px;
       text-decoration: none;
-      font-family: var(--font-sans);
       font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+      font-weight: 500;
       transition: all 0.25s ease;
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      border: none;
-      box-shadow: 0 6px 20px rgba(74, 42, 64, 0.25);
+      box-shadow: 0 6px 20px rgba(74, 42, 64, 0.22);
     }
     .btn-primary:hover {
       background: var(--plum);
       transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(74, 42, 64, 0.35);
-      color: var(--white);
+      box-shadow: 0 10px 28px rgba(74, 42, 64, 0.32);
     }
-
     .btn-secondary {
-      border: 1.5px solid var(--plum-soft);
+      background: transparent;
       color: var(--plum-deep);
-      padding: 0.95rem 2.2rem;
+      border: 1.5px solid var(--plum-soft);
+      padding: 0.95rem 2rem;
       border-radius: 100px;
       text-decoration: none;
-      font-family: var(--font-sans);
       font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+      font-weight: 500;
       transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      background: transparent;
     }
     .btn-secondary:hover {
       background: var(--rosa-blush);
       border-color: var(--plum-deep);
-      transform: translateY(-2px);
     }
 
-    /* SECTIONS COMMON */
-    section {
-      padding: 7rem 2rem;
+    /* CARD FOTO EN HERO */
+    .hero-image-card {
+      position: relative;
     }
-    .section-inner {
-      max-width: 1200px;
+    .hero-photo-frame {
+      position: relative;
+      border-radius: 200px 200px 32px 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(107, 62, 94, 0.12);
+      border: 4px solid var(--white);
+      aspect-ratio: 4/5;
+      max-width: 400px;
       margin: 0 auto;
     }
-    .section-header {
-      margin-bottom: 4rem;
-    }
-    .section-label {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--plum-soft);
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 1.5rem;
-      height: 2px;
-      background: var(--rosa);
-    }
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 3.8vw, 3.8rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--plum-deep);
-      letter-spacing: -0.01em;
-    }
-    .section-title em {
-      font-style: italic;
-      color: var(--plum-soft);
-      font-weight: 300;
-    }
-
-    /* SOBRE MÍ REDESIGNED */
-    .sobre-mi {
-      background: var(--white);
-      border-top: 1px solid rgba(107, 62, 94, 0.05);
-      border-bottom: 1px solid rgba(107, 62, 94, 0.05);
-    }
-    .sobre-mi-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .profile-card {
-      position: relative;
-      background: var(--rosa-blush);
-      border-radius: 32px;
-      padding: 2.5rem;
-      border: 1px solid var(--rosa-pale);
-      text-align: center;
-    }
-    .profile-img-wrap {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin: 0 auto 1.8rem;
-      overflow: hidden;
-      border: 4px solid var(--white);
-      box-shadow: 0 15px 35px rgba(107, 62, 94, 0.15);
-    }
-    .profile-img-wrap img {
+    .hero-photo-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center 15%;
+      display: block;
     }
-    .profile-name {
+    .hero-floating-quote {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--white);
+      padding: 1.4rem 1.8rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(107, 62, 94, 0.1);
+      border: 1px solid var(--rosa-pale);
+      max-width: 280px;
+    }
+    .hero-floating-quote p {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
-      font-weight: 500;
+      font-size: 1.1rem;
+      font-style: italic;
       color: var(--plum-deep);
-      line-height: 1.2;
+      line-height: 1.4;
     }
-    .profile-role {
-      font-size: 0.85rem;
+
+    /* SECCIONES COMUNES */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1140px; margin: 0 auto; }
+    
+    .section-tag {
+      font-size: 0.82rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       color: var(--plum-soft);
-      margin-top: 0.4rem;
+      margin-bottom: 0.8rem;
     }
-    .about-lead {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 3.5vw, 3.4rem);
       font-weight: 400;
-    }
-    .about-body {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text-mid);
-      margin-bottom: 2.5rem;
-    }
-
-    /* VALUE PILLARS GRID */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .pillar-card {
-      background: var(--cream);
-      padding: 1.8rem;
-      border-radius: 20px;
-      border: 1px solid rgba(107, 62, 94, 0.06);
-    }
-    .pillar-num {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-style: italic;
-      color: var(--rosa);
-      font-weight: 600;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .pillar-title {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 600;
       color: var(--plum-deep);
-      margin-bottom: 0.4rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
     }
-    .pillar-desc {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: var(--text-mid);
-    }
+    .section-title em { font-style: italic; color: var(--plum-soft); }
 
-    /* SESIONES / SERVICES REDESIGNED */
-    .services {
-      background: var(--cream);
+    /* SECCIÓN DE IDENTIFICACIÓN / "SITUACIONES" */
+    .empathy-section {
+      background: var(--white);
+      border-top: 1px solid var(--rosa-pale);
+      border-bottom: 1px solid var(--rosa-pale);
     }
-    .services-cards-grid {
+    .empathy-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      margin-top: 3rem;
     }
-    .service-card-new {
-      background: var(--white);
-      border-radius: 28px;
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(107, 62, 94, 0.08);
-      box-shadow: 0 10px 30px rgba(107, 62, 94, 0.03);
-      display: flex;
-      flex-direction: column;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
+    .empathy-card {
+      background: var(--cream);
+      padding: 2.2rem 1.8rem;
+      border-radius: 24px;
+      border: 1px solid rgba(107, 62, 94, 0.06);
+      transition: all 0.3s ease;
     }
-    .service-card-new::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--rosa);
-      opacity: 0;
-      transition: opacity 0.3s;
+    .empathy-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(107, 62, 94, 0.08);
+      border-color: var(--rosa);
     }
-    .service-card-new:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(107, 62, 94, 0.1);
-      border-color: var(--rosa-pale);
-    }
-    .service-card-new:hover::before {
-      opacity: 1;
-    }
-    .service-card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: var(--rosa-blush);
-      color: var(--plum);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.8rem;
-    }
-    .service-card-title {
-      font-family: var(--font-serif);
+    .empathy-icon {
       font-size: 1.8rem;
-      font-weight: 500;
-      color: var(--plum-deep);
       margin-bottom: 1rem;
-      line-height: 1.2;
+      display: block;
     }
-    .service-card-text {
-      font-size: 1rem;
-      line-height: 1.7;
+    .empathy-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--plum-deep);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .empathy-card p {
+      font-size: 0.98rem;
       color: var(--text-mid);
-      margin-bottom: 2rem;
-      flex-grow: 1;
-    }
-    .service-card-footer {
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--rosa-blush);
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--plum-soft);
-      font-style: italic;
+      line-height: 1.65;
     }
 
-    /* FAQ REDESIGNED */
-    .faq {
-      background: var(--white);
+    /* SOBRE MÍ - ENFOQUE HUMANO Y PROFESIONAL */
+    .about-section { background: var(--cream); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
     }
-    .faq-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
+    .about-content p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      margin-bottom: 1.4rem;
+    }
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .pillar-box {
+      background: var(--white);
+      padding: 1.2rem 1.4rem;
+      border-radius: 16px;
+      border: 1px solid rgba(107, 62, 94, 0.08);
+    }
+    .pillar-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--plum-deep);
+      margin-bottom: 0.3rem;
+    }
+    .pillar-box p {
+      font-size: 0.88rem !important;
+      color: var(--text-mid);
+      margin-bottom: 0 !important;
+      line-height: 1.5;
+    }
+
+    /* SESIONES Y METODOLOGÍA */
+    .services-section { background: var(--rosa-blush); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      border-radius: 28px;
+      border: 1px solid var(--rosa-pale);
+      box-shadow: 0 10px 30px rgba(107, 62, 94, 0.04);
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
     }
-    .faq-card {
+    .service-card:hover { transform: translateY(-6px); }
+    .service-title {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      color: var(--plum-deep);
+      margin-bottom: 1rem;
+    }
+    .service-body {
+      font-size: 0.98rem;
+      color: var(--text-mid);
+      margin-bottom: 1.8rem;
+    }
+    .service-foot {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--plum-soft);
+      border-top: 1px dashed var(--rosa-pale);
+      padding-top: 1rem;
+    }
+
+    /* PREGUNTAS FRECUENTES (FAQ) */
+    .faq-section { background: var(--white); }
+    .faq-container {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
       background: var(--cream);
-      border-radius: 20px;
       border: 1px solid var(--rosa-pale);
+      border-radius: 18px;
       overflow: hidden;
       transition: all 0.25s ease;
     }
-    .faq-card.open {
+    .faq-item.active {
       background: var(--rosa-blush);
       border-color: var(--rosa);
     }
     .faq-btn {
       width: 100%;
-      padding: 1.6rem 2rem;
+      padding: 1.4rem 1.8rem;
       background: none;
       border: none;
       text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--plum-deep);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--plum-deep);
     }
-    .faq-plus {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--white);
-      color: var(--plum);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .faq-icon {
       font-family: var(--font-sans);
       font-size: 1.2rem;
-      font-weight: 400;
-      flex-shrink: 0;
+      color: var(--plum-soft);
       transition: transform 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .faq-card.open .faq-plus {
-      transform: rotate(45deg);
-      background: var(--plum);
-      color: var(--white);
-    }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
     .faq-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.3s;
-      padding: 0 2rem;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 1.8rem;
     }
-    .faq-card.open .faq-content {
-      max-height: 1000px;
-      padding: 0 2rem 2rem 2rem;
+    .faq-item.active .faq-content {
+      max-height: 800px;
+      padding: 0 1.8rem 1.8rem;
     }
     .faq-content p {
-      font-size: 1.02rem;
-      line-height: 1.8;
+      font-size: 0.98rem;
       color: var(--text-mid);
+      line-height: 1.7;
     }
-    .faq-content p + p {
-      margin-top: 1rem;
-    }
+    .faq-content p + p { margin-top: 0.8rem; }
 
-    /* CONTACT REDESIGNED */
-    .contact {
+    /* CONTACTO Y CONVERSIÓN */
+    .contact-section {
       background: var(--plum-deep);
-      color: var(--cream);
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-bg-glow {
-      position: absolute;
-      top: -20%; right: -10%;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(232, 170, 187, 0.15) 0%, transparent 70%);
-      pointer-events: none;
+      color: var(--white);
+      padding: 7rem 2rem;
     }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
       gap: 5rem;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
-    .contact .section-label {
-      color: var(--rosa);
-    }
-    .contact .section-label::before {
-      background: var(--rosa);
-    }
-    .contact .section-title {
+    .contact-info h2 {
       color: var(--white);
+      margin-bottom: 1.2rem;
     }
-    .contact-p {
-      font-size: 1.15rem;
-      line-height: 1.8;
+    .contact-info p {
       color: rgba(245, 217, 226, 0.85);
-      margin-top: 1.5rem;
+      font-size: 1.1rem;
       margin-bottom: 2.5rem;
     }
-    .contact-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .contact-meta-item {
+    .contact-detail-item {
       display: flex;
       align-items: center;
       gap: 1rem;
-      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
       color: var(--rosa-pale);
     }
-    .contact-meta-icon {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(232, 170, 187, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contact-box {
+    .contact-card-form {
       background: var(--white);
-      padding: 3rem;
-      border-radius: 32px;
+      padding: 2.8rem;
+      border-radius: 28px;
       color: var(--text-dark);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
     }
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 1.4rem;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
     }
     .form-group label {
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--plum-soft);
     }
     .form-group input, .form-group textarea {
       font-family: var(--font-sans);
-      font-size: 1rem;
-      color: var(--text-dark);
-      background: var(--cream);
+      font-size: 0.98rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: 12px;
       border: 1.5px solid var(--rosa-pale);
-      border-radius: 14px;
-      padding: 0.9rem 1.2rem;
+      background: var(--cream);
       outline: none;
       transition: all 0.2s;
-      width: 100%;
     }
     .form-group input:focus, .form-group textarea:focus {
       border-color: var(--plum);
       background: var(--white);
-      box-shadow: 0 0 0 4px rgba(107, 62, 94, 0.1);
     }
-    .form-group textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-    .form-disclaimer {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
 
     /* FOOTER */
     footer {
-      background: #140B12;
+      background: #1B0F18;
       color: rgba(245, 217, 226, 0.6);
       padding: 2.5rem 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .footer-brand {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      color: var(--rosa-pale);
-      font-weight: 600;
-    }
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .footer-links a {
-      color: rgba(245, 217, 226, 0.7);
-      text-decoration: none;
+      text-align: center;
       font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--rosa); }
-
-    /* REVEAL ANIMATIONS */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
 
-    /* RESPONSIVE DESIGN */
-    @media (max-width: 992px) {
-      .hero-top-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .sobre-mi-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .services-cards-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .pillars-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      #menu-toggle { display: flex; z-index: 300; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: var(--cream);
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem;
-        z-index: 250;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.4rem; font-family: var(--font-serif); }
-      #menu-toggle.open .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      #menu-toggle.open .hamburger-line:nth-child(2) { opacity: 0; }
-      #menu-toggle.open .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-      .hero { padding-top: 7rem; }
-      section { padding: 5rem 1.5rem; }
-      .contact-box { padding: 2rem 1.5rem; }
-      .footer-container { flex-direction: column; gap: 1.5rem; text-align: center; }
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .hero-wrapper, .about-layout, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .empathy-grid, .services-grid { grid-template-columns: 1fr; }
+      .hero-photo-frame { max-width: 300px; }
+      .hero-floating-quote { position: relative; bottom: 0; left: 0; max-width: 100%; margin-top: 1.5rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="#" class="nav-logo">SerElpis</a>
-    <button id="menu-toggle" aria-label="Abrir menú">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#sesiones">Sesiones</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#faq">Preguntas frecuentes</a></li>
-      <li><a href="#contacto" class="nav-cta">Pedir cita</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- NAVEGACIÓN -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">SerElpis <span>· Vanessa Luque</span></a>
+      <ul class="nav-links">
+        <li><a href="#proceso">¿En qué te ayudo?</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#sesiones">Sesiones</a></li>
+        <li><a href="#faq">Dudas</a></li>
+        <li><a href="#contacto" class="nav-btn">Pedir cita</a></li>
+      </ul>
+    </div>
+  </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-top-grid">
-      <div class="reveal">
-        <div class="hero-tag">
-          <span class="hero-tag-dot"></span>
-          Terapia y Entrenamiento Online
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-wrapper">
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span> Acompañamiento emocional online
         </div>
-        <h1 class="hero-title">
-          Acompañamiento en <em>habilidades emocionales</em>
-        </h1>
-      </div>
-      <div class="hero-lead-side reveal">
-        <p class="hero-lead-text">
-          Construye una vida con sentido a través de un enfoque riguroso, flexible y profundamente humano.
-        </p>
+        <h1>Aprende a relacionarte con tus emociones <em>sin que paralicen tu vida</em></h1>
+        <p class="hero-p">Un espacio seguro, riguroso y humano donde entrenar herramientas psicológicas adaptadas a lo que necesitas hoy.</p>
         <div class="hero-actions">
-          <a href="#contacto" class="btn-primary">Cuéntame qué necesitas &rarr;</a>
-          <a href="#sesiones" class="btn-secondary">Conocer más</a>
+          <a href="#contacto" class="btn-primary">Reservar una consulta &rarr;</a>
+          <a href="#sobre-mi" class="btn-secondary">Conocer el enfoque</a>
+        </div>
+      </div>
+      <div class="hero-image-card">
+        <div class="hero-photo-frame">
+          <img src="data:image/png;base64,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fA/8AnGEf8Txe3/S16X/Nf4/Lte39jnh34a34f4bvdvw22+/qXjfx/f5/9m2vN8P5b93/ANeetfXze1X497Gf+IuG2s/96z9362a2336en9fInE9DLQYpUUz2X/EIsOnm/T/N/wDk+6sU353+993yX/E9hXw/EXxDG/vOfS/T68/m939K3xPL9uT0353v933f/a/38317a/x6+4a/X4d+H/38s4X9f05f/vM3vf38vS9N155f9L9L6+/Nfae0X/6vT1X3+evze+/S17tepbr1/f4vfXmS0f3X5/S06r7/AGf3fR78FVTqbEqSYOyhr9fK43X0pwt2l/AxxRytzM5jNbfX05O5/S6+W8OfeX+q/wCF72v0t9e/pZbcOJsTwr/4pP1335q3LxxXwM135/l56eXff3r55fe/B+2agqKRvf5WyC1/P4e/f2S734Y4xox/38re7u39v1/r21S/tY4X8m/pvr43v19+vl1S8jH308zP/AIn5GOf39e7/AO/ffO3+f6fePBPGuE0jP/lR3/S3+Xf29X4Xm4h4mwerZ3XfXzfv6f6fRcf4cxbF2S/iXz9On7fd3W9YFiN1L1m/a9X/m53j3y/a/473j37df9/p1Ld34IxaH+oX/AHt021vf1t3G6yIn/wBDL316f73v9/W31vG8Iqe+0Zl0vv6f6fUfe8q753fLff8A31v/AL2eL+Vz3O8Hnlyz5O382uvx5380m1//AC/dI3T/AG39Onf5v05+yE/216f9/wDL1/u3O3X9u3+n/vf0/s4fX206fNff8OlyE6v4L+/v12f/AN1S90x8x/v/AH2++6b0+P6/P+P43290Iu35b3+/03102Nvv6E//AAr9L+/x96/yX0vL2E0X7v4X+/4vS653sAdf+/vf66a6eI6p6a8v9vv6p087/m/rff8A9fS99Ea3++f5tL3/AM29/f2628n/APf0e+/e/v0vfze533/u3q8vze330/e+6B90b3T3/fX/AH5fze/d/P1/35/z4p2f5eP/AOfN638v05oG56a/7901E7f3TvoNfL3S2aX9N4AeySbdx/e/mkeX+/3v96+a/iX93/f5r7vf7p323/p21s/363vvf8APp/IuT/5/v5Xp4pfeX0//f1vO/m/y589f8/1+Xb1vf4i2o9f5/l6ff6pIvf+/P5vfrvtfyO4/q1vfz9fe3f38v6/5/S300/fT82+l73fP43p+/m8nrfy/wBDU8mve61203/69erS+/rf1S9L8/z79f3Xf53bX/N43rfy9/5a91f3v29/l+/fvv/AKf/ACXvf/f28233fze71a62X0u3p5m9/L63v+9vxf8A/9k=" alt="Vanessa Luque" />
+        </div>
+        <div class="hero-floating-quote">
+          <p>«Cada persona requiere un proceso distinto. No uso protocolos rígidos, sino herramientas que se adaptan a ti.»</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- STRIP / CARDS DE AMBITOS -->
-    <div class="hero-skills-strip reveal">
-      <div class="hero-skills-title">Áreas principales de trabajo</div>
-      <div class="hero-skills-flex">
-        <div class="hero-skill-chip">Gestión de emociones</div>
-        <div class="hero-skill-chip">Autocuidado y autoestima</div>
-        <div class="hero-skill-chip">Reducción de la rumia</div>
-        <div class="hero-skill-chip">Afrontamiento de crisis vitales</div>
-        <div class="hero-skill-chip">Mindfulness cotidiano</div>
-        <div class="hero-skill-chip">Uso problemático de tecnología</div>
+  <!-- SECCIÓN DE EMPATÍA / IDENTIFICACIÓN -->
+  <section class="empathy-section" id="proceso">
+    <div class="container">
+      <div class="section-tag">¿Te identificas con esto?</div>
+      <h2 class="section-title">El malestar se manifiesta de <em>muchas formas</em></h2>
+      <p style="max-width: 600px; color: var(--text-mid);">No hay respuestas incorrectas ni emociones que debas reprimir. Es posible que te encuentres en alguna de estas situaciones:</p>
+
+      <div class="empathy-grid">
+        <div class="empathy-card">
+          <span class="empathy-icon">🌊</span>
+          <h3>Emociones intensas</h3>
+          <p>Sientes que las emociones te desbordan o toman el control de tus decisiones cotidianas, dejándote con sensación de agotamiento o bloqueo.</p>
+        </div>
+        <div class="empathy-card">
+          <span class="empathy-icon">🔄</span>
+          <h3>Bucle mental y rumia</h3>
+          <p>Pasas horas dando vueltas a los mismos pensamientos, buscando certezas o intentando controlar la incertidumbre sin llegar a una solución.</p>
+        </div>
+        <div class="empathy-card">
+          <span class="empathy-icon">🧭</span>
+          <h3>Piloto automático</h3>
+          <p>Vives cumpliendo con las expectativas del resto, pero sientes una desconexión profunda de lo que de verdad es importante y tiene sentido para ti.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SOBRE MÍ -->
-<section class="sobre-mi" id="sobre-mi">
-  <div class="section-inner">
-    <div class="sobre-mi-grid">
-      
-      <!-- FOTO Y PERFIL -->
-      <div class="profile-card reveal">
-        <div class="profile-img-wrap">
-          <img src="data:image/png;base64,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XqfX6e6m09fv49/f6Xf83/ANy5+p/N0+/6+39kXv1I6/zb7+/S/pvdL220N+/8f4/pbrq2/TzfNfe3p9vd2L3vf9f3vd/9vdLrfz/S99vd3p5/09L3+3s/r6s779f323+/u+/X9y9vd11993213vv9f8AN/3/ALXpf3L9O/Xpfze+2yTdfO3s5fM+v5S/T+3+L33f95e/x152vvvv/m+26XX0v+tve+/p86S99b/Lpr2e6/2S9PXX+L5tf3S6fvf419/5S/31/m6/i0S+ml+l3X4m2m4/u3/x/e7S/0fS32Xm7p9r7ev+nNLffp/8X5+ftfS/u1+3f7v9/X+f/l6A21S93+e3m11S2+l/T2e7/q9939Oa/p73s8e1i10aD5tPt9F23S083f/wBP1S+n/D838v8Ae9L4ff792mvt6/p6+L323v8Afe+vrvv/AH4/xet+90v/AHP1ve/+76Xfzf138mvdfe/X973f1S833+O/t+3vd26f4fT0/v8AL9/mXXfeXf35vd6fL0fI1+f83v1v6p/S35fd/f2e1L+ml/O9/mS1+3tS9+nS6/vd+0u/1L3vf05S+383p/fze50S/q2vd1/F1/m6/m6X83Xm/T/ANfNvfxfxe90s3l9NvdL/i2sWvf9rXm906Xvr6/9z338Xm/jze83d9vfX/m99P3S3vf30/m9X/mvd1Lpr9ve9L/mvdvP9et/M/f+/e913a/T2/a933f/AES0ve383N4ffzvdvd1efr+/X9/vf3vvdJ00+23v1e9389f410vf/t9Nvvp/fzf43425v0Svd19vd6Xve++/wX1e2u/v595+X2sml0v5df16ev0v4d/2S1vf/e++t//AH/T5et2l6XX09L136L+nveff0+/ve926+/p+/jze5vd9fO/m93fxfX3+i9L6fbe++9//sXrf8I/1330Sve+/vf97aW8/vvvde4l/L7+Ovl+utX06/N69Nvf++//AHfS7e1/N2/m6W33v72vf6X9Eut3/W1vev/d3a8+7vd38/X3a93+Xm93m6ffz88/O5+f4S/33919vS+3tS2iL+fve++//ANL69Lvd1L7efrb9vX9k0I97/j/Ff8j4330I6+/t/d816/067fU+XjX4L0vS99et32vd4e3yL9/f1S3m1997++nrveX82Xfe79+v2vd/Xve1I315ff/P11vf59f138864X++fD+m+/v2v59+ffr4v13vvvvff3vev8+/O+3ffv/vj/AOPe7e/fe87+/ffv0S/vv9/3p/f97X0m66fze/06fS56pve1rfbe9Nf+/S+vl+s9X6S++3l+f1ve7/e3S4XXe/t2/vd+/0ve1p6dNv/AH67/ve4SXXe9L3vf33S+6XXa9ve38u/i9vd6fxe8+S++9vf6v3/AOT3vfvdv/d+a3e/7s9U72v/ADX830v+X0S83i3/AFs/re39/e9vfIva/Tbf08un2S3vf++/p5+l1v666+/m1eS83pfy6W5+ft5rve1/2tb3vf5vfL8v0S32vv6Xp4ve3vd/iXk/L+O/N8X5/vA8+2/0+/S7v/p4/l1933+a3XpfyS/u15fe8/1/S1vf930vL3u71L33v8vvS9v6f93ve5038vv58729/e5pve3Xzv0u93L6X8+X/e/r5s18+v29L0vv6699/dve9/v236/a62e3l/f4+v38363X5Xvf8An476d/i/1/iW1/a9/a7r519vFtefr4fHjeb2/v8Abv8Av/lvdv7r2S1/fvevvffwve+333zePte9+v1v8X4v/v6/e181ve1/S/v1S8/v0v7v4Xpfe+/5fW+7vv7t5ve6+/wCNve93e+v5vPzefr+/l4eXXfze/wBHve79Xvfev++/687/AA93r28v1f8Ae1r3f/Gvv+9/W939vT0/l6+1/eXnS/X8v0vrvf4e/l+q69e9vfXf+1/vevdvd++vn/e93m6/vd38vv0S1rde2m9f6+/pSvv8/vS++m++v3fe38vf/KlrXvvefvX+/O9/j3vd4vv62X9+/v00X/LvvfS1vefl5vze/T/10vdvd7/5v3f5fvjXXt4e79X/AH/i++S9Xm//AI+b38f8p/d3X97/APv3vvfe9/a7e32Xve++X131235vf3t6XnS/X8vrv10vrve17vf+p6e/vvd08v1v/j+/h6ffzS8vvd3b5fP8A29/8vP1838vv+/2S3v28fW3r4vv093T+1+X09vC40ve++/Xv/m5f29fe3p48/vX+y8Oun+X1+Xf9eiv4fS4XWbS4bU0j3Eukc7vdL+f31suf4k64f33mdev35/291vHGdZkpoos2fM/vNtrf/AKut1znEZrmS34e9v6fvbf8AseS9fhce3T/xOa5/kMv3456v2u/z4/u+32v4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sro9/1/v+/pze0X9P2/mvy6Lp5/3/APp+91k1FmU5a7vPy6f83m6f5L8+i/m8r63o339G/m66/T+3l+p3sH/p+nrO90v12vv5f5s7GZ2/1Xf/ANP5t9Lfa1p81uNvfX+/8PPl4p/e+/H7+n4/f19+fX7d4/0Xvj/d/j5+/X8v4r3+M2u115N8+v3f6mU60fXpbrvd3l3W4/wD/AE1+P2vXvv3T813a3p2b/D9jRpsVfR1L/wAP+X3v/S34l22sXm2Xvv8An/wX8834/vf/ANP0+/L53fM/Ie4/7P4vTq310++v9/6d61f5/t+L3xL5v031/e+s3v8Arv8Av/N5/d+/N326cf4PxfS1eC1P4f8AMm3/AM3ze+/2+fXf4m30t/E3B212I4o35e7ffX+vW99Lfb/3S+M4qfFO4/F/EedT4vd/1vf5bdei9n/Hz7eRj/yv39Pnv3L/AOE+/wDR/G4d/E39Onvv/Gv5fE2XzS7/AK3X93m/s/l4fN5+169/2m+/s4S/P/F0/m3Xp30vzf8AN+/f3e1/44X+27/E3T/S832e008O/XmX/S93d+s0ve8161+y5qf3n3v0Xm6+3Xpf5vS9a++3/X/3vv33+t8G2S109vf+/wA/r11/m1fA2O4tA6fE/G2/4e3vd3vpr+/X3x2b429/c03d/L12/p313vf9fN1v/BfG4xX8b4i/wAP4ff30+X3vte/u++s93f1/A343k4+R/u/Lfv/AE8/p18vxX8d7er/AMs2tve7vf5fXp/49/jL3+iGqW23/dvdI35oI9eXnfe/X6039+/6aI5p3t6dEBDU20QfuhAQBy6po9kAn91FFkEt90vP63KAEIC2yOaED0/sget0I30/sgSaaP93QJCaR6oBCEIHZAS6/2TQCaSEAhCEA49kBO4ugkmyWv/AIUgEwUAmyYT018/9lIDogSdrdEgUIn6/wBKk/e/0/8AZL/1eSly3X3v8319f39P37Xv/P74+f8A09U0u325aIQG+aR/3v4/S300mI2s38v+e1/325f1b2vzeev/AO3S96X97f4/x1/3+/x96W3q9eXp5t9v7eXk6v2v6f2/y+/O20/6m2q90vfX0/m839vfXvv/mS/201/X59f63L+3mvd/Vf09df/f61v30vL3r/ALu+/N66et/39fL3o139/S3S83f+z0vd/k516a/M8v0Xq9L7X9m1+l5+95+/u70tvef7v/e1Ltfze13m1vS99et32v97/AF9/vXveX5v177X8vS7834/D57yvfXX+9r3aWvfze/X6v/3+t4d/L1a/2v5X9L++/l53X+i6+/34f4pbr0+/ve9m3sva6f8Ae+p3+93a7e3/AGS8L0++tr6Xvf06aXze7ve9/wDxea3pfa1vv/3vO9fve9eWvf0vLvfXXy3m/Nf4f5f5fP8A0/v+9/H3S63v7a/+7/vf03+iE2/93/e9/Xfe/fXfS03vf6+f+2/0XX802e/p7u39vzfK7vfze93pffr03u9m38v4e39L+/0aL735+f1v4d/8AtfVvd7veL9dfv1a503v16/z1/v11XqX/AD2X4f1vf++XXf2X/S/e/P192/Xxfp1X1v7/ADve2m/15L/S/i9/0vfL/N09fG3/AD183ze12v03125v5p7+S9m3a778un1u/wDX6pXvb6erf616vL6f93u+/vfS+935f1e1+/a97/l/vd+3057e/wB/P18d/wD+X01vPteX4/v/AD6vv19v0u7X135eX9k7ev5vXp005/T2t6vve/3/AIerW99et/v03/m21vd7XXe7y+/21aXy/u99321e1S+N/aX+136d83yS/k++9Ld2/L39634/q5v191Xvd01vS3s+vv13u6Xm6f81pvd3vfW997/AN7r63+/uS+/b4b6ft+tr1/t/uW4d50v/vfXffy3m9fJ+91vN99/S31tP92+/v1v9d95fS6Xm9evze330m1vv3/zebrf+j4b9b9+m1aXm9f8/S//ALX8tve96vvS/f15fe/+P0vd774/f+XfzvK97/xXl3vTz1/X2vzf1f8An9+2/e3+n1eS/L4/03S3v43ve75vf3v5N3m9/a/vf9/vfI2t103S9Lz7fvpr6+f4u9m8u1+/l29d63Xv92e7+/u111v6b3e2/2/X8383v30vL3r5f333p9X192/S89/7+vr0vfT/F1vL+d+/v19Uve/ze/9/vvXo/L/AP3363v93te2s4e4vA0A2N/84/xLreD1AnptA3y/M1v9mX9v2p09f2d/m/n/AG/6+vS7X52Xm9fvzff6f8vX1++vP6q/aH3/AIn+e/5f6/L03S/P7+/s/m9PxfT+/Xm8vX7/AG+f3S/u2/mX6X+l390Xm1vvp33418vfX/q0Xf3/AMxXv++/a7/m/H4fNqf2l3000ve3XW/zX+/+G179fv113S9f1+i/k+qXX/C83X97x0+3u/e9f2913S+vTq699L+/rfq6/kvrbfy0vr5ebrrL0/39r018/mS/lX993m76f7X+/p0u90X0aL++92X+32vS89Lp+/4/T4p2v66XXpf+bW/q419p73/ALv2d9f3f9f7aX9+v3+9eS6+/Xp09f8Anu6a3X1v4/8ANrXj3/kS/S4f+/v1v93tebtr0vv3+S+/eS82tevv/S3n2d2v+P4a+/X/AG81u915X8/d34vX9/fvebr+ffy19+i/L0vS997zfXn08XX3fS813f5fb6Xv8/3e/O1/m9m083W2vpf+35q16vpfyf4r3v205et+n31/e4f5v/bW6+a9L++/p6ffvvd0fU7934+9/wCG7X/3ve9/5vfNfl1S93/3+v8AS538l6fX59f63X5f9/m3b4L53vf/ACf5m3vX/f3+/v8Arvf8/rve9vd90u3L/N1vf4vxfNfX8f170vd6e+XX0vX403f721/n1XXS03e33/i1/pS1/a15+b/ADfxf30v361fP4f+nr38r/X0/b0vN003m3930/y4vI+32/l0veS72XX0vf9t/31+jU0ve+br6+l797/wBv43tffp/N9X5f/N/a47X8ut53vL9/2vd6e35/P+r5r6XXS6/9bXn38vvfS062vfbfuS6/T++/3vd5b7/m/r63a92vvq5v4992u/Pz9/f/AL3/ALX9b1pdd/Nve//AH63pXn/AE3/AEn538vt8fX+f28/Lte72S66+/X53vd9/TpfT/L/AGS8Lz6+vN23uS21m+97p72vrffve3/u3W13v+e/S+/20te/4f5f1u325eX321++t/u7S+/4f/eX9/5enwXXy9m1v/L5+99P+T3/AH71p83ve9/2ve1/q65/3v8Ae7+L399+/rf3a8/i8/3Xvfxf12+L+576+rW6/f2v2u9f18X9f43v6fS339tL4X5/p3+X+/tXv78/2l4vd3/zeH0v12/8AXi/v4vJff01s2tfxfXv09Xze+X9Lvvvvv1fxfxdf0ve8/wB3v6v3s22sXmX0/q18r3vxf/y6W3n5/Tzvvd//ANvdNdeXn3a/x/t83r4vd3eP62f/AM+97/veXXvd4a3n499313vT3ve9+G58f6Xfbfd1rX+/r0eet/e1f3zeet1e912/+X+vf+e9f3bvea9v01+XX63vd7p/X6e91fxe97X/APfeen4vd3/3eH3/AJvvvfL01p419/5e+/re7e62d93e11+P83vd+7f/AN33tL0/6f3e1p/L81v359fvf+/4erXf9393eX++u/v09et2+f6XfS035evNf1vf/PjX339rL4p+e3vf1/3eL/xXl33vevf3vfpeev3y6bfS082vvd93a835+X8d33v9m1vzeXl5/m/e61v031/e9+vrv/L3/f7/a8u12vvf3vev5e99/jve0vd83vd/e8vf/uXXfzeu6/X69vv5+jvvv+l99/5vf++/s/s7Lze5vLvd10f+/l+vrffvvve/3+N2/N3+/v6a/8Avy7269L+ff8A2293vef33dffl7v3f5fv6/v+/m1+2/n/AH0v035vvvd2/f531d0vd6/v33f93r1334f+r4t/P/216Xv12veS1vf+Xm3e1/4X193f+/T1+v3ffnvd2t730+/zf183e+ve/m939529+GvdLfe+9097tfze91vd9m8+93e+v5v87/s6/ze/e112s9/4ff0/3d/C+/42XXe6vv43vv01+vfze3Lz21u18/Xffz0vd206++/3599/wCPf0S/349X3+Xl/ve776vvdffvvS6Svvveflfze11S++2vXff28318t9f3d9vd2u5vff3+L3tef1/d9/X0/L182vf4s+/383/l5vfe8aXf9m95p/Xp9fvfev2Xve//AD/7XX4v/L+X03eLveS20/ve11u6X/vvS6X9v2/r8/8AN50+1/eX/fvd/iX3vNteP57+ffNf1vf7vfS9vv7v1f21vfpe8336d/36+1Ld/f4339P3491/2v3p8/y23uS+Lve1+H918vf3r35fvvz4/wDXv3S6ff3+/e816a30u2vd+l/l9Lvf8Xv/ADXfS339uS/F5vT973m6/L10fS0XX8vT341/3+b8X5dff/a/e+/m3S3m+3zfP620/S3v+/pL6e35/wCbf5r1L++r13a+9+b4vS9/F3fze/41/p6XX4ff6a/192ut4fS9S+L3v12f/b33/ffyX++H9/u6Xpfd1L3f05veft+/xLve9/e/Tf+/v0ve+/W83X083/y3v3Xpf/ffve/ze1f7+XXvrr38Xf8Ax9/3/C9/i16XXS1v9P8Av/z6X+/3f6Xv4vf/AN/s877f8NqS1Ld/4fvefr3p2fU7/wD0/v8AZLteP4f7t+S293+rX3191vv/AEs+/mXX/P6b3vXj3/kS0f3e69f/AN79L2vfL6X0/m++n5dfr59+66Xm92X/ADeXX2ff/dvd3ve++/011/e7115/vvf/ALv/ALp7a61/9m" alt="Vanessa Luque">
-        </div>
-        <div class="profile-name">Vanessa Luque</div>
-        <div class="profile-role">Educadora Social y Terapeuta Contextual</div>
-      </div>
-
-      <!-- CONTENIDO TEXTUAL -->
-      <div class="reveal">
-        <div class="section-label">Sobre mí</div>
-        <h2 class="section-title">Un enfoque riguroso,<br><em>una mirada humana</em></h2>
-        
-        <p class="about-lead">
-          He trabajado durante años con personas en situaciones muy variadas. Esta experiencia me ha enseñado que cada persona es única y requiere un proceso a su medida.
-        </p>
-        <p class="about-body">
-          Mi trabajo consiste en identificar qué hay detrás de tu malestar y construir contigo una intervención con sentido para tu vida. No aplico protocolos rígidos: utilizo estrategias basadas en evidencia científica adaptadas a lo que necesitas en cada momento.
-        </p>
-
-        <!-- PILARES EN GRID COMPACTO -->
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-num">01</div>
-            <div class="pillar-title">Rigor sin rigidez</div>
-            <div class="pillar-desc">Base científica adaptada a tu realidad individual.</div>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">02</div>
-            <div class="pillar-title">Sin juicio</div>
-            <div class="pillar-desc">Espacio seguro para explorar tus emociones con dirección.</div>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">03</div>
-            <div class="pillar-title">Tú en el centro</div>
-            <div class="pillar-desc">Sesiones construidas desde lo que necesitas hoy.</div>
-          </div>
-          <div class="pillar-card">
-            <div class="pillar-num">04</div>
-            <div class="pillar-title">Online y a tu ritmo</div>
-            <div class="pillar-desc">Sin desplazamientos ni barreras geográficas.</div>
+  <!-- SOBRE MÍ Y METODOLOGÍA -->
+  <section class="about-section" id="sobre-mi">
+    <div class="container">
+      <div class="about-layout">
+        <div>
+          <div class="section-tag">Conóceme</div>
+          <h2 class="section-title">Acompañamiento profesional desde el <em>respeto y la evidencia</em></h2>
+          <div class="about-content">
+            <p>Soy <strong>Vanessa Luque</strong>, educadora social y terapeuta con posgrado en terapias contextuales (ACT, DBT, FAP, Mindfulness y análisis de conducta).</p>
+            <p>A lo largo de los años he acompañado a personas en situaciones muy diversas: salud mental, adicciones, personas mayores, infancia... Esto me ha enseñado que no existen las recetas mágicas.</p>
+            <p>Mi objetivo es que entiendas qué hay detrás de tu malestar y construyamos repertorios de respuesta más flexibles para que puedas vivir de manera más plena.</p>
           </div>
         </div>
 
+        <div>
+          <div class="about-pillars">
+            <div class="pillar-box">
+              <h4>Rigor científico</h4>
+              <p>Modelos de tercera generación aplicados a tu realidad individual.</p>
+            </div>
+            <div class="pillar-box">
+              <h4>Sin juzgar</h4>
+              <p>Todas tus emociones tienen una función y un porqué.</p>
+            </div>
+            <div class="pillar-box">
+              <h4>Proceso a tu ritmo</h4>
+              <p>Tú marcas la velocidad y los objetivos de cada sesión.</p>
+            </div>
+            <div class="pillar-box">
+              <h4>Formato Online</h4>
+              <p>Sesiones por videollamada desde la comodidad de tu espacio.</p>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SESIONES -->
-<section class="services" id="sesiones">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Sesiones individuales</div>
-      <h2 class="section-title">Un espacio adaptado<br><em>a lo que necesites</em></h2>
+  <!-- SERVICIOS / SESIONES -->
+  <section class="services-section" id="sesiones">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <div class="section-tag">Sesiones individuales</div>
+        <h2 class="section-title">Herramientas concretas para <em>tu día a día</em></h2>
+        <p style="color: var(--text-mid);">En cada sesión trabajamos desde lo que traes en el momento, combinando la escucha profunda con ejercicios prácticos.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div>
+            <h3 class="service-title">Regulación emocional</h3>
+            <p class="service-body">Aprende a sostener la ansiedad, la tristeza o la rabia sin reaccionar en automático ni intentar huir de lo que sientes.</p>
+          </div>
+          <div class="service-foot">Respuesta flexible ante la reactividad o el bloqueo.</div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <h3 class="service-title">Clarificación de valores</h3>
+            <p class="service-body">Identifica qué es relevante para ti y toma decisiones alineadas con tu bienestar y no solo con la aprobación externa.</p>
+          </div>
+          <div class="service-foot">Dirección clara para salir de la parálisis.</div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <h3 class="service-title">Flexibilidad y atención</h3>
+            <p class="service-body">Practica el mindfulness como una vía real para reducir la rumia mental y conectar de nuevo con el presente.</p>
+          </div>
+          <div class="service-foot">Atención plena aplicada a tu rutina.</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="services-cards-grid">
-      
-      <div class="service-card-new reveal">
-        <div class="service-card-icon">🌊</div>
-        <h3 class="service-card-title">Gestión de emociones</h3>
-        <p class="service-card-text">
-          A veces sentimos que las emociones nos desbordan o controlan nuestra vida. Trabajaremos para comprender qué las genera y desarrollar formas de responder más flexibles para que no paralicen tu día a día.
-        </p>
-        <div class="service-card-footer">
-          Desarrolla repertorios de respuesta funcionales.
-        </div>
+  <!-- FAQS -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="section-tag">Resolviendo dudas</div>
+        <h2 class="section-title">Preguntas <em>frecuentes</em></h2>
       </div>
 
-      <div class="service-card-new reveal">
-        <div class="service-card-icon">🌱</div>
-        <h3 class="service-card-title">Autocuidado y autoestima</h3>
-        <p class="service-card-text">
-          Si llevas tiempo viviendo en función de lo que otros esperan, puede ser difícil reconocer tus propias necesidades. Descubriremos quién quieres ser para tomar decisiones que nazcan de ti.
-        </p>
-        <div class="service-card-footer">
-          Conecta con tus propios valores y prioridades.
-        </div>
-      </div>
-
-      <div class="service-card-new reveal">
-        <div class="service-card-icon">🕊️</div>
-        <h3 class="service-card-title">Mindfulness cotidiano</h3>
-        <p class="service-card-text">
-          El piloto automático nos hace sentir que solo sobrevivimos. El mindfulness te ayuda a estar presente para apreciar lo agradable y decidir qué hacer con lo que no funciona en tu vida.
-        </p>
-        <div class="service-card-footer">
-          Presencia consciente para elegir mejor tus respuestas.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="section-inner">
-    <div class="section-header reveal" style="text-align: center;">
-      <div class="section-label" style="justify-content: center;">Dudas frecuentes</div>
-      <h2 class="section-title">Lo que necesitas saber<br><em>antes de empezar</em></h2>
-    </div>
-
-    <div class="faq-wrapper">
-      
-      <div class="faq-card reveal">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>¿Cómo saber si este espacio es para mí?</span>
-          <span class="faq-plus">+</span>
-        </button>
-        <div class="faq-content">
-          <p>SerElpis es un espacio de acompañamiento y entrenamiento en habilidades emocionales con un enfoque contextual. Te ayudará si sientes dificultad para regular tus emociones, si la rumia te paraliza o si sientes que tu vida no refleja lo que de verdad te importa.</p>
-          <p>Lo importante es que reconozcas que algo en tu relación con tus emociones necesita cambiar y estés dispuesta a trabajarlo con herramientas prácticas.</p>
-        </div>
-      </div>
-
-      <div class="faq-card reveal">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>¿Cuántas sesiones necesitaré?</span>
-          <span class="faq-plus">+</span>
-        </button>
-        <div class="faq-content">
-          <p>No hay un número prefijado. Algunas personas adquieren las herramientas que necesitan en 3 o 4 sesiones; otras prefieren un acompañamiento más continuo. En la primera sesión valoramos tu situación y acordamos el ritmo que tenga más sentido para ti.</p>
-        </div>
-      </div>
-
-      <div class="faq-card reveal">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>¿Cómo se desarrollan las sesiones?</span>
-          <span class="faq-content">
-            <p>Las sesiones duran entre 50 y 55 minutos y se realizan de manera online por videollamada. Es un proceso dinámico y personalizado según lo que traigas a cada encuentro.</p>
-          </span>
-        </button>
-      </div>
-
-      <div class="faq-card reveal">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>¿Qué pasa si me siento perdida o algo no me encaja?</span>
-          <span class="faq-plus">+</span>
-        </button>
-        <div class="faq-content">
-          <p>Puedes expresarlo con total libertad. La sesión es tu espacio y ajustaremos lo que haga falta. No aplicamos protocolos rígidos.</p>
-        </div>
-      </div>
-
-      <div class="faq-card reveal">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>¿Es un proceso confidencial?</span>
-          <span class="faq-plus">+</span>
-        </button>
-        <div class="faq-content">
-          <p>Sí, la privacidad es absoluta y está protegida por la normativa vigente (RGPD). Tu información y tus datos personales no se comparten con nadie.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="contact" id="contacto">
-  <div class="contact-bg-glow"></div>
-  <div class="section-inner">
-    <div class="contact-grid">
-      
-      <div class="reveal">
-        <div class="section-label">Contacto</div>
-        <h2 class="section-title">Da el primer paso<br><em>hacia tu bienestar</em></h2>
-        <p class="contact-p">
-          No necesitas tener las palabras perfectas ni saber exactamente qué te pasa para empezar. Puedes llegar con dudas o cansancio; eso es suficiente para iniciar el proceso.
-        </p>
-
-        <div class="contact-meta">
-          <div class="contact-meta-item">
-            <div class="contact-meta-icon">✉️</div>
-            <span>contacto@serelpis.com</span>
-          </div>
-          <div class="contact-meta-item">
-            <div class="contact-meta-icon">💻</div>
-            <span>Sesiones individuales online</span>
-          </div>
-          <div class="contact-meta-item">
-            <div class="contact-meta-icon">⏱️</div>
-            <span>Respuesta en menos de 48 horas</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-box reveal">
-        <form id="contact-form" method="POST">
-          <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required />
-          </div>
-          <div class="form-group">
-            <label for="mensaje">¿En qué te puedo ayudar?</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje o consulta..." required></textarea>
-          </div>
-          <p class="form-disclaimer">
-            Tus datos están seguros y protegidos. Te responderé para agendar sesión o resolver tus dudas.
-          </p>
-          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; cursor: pointer;">
-            Enviar mensaje &rarr;
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span>¿Cómo sé si este espacio es para mí?</span>
+            <span class="faq-icon">+</span>
           </button>
-        </form>
+          <div class="faq-content">
+            <p>Es para ti si buscas aprender herramientas prácticas para llevarte mejor con tus emociones y tus pensamientos. Si sientes bloqueo, cansancio emocional o la necesidad de tomar rumbo en tu vida desde un enfoque práctico y estructurado, este acompañamiento te puede ayudar.</p>
+          </div>
+        </div>
 
-        <div id="confirmation-msg" style="display:none; text-align: center; padding: 2rem 0;">
-          <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--plum-deep); margin-bottom: 0.5rem;">¡Mensaje enviado!</h3>
-          <p style="color: var(--text-mid);">Gracias por escribirme. Te responderé lo antes posible.</p>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span>¿Cuántas sesiones son necesarias?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            <p>No hay un número obligatorio. Algunas personas logran la claridad y las herramientas que buscan en 3 o 4 sesiones; otras prefieren un acompañamiento más continuado en el tiempo. Lo decidiremos juntas progresivamente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span>¿Cómo funcionan las sesiones por videollamada?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            <p>Las sesiones duran aproximadamente 50-55 minutos. Solo necesitas un espacio tranquilo y conexión a internet. Recibirás un enlace seguro antes de cada cita.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span>¿Es un espacio confidencial?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            <p>Totalmente. Todo lo conversado en sesión y tus datos personales están estrictamente protegidos conforme a la normativa de protección de datos (RGPD).</p>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-brand">SerElpis</div>
-    <ul class="footer-links">
-      <li><a href="#sesiones">Sesiones</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <div>&copy; 2026 SerElpis · Vanessa Luque</div>
-  </div>
-</footer>
+  <!-- FORMULARIO / CITA (CONVERSIÓN) -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-tag" style="color: var(--rosa);">Dar el paso</div>
+          <h2 class="section-title">Escríbeme sin <em>compromiso</em></h2>
+          <p>No hace falta que tengas las ideas ordenadas. Cuéntame qué estás experimentando y veremos juntos cómo empezar.</p>
+          
+          <div class="contact-detail-item">
+            <span>✉️</span> <strong>contacto@serelpis.com</strong>
+          </div>
+          <div class="contact-detail-item">
+            <span>💻</span> <span>Sesiones individuales online</span>
+          </div>
+          <div class="contact-detail-item">
+            <span>💬</span> <span>Respuesta en menos de 48 horas</span>
+          </div>
+        </div>
 
-<script>
-  // Sticky Navbar
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  });
+        <div class="contact-card-form">
+          <form id="contact-form" method="POST">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">¿Qué necesitas o qué te gustaría trabajar?</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Puedes escribir brevemente lo que estás sintiendo..." required></textarea>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-mid); margin-bottom: 1.2rem;">Tus datos no se compartirán con nadie. Solo los utilizaré para responder a tu mensaje.</p>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; cursor: pointer;">
+              Enviar mensaje &rarr;
+            </button>
+          </form>
 
-  // Mobile Menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+          <div id="confirmation" style="display:none; text-align: center; padding: 2rem 0;">
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--plum-deep); margin-bottom: 0.5rem;">Mensaje enviado</h3>
+            <p style="color: var(--text-mid);">Gracias por escribirme. Me pondré en contacto contigo muy pronto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-  });
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 SerElpis · Vanessa Luque · Acompañamiento y Entrenamiento Emocional Online</p>
+    </div>
+  </footer>
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('open');
-      navLinks.classList.remove('open');
+  <!-- JAVASCRIPT SIMPLIFICADO -->
+  <script>
+    // Header scrolled state
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
     });
-  });
 
-  // FAQ Toggle Function
-  function toggleFaq(buttonElement) {
-    const card = buttonElement.parentElement;
-    const isOpen = card.classList.contains('open');
-    
-    document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('open'));
-    
-    if (!isOpen) {
-      card.classList.add('open');
+    // FAQ Accordion
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
     }
-  }
 
-  // Intersection Observer for Animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 70);
-        observer.unobserve(entry.target);
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      try {
+        await fetch('https://formspree.io/f/xkoyrknw', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('confirmation').style.display = 'block';
+      } catch (err) {
+        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
       }
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Form Submission handling
-  document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    try {
-      await fetch('https://formspree.io/f/xkoyrknw', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('confirmation-msg').style.display = 'block';
-    } catch (error) {
-      alert('Error al enviar el mensaje. Por favor intenta de nuevo.');
-    }
-  });
-</script>
-
+  </script>
 </body>
 </html>
