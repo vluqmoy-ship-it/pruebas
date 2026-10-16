@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ========== SEO ========== -->
-  <title>Terapia online para la rumia y los pensamientos intrusivos · SerElpis</title>
-  <meta name="description" content="¿Tu mente no para de dar vueltas? Sesiones individuales online (40–45 min, 40 €) para la rumia y los pensamientos intrusivos, desde un enfoque contextual adaptado a ti.">
-  <link rel="canonical" href="https://www.serelpis.com/rumia">
+  <title>Terapia online para el uso problemático de redes sociales y videojuegos · SerElpis</title>
+  <meta name="description" content="¿Sientes que las pantallas deciden por ti? Sesiones individuales online (40–45 min, 40 €) para el uso problemático de redes sociales y videojuegos, desde un enfoque contextual adaptado a ti.">
+  <!-- CAMBIA la URL canónica por la dirección final de esta página -->
+  <link rel="canonical" href="https://www.serelpis.com/redes-y-videojuegos">
   <meta name="author" content="Vanessa Luque">
   <!-- Si esta página es solo para anuncios y no quieres que compita con tu web en Google, descomenta: -->
   <!-- <meta name="robots" content="noindex, follow"> -->
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:title" content="¿Tu mente no para de dar vueltas? · SerElpis">
-  <meta property="og:description" content="Terapia online para la rumia y los pensamientos intrusivos. Sesiones individuales adaptadas a ti.">
-  <meta property="og:url" content="https://www.serelpis.com/rumia">
+  <meta property="og:title" content="¿Sientes que las pantallas deciden por ti? · SerElpis">
+  <meta property="og:description" content="Terapia online para el uso problemático de redes sociales y videojuegos. Sesiones individuales adaptadas a ti.">
+  <meta property="og:url" content="https://www.serelpis.com/redes-y-videojuegos">
   <meta name="twitter:card" content="summary">
 
   <!-- ========== GOOGLE ADS / ANALYTICS ==========
@@ -41,7 +42,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Sesiones online para la rumia y los pensamientos intrusivos",
+    "name": "Sesiones online para el uso problemático de redes sociales y videojuegos",
     "provider": { "@type": "Person", "name": "Vanessa Luque", "url": "https://www.serelpis.com" },
     "areaServed": "ES",
     "serviceType": "Acompañamiento y entrenamiento en habilidades emocionales (enfoque contextual)",
@@ -239,25 +240,6 @@
     .principle h3 { color: var(--plum); margin-bottom: .3rem; font-size: 1.45rem; }
     .principle p { margin: 0; }
 
-    /* ---------- Pasos ---------- */
-    .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.2rem; grid-template-columns: 1fr; counter-reset: s; }
-    @media (min-width: 860px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-    .steps li {
-      position: relative; background: rgba(255, 255, 255, .08);
-      border: 1px solid rgba(232, 170, 187, .35);
-      border-radius: var(--radius); padding: 2rem 1.5rem 1.5rem;
-    }
-    .steps li::before {
-      counter-increment: s; content: counter(s);
-      position: absolute; top: -1.2rem; left: 1.4rem;
-      width: 2.6rem; height: 2.6rem; border-radius: 50%;
-      background: var(--rosa); color: var(--plum-deep);
-      font-family: var(--font); font-weight: 700; font-size: 1.6rem;
-      display: grid; place-items: center; line-height: 1;
-    }
-    .steps h3 { color: #fff; }
-    .steps p { margin: 0; color: var(--rosa-pale); }
-
     /* ---------- Precio ---------- */
     .price {
       max-width: 40rem; margin-inline: auto; background: #fff;
@@ -270,65 +252,50 @@
     .price .checks li::before { background: var(--rosa-pale); color: var(--plum); }
 
     /* ---------- Sobre mí ---------- */
-.about {
-  display: grid; grid-template-columns: 1fr; gap: 2.2rem; align-items: start;
-}
-.about__media {
-  position: relative; width: min(100%, 280px); margin-inline: auto;
-}
-.about__media::before {            /* marco rosa decorativo detrás de la foto */
-  content: ""; position: absolute; inset: 14px -14px -14px 14px;
-  background: var(--rosa-pale); border-radius: var(--radius); z-index: 0;
-}
-.about__photo {
-  position: relative; z-index: 1; display: block;
-  width: 100%; height: auto; aspect-ratio: 4 / 5;
-  object-fit: cover; object-position: center top;
-  border-radius: var(--radius); box-shadow: var(--shadow);
-}
-.about__body h2 { margin-bottom: 1.2rem; }
-.about__lead {
-  font-family: var(--font); font-size: 1.6rem; line-height: 1.3;
-  font-weight: 600; color: var(--plum-deep); margin-bottom: 1.2rem;
-}
-.about__personal {
-  background: var(--rosa-blush);
-  border-left: 4px solid var(--rosa);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 1.3rem 1.5rem 0.4rem; margin: 1.6rem 0;
-}
-.about__personal h3 { font-size: 1.35rem; color: var(--plum); margin-bottom: .7rem; }
-.about .training { margin-top: 0; }
-.about .cta-row { text-align: left; margin-top: 1.8rem; }
-
-@media (min-width: 900px) {
-  .about { grid-template-columns: 340px 1fr; gap: 4.5rem; }
-  .about__media { width: 100%; margin: 0; position: sticky; top: 100px; }
-}
-@media (max-width: 899px) {
-  .about .cta-row { text-align: center; }
-}
+    .about { display: grid; grid-template-columns: 1fr; gap: 2.2rem; align-items: start; }
+    .about__media { position: relative; width: min(100%, 280px); margin-inline: auto; }
+    .about__media::before {            /* marco rosa decorativo detrás de la foto */
+      content: ""; position: absolute; inset: 14px -14px -14px 14px;
+      background: var(--rosa-pale); border-radius: var(--radius); z-index: 0;
+    }
+    .about__photo {
+      position: relative; z-index: 1; display: block;
+      width: 100%; height: auto; aspect-ratio: 4 / 5;
+      object-fit: cover; object-position: center top;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .about__body h2 { margin-bottom: 1.2rem; }
+    .about__lead { font-family: var(--font); font-size: 1.6rem; line-height: 1.3; font-weight: 600; color: var(--plum-deep); margin-bottom: 1.2rem; }
+    .about__personal {
+      background: var(--rosa-blush); border-left: 4px solid var(--rosa);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.3rem 1.5rem .4rem; margin: 1.6rem 0;
+    }
+    .about__personal h3 { font-size: 1.35rem; color: var(--plum); margin-bottom: .7rem; }
+    .about .cta-row { text-align: left; margin-top: 1.8rem; }
+    @media (min-width: 900px) {
+      .about { grid-template-columns: 340px 1fr; gap: 4.5rem; }
+      .about__media { width: 100%; margin: 0; position: sticky; top: 100px; }
+    }
+    @media (max-width: 899px) { .about .cta-row { text-align: center; } }
 
     /* ---------- Formación ---------- */
-.training {
-  margin-top: 2rem; background: #fff;
-  border: 1px solid var(--rosa-pale); border-radius: var(--radius);
-  padding: 1.5rem 1.6rem; box-shadow: var(--shadow);
-}
-.training h3 { color: var(--plum); margin-bottom: 1rem; }
-.training__list {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: .7rem 1.5rem; grid-template-columns: 1fr;
-}
-@media (min-width: 700px) { .training__list { grid-template-columns: 1fr 1fr; } }
-.training__list li { position: relative; padding-left: 1.9rem; font-weight: 600; }
-.training__list li::before {
-  content: "✓"; position: absolute; left: 0; top: .2rem;
-  width: 1.3rem; height: 1.3rem; border-radius: 50%;
-  background: var(--rosa-pale); color: var(--plum);
-  font-size: .8rem; font-weight: 800; line-height: 1;
-  display: grid; place-items: center;
-}
+    .training {
+      margin-top: 2rem; background: #fff;
+      border: 1px solid var(--rosa-pale); border-radius: var(--radius);
+      padding: 1.5rem 1.6rem; box-shadow: var(--shadow);
+    }
+    .training h3 { color: var(--plum); margin-bottom: 1rem; }
+    .training__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem 1.5rem; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .training__list { grid-template-columns: 1fr 1fr; } }
+    .training__list li { position: relative; padding-left: 1.9rem; font-weight: 600; }
+    .training__list li::before {
+      content: "✓"; position: absolute; left: 0; top: .2rem;
+      width: 1.3rem; height: 1.3rem; border-radius: 50%;
+      background: var(--rosa-pale); color: var(--plum);
+      font-size: .8rem; font-weight: 800; line-height: 1;
+      display: grid; place-items: center;
+    }
 
     /* ---------- FAQ ---------- */
     .faq { max-width: 46rem; margin-inline: auto; display: grid; gap: .8rem; }
@@ -365,10 +332,7 @@
     @media (min-width: 920px) { .sticky-cta { display: none; } }
     @media (max-width: 919px) { .footer { padding-bottom: 6rem; } }
 
-    @media (max-width: 520px) {
-      .about__photo { float: none; display: block; margin: 0 0 1.2rem; }
-      .price__amount { font-size: 4.2rem; }
-    }
+    @media (max-width: 520px) { .price__amount { font-size: 4.2rem; } }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -395,18 +359,18 @@
       <div class="container hero__grid">
 
         <div>
-          <span class="eyebrow">Terapia online · Rumia y pensamientos intrusivos</span>
-          <h1>¿Tu mente no para de <em>dar vueltas</em>?</h1>
+          <span class="eyebrow">Terapia online · Redes sociales y videojuegos</span>
+          <h1>¿Sientes que las pantallas <em>deciden por ti</em>?</h1>
           <p class="hero__lead">
-            Terapia online para esos pensamientos que se repiten,
-            se cuelan sin avisar y te dejan agotada. Lo construimos juntas, a tu ritmo y a tu medida.
+            Terapia online para cuando el móvil, las redes o los videojuegos se han quedado
+            con más tiempo, sueño y energía de los que quieres darles. Lo construimos a tu ritmo y a tu medida.
           </p>
 
           <ul class="checks">
             <li>Sesiones online de 40–45 minutos</li>
             <li>40 € por sesión</li>
             <li>Enfoque contextual, adaptado a ti: con base científica pero sin protocolos rígidos</li>
-            <li>Tú decides cuándo empezar y cuando terminar</li>
+            <li>Tú decides cuándo empezar y cuándo terminar</li>
           </ul>
 
           <a class="btn btn--accent hero__cta-mobile" href="#formulario">Cuéntame qué necesitas →</a>
@@ -462,20 +426,20 @@
         </div>
 
         <div class="cards">
-          <div class="quote">"Repaso conversaciones una y otra vez buscando qué hice mal."</div>
-          <div class="quote">"Me pregunto «¿por qué me pasa esto?» y ninguna respuesta me tranquiliza."</div>
-          <div class="quote">"Me vienen pensamientos que no quiero y, cuanto más los aparto, más vuelven."</div>
-          <div class="quote">"Estoy con gente, pero mi cabeza está en otro sitio."</div>
-          <div class="quote">"Llego a la noche agotada de pensar y no consigo parar."</div>
-          <div class="quote">"Algunos pensamientos que aparecen sin avisar me asustan o me avergüenzan."</div>
+          <div class="quote">"Solo iba a mirar un momento y se me han ido dos horas."</div>
+          <div class="quote">"Me enfado conmigo por no poder parar, aunque sé que me hace daño."</div>
+          <div class="quote">"Cuando me aburro o me siento mal, cojo el móvil sin darme cuenta."</div>
+          <div class="quote">"Estoy con gente, pero mi cabeza y mi mano están en la pantalla."</div>
+          <div class="quote">"Duermo menos de lo que necesito por una partida más o un vídeo más."</div>
+          <div class="quote">"Me comparo con lo que veo y termino sintiéndome peor."</div>
         </div>
 
         <p class="reassure">
-          Si te reconoces, <strong>no estás rota ni lo estás haciendo mal</strong>.
-          Muchas veces la mente le da vueltas justo a lo que más nos importa.
-          El problema aparece cuando esas vueltas nos quitan la vida que queremos tener.
+          Si te reconoces, <strong>no eres débil ni lo estás haciendo mal</strong>.
+          Las pantallas suelen cumplir una función: distraer, conectar, descansar, escapar un rato.
+          El problema aparece cuando nos quitan la vida que queremos tener.
         </p>
-        <div class="cta-row"><a class="btn btn--primary" href="#formulario">Quiero hablar contigo →</a></div>
+        <div class="cta-row"><a class="btn btn--primary" href="#contacto">Quiero hablar contigo →</a></div>
       </div>
     </section>
 
@@ -483,21 +447,21 @@
     <section class="section">
       <div class="container split">
         <div>
-          <h2>No se trata de <em>"dejar de pensar"</em></h2>
+          <h2>No se trata de <em>"dejarlo todo"</em></h2>
           <p>
-            Intentar no pensar en algo suele hacer que vuelva con más fuerza.
-            Por eso aquí no te voy a pedir que pienses en positivo ni que
-            calles tu mente.
+            Aguantar a base de fuerza de voluntad suele funcionar poco tiempo y deja
+            una sensación de fracaso. Por eso aquí no te voy a pedir que borres todo
+            ni que te desconectes del mundo.
           </p>
           <p>
-            Trabajamos otra cosa: <strong>cómo te relacionas con esos pensamientos</strong>,
-            para que pesen menos, no decidan por ti y tengas más espacio para
-            lo que de verdad te importa.
+            Trabajamos otra cosa: <strong>qué buscas en la pantalla</strong> y qué emociones hay detrás,
+            para que puedas elegir con más libertad, el uso que haces de ella no decida por ti
+            y tengas más espacio para lo que de verdad te importa.
           </p>
           <p>
             Trabajo desde un enfoque contextual: miro qué hay detrás de tu
             malestar, cuándo aparece y qué te está costando. Dos personas
-            pueden parecer tener el mismo problema y necesitar procesos muy distintos.
+            pueden usar el móvil igual y necesitar procesos muy distintos.
           </p>
         </div>
 
@@ -508,7 +472,7 @@
           </div>
           <div class="principle">
             <h3>Sin juicio, con dirección</h3>
-            <p>No hay pensamientos ni emociones incorrectas. Hay formas de relacionarnos con ellos que abren posibilidades y otras que las cierran.</p>
+            <p>No hay hábitos ni emociones incorrectas. Hay formas de relacionarnos con ellos que abren posibilidades y otras que las cierran.</p>
           </div>
           <div class="principle">
             <h3>Tú en el centro</h3>
@@ -517,8 +481,6 @@
         </div>
       </div>
     </section>
-
-  
 
     <!-- ========== PRECIO ========== -->
     <section class="section section--rosa">
@@ -537,78 +499,79 @@
             <li>No hay un número de sesiones establecido</li>
             <li>Confidencial, conforme al RGPD</li>
           </ul>
-          <a class="btn btn--primary btn--block" href="#formulario">Quiero empezar →</a>
+          <a class="btn btn--primary btn--block" href="#contacto">Quiero empezar →</a>
         </div>
       </div>
     </section>
 
-     <!-- ========== SOBRE MÍ ========== -->
-<section class="section">
-  <div class="container about">
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="section">
+      <div class="container about">
 
-    <div class="about__media">
-      <img class="about__photo" src="vanessaperro.jpg"
-           alt="Vanessa Luque, terapeuta contextual"
-           width="400" height="500" loading="lazy">
-    </div>
+        <div class="about__media">
+          <!-- SUBE tu foto al repositorio con este nombre junto a index.html -->
+          <img class="about__photo" src="vanessaperro.jpg"
+               alt="Vanessa Luque, terapeuta contextual"
+               width="400" height="500" loading="lazy">
+        </div>
 
-    <div class="about__body">
-      <h2>Hola, soy <em>Vanessa</em></h2>
+        <div class="about__body">
+          <h2>Hola, soy <em>Vanessa</em></h2>
 
-      <p class="about__lead">
-        Soy terapeuta contextual y educadora social especializada en educación emocional.
-      </p>
+          <p class="about__lead">
+            Soy terapeuta contextual y educadora social especializada en educación emocional.
+          </p>
 
-      <p>
-        Durante años he trabajado y hecho voluntariados con personas en situaciones muy
-        distintas: salud mental, adicciones, personas mayores, infancia… Eso me enseñó que
-        cada persona es diferente y que no hay una única forma de acompañar ni de vivir la vida.
-      </p>
-      <p>
-        Por eso no trabajo con recetas: me interesa entender qué hay detrás de lo que sientes
-        y qué te ha llevado al lugar donde estás hoy, para poder construir contigo algo que
-        tenga sentido para tu vida y el tipo de persona que quieres ser.
-      </p>
+          <p>
+            Durante años he trabajado y hecho voluntariados con personas en situaciones muy
+            distintas: salud mental, adicciones, personas mayores, infancia… Eso me enseñó que
+            cada persona es diferente y que no hay una única forma de acompañar ni de vivir la vida.
+          </p>
+          <p>
+            Por eso no trabajo con recetas: me interesa entender qué hay detrás de lo que sientes
+            y qué te ha llevado al lugar donde estás hoy, para poder construir contigo algo que
+            tenga sentido para tu vida y el tipo de persona que quieres ser.
+          </p>
 
-      <div class="about__personal">
-        <h3>Y fuera de la consulta…</h3>
-        <p>
-          Sé que dar el primer paso puede costar, y más con alguien a quien no conoces de nada,
-          así que para que sepas un poquito más sobre mí: soy una persona con mucha curiosidad
-          y muchas aficiones. Me gusta leer, ver series, pasear por la naturaleza, los animales
-          (tengo una gatita y una perrita), los juegos de mesa y los videojuegos, mirar las
-          estrellas y planetas con mi telescopio y aprender cosas nuevas, especialmente para
-          poder comprender y ayudar a otras personas.
-        </p>
-        <p>
-          Y sobre el tipo de persona que intento ser, mi norte lo marcan la amabilidad y la
-          humildad (aunque por supuestísimo no soy perfecta y a veces meto la pata y voy en la
-          dirección contraria, hasta que mi brújula me recuerda cuál era el norte). Pienso que
-          la vida es eso: decidir hacia dónde quieres moverte y qué tipo de persona te gustaría
-          ser en ese viaje, y cuando la vida te pone obstáculos o te pierdes, usar esa brújula
-          para volver a tu camino.
-        </p>
+          <div class="about__personal">
+            <h3>Y fuera de la consulta…</h3>
+            <p>
+              Sé que dar el primer paso puede costar, y más con alguien a quien no conoces de nada,
+              así que para que sepas un poquito más sobre mí: soy una persona con mucha curiosidad
+              y muchas aficiones. Me gusta leer, ver series, pasear por la naturaleza, los animales
+              (tengo una gatita y una perrita), los juegos de mesa y los videojuegos, mirar las
+              estrellas y planetas con mi telescopio y aprender cosas nuevas, especialmente para
+              poder comprender y ayudar a otras personas.
+            </p>
+            <p>
+              Y sobre el tipo de persona que intento ser, mi norte lo marcan la amabilidad y la
+              humildad (aunque por supuestísimo no soy perfecta y a veces meto la pata y voy en la
+              dirección contraria, hasta que mi brújula me recuerda cuál era el norte). Pienso que
+              la vida es eso: decidir hacia dónde quieres moverte y qué tipo de persona te gustaría
+              ser en ese viaje, y cuando la vida te pone obstáculos o te pierdes, usar esa brújula
+              para volver a tu camino.
+            </p>
+          </div>
+
+          <div class="training">
+            <h3>Tengo formación en</h3>
+            <ul class="training__list">
+              <li>Terapias contextuales y de tercera generación</li>
+              <li>Terapia de Aceptación y Compromiso</li>
+              <li>Terapia Analítico Funcional</li>
+              <li>Educación social</li>
+              <li>Educación emocional</li>
+              <li>Análisis de conducta</li>
+            </ul>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#contacto">Quiero hablar contigo →</a>
+          </div>
+        </div>
+
       </div>
-
-      <div class="training">
-        <h3>Tengo formación en</h3>
-        <ul class="training__list">
-          <li>Terapias contextuales y de tercera generación</li>
-          <li>Terapia de Aceptación y Compromiso</li>
-          <li>Terapia Analítico Funcional</li>
-          <li>Educación social</li>
-          <li>Educación emocional</li>
-          <li>Análisis de conducta</li>
-        </ul>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn--primary" href="#formulario">Quiero hablar contigo →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- ========== FAQ ========== -->
     <section class="section section--blush">
@@ -621,19 +584,19 @@
           <details>
             <summary>¿Cómo sé si es para mí?</summary>
             <p>
-              Puede serlo si tus pensamientos se repiten, te cuesta soltarlos y
-              sientes que te limitan en tu día a día. No hace falta saber qué te
-              pasa ni tener las palabras exactas. Con que quieras relacionarte de
-              otra manera con lo que piensas y sientes, ya es suficiente para empezar.
+              Puede serlo si sientes que el móvil, las redes o los videojuegos ocupan más espacio
+              del que quieres, te cuesta parar y notas que afectan a tu sueño, a tu ánimo o a tus
+              relaciones. No hace falta saber qué te pasa ni tener las palabras exactas. Con que
+              quieras relacionarte de otra manera con las pantallas, ya es suficiente para empezar.
             </p>
           </details>
 
           <details>
-            <summary>¿Dejaré de tener estos pensamientos?</summary>
+            <summary>¿Tendré que dejar las redes o los videojuegos?</summary>
             <p>
-              No puedo prometerte eso, y desconfiaría de quien lo hiciera.
-              Lo que trabajamos es cómo te relacionas con ellos: que pesen menos,
-              que no decidan por ti y que tengas más espacio para lo que te importa.
+              No. No te voy a pedir que renuncies a algo que disfrutas. Trabajamos para que decidas
+              tú cómo, cuándo y cuánto, y para que el uso que haces de ellos sume a tu vida en lugar
+              de restar.
             </p>
           </details>
 
@@ -651,11 +614,10 @@
             <summary>¿Cuántas sesiones necesitaré?</summary>
             <p>
               No hay un número fijo. Depende de ti y de lo que necesites.
-              En la primera sesión valoramos juntas qué ritmo tiene sentido y
+              En la primera sesión valoramos qué ritmo tiene sentido y
               lo vamos revisando por el camino.
             </p>
           </details>
- 
 
           <details>
             <summary>¿Es confidencial?</summary>
@@ -668,17 +630,42 @@
       </div>
     </section>
 
-    <!-- ========== CTA FINAL ========== -->
-<section class="section section--dark" id="contacto">
-  <div class="container final center">
-    <h2>Da el <em>primer paso</em></h2>
-    <p class="section__head" style="margin-inline:auto;color:var(--rosa-pale);font-size:1.2rem;">
-      Puedes llegar con dudas, con cansancio o con ganas de hacer algo
-      diferente. Eso ya es suficiente.
-    </p>
-    <a class="btn btn--accent" href="#formulario">Cuéntame qué necesitas →</a>
-  </div>
-</section>
+    <!-- ========== CTA FINAL + FORMULARIO ========== -->
+    <section class="section section--dark" id="contacto">
+      <div class="container final center">
+        <h2>Da el <em>primer paso</em></h2>
+        <p class="section__head" style="margin-inline:auto;color:var(--rosa-pale);font-size:1.2rem;">
+          Puedes llegar con dudas, con cansancio o con ganas de hacer algo
+          diferente. Eso ya es suficiente.
+        </p>
+
+        <div class="form-card">
+          <h2>Cuéntame qué necesitas</h2>
+          <p class="form-card__sub">Te respondo en menos de 48 h.</p>
+
+          <form class="lead-form" method="POST" action="https://formspree.io/f/TU_ID">
+            <label>Tu nombre
+              <input type="text" name="nombre" autocomplete="given-name" required>
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>¿Qué te gustaría trabajar? <span class="opt">(opcional)</span>
+              <textarea name="mensaje" rows="3"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consentimiento" required>
+              <span>He leído y acepto la <a href="https://www.serelpis.com/privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn--primary btn--block" type="submit">Pedir información →</button>
+            <p class="form-micro">Sin compromiso · Tus datos no se comparten con nadie</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -704,7 +691,7 @@
 
   <!-- Botón fijo en móvil -->
   <div class="sticky-cta" id="stickyCta">
-    <a class="btn btn--accent" href="#formulario">Cuéntame qué necesitas →</a>
+    <a class="btn btn--accent" href="#contacto">Cuéntame qué necesitas →</a>
   </div>
 
   <!-- ==========================================================
