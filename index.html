@@ -275,6 +275,27 @@
     .tags { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
     .tags li { background: var(--rosa-pale); color: var(--plum-deep); font-weight: 700; font-size: .92rem; padding: .35rem .9rem; border-radius: 999px; }
 
+    /* ---------- Formación ---------- */
+.training {
+  margin-top: 2rem; background: #fff;
+  border: 1px solid var(--rosa-pale); border-radius: var(--radius);
+  padding: 1.5rem 1.6rem; box-shadow: var(--shadow);
+}
+.training h3 { color: var(--plum); margin-bottom: 1rem; }
+.training__list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: .7rem 1.5rem; grid-template-columns: 1fr;
+}
+@media (min-width: 700px) { .training__list { grid-template-columns: 1fr 1fr; } }
+.training__list li { position: relative; padding-left: 1.9rem; font-weight: 600; }
+.training__list li::before {
+  content: "✓"; position: absolute; left: 0; top: .2rem;
+  width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  background: var(--rosa-pale); color: var(--plum);
+  font-size: .8rem; font-weight: 800; line-height: 1;
+  display: grid; place-items: center;
+}
+
     /* ---------- FAQ ---------- */
     .faq { max-width: 46rem; margin-inline: auto; display: grid; gap: .8rem; }
     .faq details { background: #fff; border: 1px solid var(--rosa-pale); border-radius: 16px; padding: 0 1.3rem; }
@@ -531,11 +552,17 @@
           lo que sientes y construir contigo algo que tenga sentido para tu vida.
         </p>
 
-        <ul class="tags">
-          <li>Educadora social</li>
-          <li>Terapeuta contextual</li>
-          <li>Enfoque basado en evidencia</li>
-        </ul>
+        <div class="training">
+  <h3>Tengo formación en</h3>
+  <ul class="training__list">
+    <li>Terapias contextuales y de tercera generación</li>
+    <li>Terapia de Aceptación y Compromiso</li>
+    <li>Terapia Analítico Funcional</li>
+    <li>Educación social</li>
+    <li>Educación emocional</li>
+    <li>Análisis de conducta</li>
+  </ul>
+</div>
       </div>
     </section>
 
