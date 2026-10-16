@@ -6,22 +6,35 @@
 
   <!-- ========== SEO ========== -->
   <title>Terapia online para la rumia y los pensamientos intrusivos · SerElpis</title>
-  <meta name="description" content="Sesiones individuales online para cuando la mente no deja de dar vueltas. Acompañamiento en rumia y pensamientos intrusivos desde un enfoque contextual, adaptado a ti. 40 € por sesión.">
+  <meta name="description" content="¿Tu mente no para de dar vueltas? Sesiones individuales online (40–45 min, 40 €) para la rumia y los pensamientos intrusivos, desde un enfoque contextual adaptado a ti.">
   <link rel="canonical" href="https://www.serelpis.com/rumia">
   <meta name="author" content="Vanessa Luque">
+  <!-- Si esta página es solo para anuncios y no quieres que compita con tu web en Google, descomenta: -->
+  <!-- <meta name="robots" content="noindex, follow"> -->
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:title" content="Terapia online para la rumia y los pensamientos intrusivos · SerElpis">
-  <meta property="og:description" content="Para cuando la mente no deja de dar vueltas. Sesiones individuales online, desde un enfoque contextual adaptado a ti.">
+  <meta property="og:title" content="¿Tu mente no para de dar vueltas? · SerElpis">
+  <meta property="og:description" content="Terapia online para la rumia y los pensamientos intrusivos. Sesiones individuales adaptadas a ti.">
   <meta property="og:url" content="https://www.serelpis.com/rumia">
   <meta name="twitter:card" content="summary">
 
-  <!-- ========== FUENTE ========== -->
+  <!-- ========== GOOGLE ADS / ANALYTICS ==========
+       Pega aquí tu etiqueta de Google (gtag.js) cuando la tengas, por ejemplo:
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  ========================================== -->
+
+  <!-- ========== FUENTES ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- ========== DATOS ESTRUCTURADOS ========== -->
   <script type="application/ld+json">
@@ -29,24 +42,16 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Sesiones online para la rumia y los pensamientos intrusivos",
-    "provider": {
-      "@type": "Person",
-      "name": "Vanessa Luque",
-      "url": "https://www.serelpis.com"
-    },
+    "provider": { "@type": "Person", "name": "Vanessa Luque", "url": "https://www.serelpis.com" },
     "areaServed": "ES",
     "serviceType": "Acompañamiento y entrenamiento en habilidades emocionales (enfoque contextual)",
-    "offers": {
-      "@type": "Offer",
-      "price": "40",
-      "priceCurrency": "EUR"
-    }
+    "offers": { "@type": "Offer", "price": "40", "priceCurrency": "EUR" }
   }
   </script>
 
   <!-- ==========================================================
        ESTILOS
-       Para cambiar colores o fuente, edita solo las variables de :root
+       Colores y fuentes: edita solo las variables de :root
        ========================================================== -->
   <style>
     :root {
@@ -62,239 +67,254 @@
       --text-mid: #271626;
       --text-light: #3E2438;
 
-      /* Fuente */
+      /* Fuentes: Cormorant para títulos (tu marca), Nunito Sans para leer cómodo.
+         Si quieres Cormorant en todo, pon --font-body: var(--font); */
       --font: 'Cormorant Garamond', serif;
+      --font-body: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-      /* Medidas */
-      --radius: 18px;
-      --maxw: 1080px;
-      --narrow: 760px;
-      --shadow: 0 10px 30px rgba(74, 42, 64, 0.10);
+      --radius: 20px;
+      --maxw: 1120px;
+      --shadow: 0 12px 32px rgba(74, 42, 64, .12);
     }
 
     /* ---------- Base ---------- */
     *, *::before, *::after { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
     body {
       margin: 0;
-      font-family: var(--font);
-      font-size: 1.3rem;
-      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      line-height: 1.65;
       color: var(--text-mid);
       background: var(--cream);
       -webkit-font-smoothing: antialiased;
     }
-
     h1, h2, h3 {
+      font-family: var(--font);
       color: var(--text-dark);
-      font-weight: 500;
-      line-height: 1.15;
+      font-weight: 700;
+      line-height: 1.08;
       margin: 0 0 1rem;
     }
-    h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); }
-    h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
-    h3 { font-size: 1.5rem; }
+    h1 { font-size: clamp(2.7rem, 7vw, 4.5rem); }
+    h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
+    h3 { font-size: 1.55rem; line-height: 1.2; }
     em { font-style: italic; color: var(--plum); }
-
     p { margin: 0 0 1.1rem; }
     a { color: var(--plum); }
     img { max-width: 100%; height: auto; }
 
     .container { width: min(100% - 2.5rem, var(--maxw)); margin-inline: auto; }
-    .container--narrow { width: min(100% - 2.5rem, var(--narrow)); }
-
-    .skip {
-      position: absolute; left: -999px; top: 0;
-      background: var(--plum); color: #fff; padding: .6rem 1rem; z-index: 100;
-    }
+    .center { text-align: center; }
+    .skip { position: absolute; left: -999px; top: 0; background: var(--plum); color: #fff; padding: .6rem 1rem; z-index: 100; }
     .skip:focus { left: 0; }
-
-    :focus-visible { outline: 3px solid var(--plum-soft); outline-offset: 3px; }
+    :focus-visible { outline: 3px solid var(--rosa); outline-offset: 3px; }
 
     /* ---------- Botones ---------- */
     .btn {
-      display: inline-block;
-      padding: .8rem 1.7rem;
-      border-radius: 999px;
-      background: var(--plum);
-      color: #fff;
-      font-family: var(--font);
-      font-size: 1.15rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid var(--plum);
-      transition: background .2s, transform .2s, color .2s;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 54px; padding: .9rem 1.9rem;
+      border-radius: 999px; border: 0; cursor: pointer;
+      font-family: var(--font-body); font-size: 1.05rem; font-weight: 800;
+      text-decoration: none; text-align: center;
+      transition: transform .15s, background .2s, box-shadow .2s;
     }
-    .btn:hover { background: var(--plum-deep); border-color: var(--plum-deep); transform: translateY(-2px); }
-    .btn--ghost { background: transparent; color: var(--plum); }
-    .btn--ghost:hover { background: var(--rosa-pale); color: var(--plum-deep); }
-    .btn--small { padding: .45rem 1.1rem; font-size: 1.05rem; }
-    .btn--light { background: var(--rosa-blush); color: var(--plum-deep); border-color: var(--rosa-blush); }
-    .btn--light:hover { background: var(--rosa); border-color: var(--rosa); color: var(--plum-deep); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:disabled { opacity: .7; cursor: wait; transform: none; }
+    .btn--primary { background: var(--plum); color: #fff; box-shadow: 0 8px 20px rgba(107, 62, 94, .35); }
+    .btn--primary:hover { background: var(--plum-deep); }
+    .btn--accent { background: var(--rosa); color: var(--plum-deep); box-shadow: 0 8px 22px rgba(0, 0, 0, .25); }
+    .btn--accent:hover { background: var(--rosa-pale); }
+    .btn--small { min-height: 42px; padding: .5rem 1.2rem; font-size: .95rem; }
+    .btn--block { width: 100%; }
 
-    .link { font-weight: 600; }
-
-    /* ---------- Cabecera ---------- */
-    .header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(251, 247, 244, .92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rosa-pale);
-    }
+    /* ---------- Cabecera (sin menú: una sola acción) ---------- */
+    .header { position: sticky; top: 0; z-index: 50; background: var(--plum-deep); }
     .header__inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
+    .logo { font-family: var(--font); font-size: 2rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: .02em; }
 
-    .logo {
-      font-size: 1.8rem; font-weight: 600; letter-spacing: .02em;
-      color: var(--plum); text-decoration: none;
+    /* ---------- Hero ---------- */
+    .hero {
+      background: linear-gradient(160deg, var(--plum-deep) 0%, var(--plum) 100%);
+      color: var(--rosa-blush);
+      padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 5.5rem);
     }
-    .logo--light { color: var(--rosa-blush); }
+    .hero__grid { display: grid; gap: 2.4rem; grid-template-columns: 1fr; }
+    @media (min-width: 920px) {
+      .hero__grid { grid-template-columns: 1.1fr .9fr; gap: 3.5rem; align-items: center; }
+      .hero__cta-mobile { display: none; }
+    }
+    .eyebrow {
+      display: inline-block; text-transform: uppercase; letter-spacing: .14em;
+      font-size: .8rem; font-weight: 800; color: var(--rosa); margin-bottom: 1rem;
+    }
+    .hero h1 { color: #fff; }
+    .hero h1 em { color: var(--rosa); }
+    .hero__lead { font-size: 1.25rem; color: var(--rosa-pale); max-width: 34rem; }
+    .checks { list-style: none; padding: 0; margin: 1.4rem 0 1.8rem; display: grid; gap: .6rem; }
+    .checks li { position: relative; padding-left: 2rem; font-weight: 600; }
+    .checks li::before {
+      content: "✓"; position: absolute; left: 0; top: .1rem;
+      width: 1.4rem; height: 1.4rem; border-radius: 50%;
+      background: var(--rosa); color: var(--plum-deep);
+      font-size: .85rem; font-weight: 800; display: grid; place-items: center; line-height: 1;
+    }
 
-    .nav { display: flex; align-items: center; gap: 1.6rem; }
-    .nav a:not(.btn) { color: var(--text-light); text-decoration: none; font-size: 1.15rem; }
-    .nav a:not(.btn):hover { color: var(--plum); }
+    /* ---------- Formulario ---------- */
+    .form-card {
+      background: var(--cream); color: var(--text-mid);
+      border-radius: 24px; padding: 1.7rem;
+      box-shadow: 0 24px 60px rgba(14, 7, 9, .35);
+    }
+    .form-card h2 { font-size: 2rem; color: var(--plum-deep); margin-bottom: .4rem; }
+    .form-card__sub { font-size: 1rem; color: var(--text-light); margin-bottom: 1.2rem; }
+    .lead-form label { display: block; font-size: .95rem; font-weight: 700; color: var(--text-dark); margin-bottom: .9rem; }
+    .lead-form .opt { font-weight: 400; color: var(--text-light); }
+    .lead-form input[type="text"],
+    .lead-form input[type="email"],
+    .lead-form textarea {
+      display: block; width: 100%; margin-top: .3rem;
+      padding: .85rem 1rem; border: 2px solid var(--rosa-pale); border-radius: 12px;
+      background: #fff; color: var(--text-dark);
+      font-family: var(--font-body); font-size: 1rem;   /* 16px: evita zoom en iPhone */
+    }
+    .lead-form textarea { resize: vertical; min-height: 84px; }
+    .lead-form input:focus, .lead-form textarea:focus { border-color: var(--plum); outline: none; }
+    .lead-form .check { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; font-size: .88rem; color: var(--text-light); }
+    .lead-form .check input { margin-top: .25rem; width: 18px; height: 18px; flex: none; accent-color: var(--plum); }
+    .hp { position: absolute; left: -9999px; }
+    .form-micro { font-size: .88rem; text-align: center; color: var(--text-light); margin: .9rem 0 0; }
+    .form-status { margin: .8rem 0 0; font-weight: 700; text-align: center; }
+    .form-status:empty { display: none; }
+    .form-status.is-ok { color: #1f6b3a; }
+    .form-status.is-error { color: #a12a2a; }
 
-    .nav-toggle { display: none; background: none; border: 0; padding: .5rem; cursor: pointer; }
-    .nav-toggle span { display: block; width: 26px; height: 2px; background: var(--plum); margin: 5px 0; transition: transform .2s, opacity .2s; }
-    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* ---------- Franja de confianza ---------- */
+    .trust { background: #fff; border-bottom: 1px solid var(--rosa-pale); }
+    .trust__list {
+      list-style: none; margin: 0; padding: 1.2rem 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: .9rem 1.2rem;
+    }
+    @media (min-width: 820px) { .trust__list { grid-template-columns: repeat(4, 1fr); } }
+    .trust__list li { font-weight: 700; font-size: .98rem; color: var(--plum-deep); display: flex; gap: .6rem; align-items: center; line-height: 1.3; }
+    .trust__list li::before {
+      content: "✓"; flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+      background: var(--rosa-pale); color: var(--plum); font-weight: 800; font-size: .85rem;
+      display: grid; place-items: center;
+    }
 
     /* ---------- Secciones ---------- */
     .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
     .section--blush { background: var(--rosa-blush); }
-    .section--rosa  { background: var(--rosa-pale); }
-    .section--plum  { background: var(--plum-deep); color: var(--rosa-blush); }
-    .section--plum h2 { color: #fff; }
-    .section--plum em { color: var(--rosa); }
+    .section--rosa { background: var(--rosa-pale); }
+    .section--dark { background: var(--plum-deep); color: var(--rosa-blush); }
+    .section--dark h2 { color: #fff; }
+    .section--dark em { color: var(--rosa); }
+    .section__head { max-width: 46rem; margin-bottom: 2.4rem; }
+    .section__head.center { margin-inline: auto; }
+    .section__head p { font-size: 1.2rem; color: var(--text-light); }
+    .section--dark .section__head p { color: var(--rosa-pale); }
 
-    .eyebrow {
-      text-transform: uppercase; letter-spacing: .16em;
-      font-size: .95rem; font-weight: 600;
-      color: var(--plum-soft); margin-bottom: .8rem;
+    /* ---------- ¿Te suena? ---------- */
+    .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+    .quote {
+      background: #fff; border-radius: var(--radius); padding: 1.5rem 1.4rem 1.4rem;
+      box-shadow: var(--shadow); border-top: 5px solid var(--rosa);
+      font-family: var(--font); font-size: 1.45rem; line-height: 1.25; font-weight: 600; color: var(--plum-deep);
     }
-    .eyebrow--light { color: var(--rosa); }
+    .reassure {
+      margin: 2.2rem auto 0; max-width: 44rem; text-align: center;
+      font-size: 1.2rem; color: var(--text-dark);
+    }
+    .reassure strong { color: var(--plum); }
+    .cta-row { text-align: center; margin-top: 1.6rem; }
 
-    .lead { font-size: 1.4rem; color: var(--text-light); }
-    .small-note { font-style: italic; color: var(--text-light); margin-top: 2rem; }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      padding: clamp(4rem, 10vw, 7.5rem) 0 clamp(3.5rem, 8vw, 6rem);
-      background:
-        radial-gradient(circle at 85% 10%, var(--rosa-pale) 0, transparent 45%),
-        radial-gradient(circle at 5% 90%, var(--rosa-blush) 0, transparent 40%),
-        var(--cream);
-    }
-    .hero__inner { max-width: 820px; }
-    .hero__lead { font-size: 1.45rem; color: var(--text-light); max-width: 640px; margin-bottom: 2rem; }
-    .hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
-    .hero__note { font-size: 1.05rem; color: var(--plum-soft); margin: 0; }
-
-    /* ---------- Lista "te suena" ---------- */
-    .list { list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: .9rem; }
-    .list li {
-      position: relative;
-      background: #fff;
-      padding: 1.1rem 1.3rem 1.1rem 3rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .list li::before {
-      content: ""; position: absolute; left: 1.3rem; top: 1.65rem;
-      width: 10px; height: 10px; border-radius: 50%; background: var(--rosa);
-    }
-
-    /* ---------- Tarjetas ---------- */
-    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
-    .card {
-      background: #fff; border: 1px solid var(--rosa-pale);
-      border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow);
-    }
-    .card p:last-child { margin: 0; }
+    /* ---------- Enfoque ---------- */
+    .split { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; }
+    @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .principles { display: grid; gap: 1rem; }
+    .principle { background: #fff; border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow); }
+    .principle h3 { color: var(--plum); margin-bottom: .3rem; font-size: 1.45rem; }
+    .principle p { margin: 0; }
 
     /* ---------- Pasos ---------- */
-    .steps { list-style: none; padding: 0; margin: 2.2rem 0 0; display: grid; gap: 1.4rem; }
-    .steps li { display: flex; gap: 1.2rem; align-items: flex-start; }
-    .steps__num {
-      flex: none; font-size: 2.2rem; font-style: italic; color: var(--plum);
-      min-width: 3rem; line-height: 1;
+    .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.2rem; grid-template-columns: 1fr; counter-reset: s; }
+    @media (min-width: 860px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+    .steps li {
+      position: relative; background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(232, 170, 187, .35);
+      border-radius: var(--radius); padding: 2rem 1.5rem 1.5rem;
     }
-    .steps h3 { margin-bottom: .3rem; }
-    .steps p { margin: 0; }
+    .steps li::before {
+      counter-increment: s; content: counter(s);
+      position: absolute; top: -1.2rem; left: 1.4rem;
+      width: 2.6rem; height: 2.6rem; border-radius: 50%;
+      background: var(--rosa); color: var(--plum-deep);
+      font-family: var(--font); font-weight: 700; font-size: 1.6rem;
+      display: grid; place-items: center; line-height: 1;
+    }
+    .steps h3 { color: #fff; }
+    .steps p { margin: 0; color: var(--rosa-pale); }
 
     /* ---------- Precio ---------- */
-    .price-card {
-      background: #fff; border: 1px solid var(--rosa-pale);
-      border-radius: calc(var(--radius) + 6px); padding: 2.2rem;
-      box-shadow: var(--shadow); margin-top: 2rem;
+    .price {
+      max-width: 40rem; margin-inline: auto; background: #fff;
+      border-radius: 28px; padding: 2.2rem 1.8rem; box-shadow: var(--shadow);
+      border: 2px solid var(--rosa); text-align: center;
     }
-    .price-card__price { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1.2rem; }
-    .price-card__amount { font-size: 3.6rem; font-weight: 500; color: var(--plum); line-height: 1; }
-    .price-card__unit { font-style: italic; color: var(--text-light); }
-    .price-card__list { list-style: none; padding: 0; margin: 0 0 1.8rem; }
-    .price-card__list li { padding: .5rem 0 .5rem 1.8rem; position: relative; border-bottom: 1px solid var(--rosa-blush); }
-    .price-card__list li::before { content: "✓"; position: absolute; left: 0; color: var(--plum-soft); font-weight: 700; }
+    .price__amount { font-family: var(--font); font-size: 5rem; font-weight: 700; color: var(--plum); line-height: 1; }
+    .price__unit { display: block; font-weight: 700; color: var(--text-light); margin: .3rem 0 1.4rem; }
+    .price .checks { text-align: left; max-width: 28rem; margin: 0 auto 1.8rem; }
+    .price .checks li::before { background: var(--rosa-pale); color: var(--plum); }
 
     /* ---------- Sobre mí ---------- */
-    .about__photo { float: right; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); max-width: 220px; }
+    .about { max-width: 46rem; margin-inline: auto; }
+    .about__photo { float: right; width: 190px; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); }
+    .tags { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+    .tags li { background: var(--rosa-pale); color: var(--plum-deep); font-weight: 700; font-size: .92rem; padding: .35rem .9rem; border-radius: 999px; }
 
     /* ---------- FAQ ---------- */
-    .faq { margin-top: 2rem; display: grid; gap: .8rem; }
-    .faq details {
-      background: #fff; border: 1px solid var(--rosa-pale);
-      border-radius: var(--radius); padding: 0 1.4rem;
-    }
+    .faq { max-width: 46rem; margin-inline: auto; display: grid; gap: .8rem; }
+    .faq details { background: #fff; border: 1px solid var(--rosa-pale); border-radius: 16px; padding: 0 1.3rem; }
     .faq summary {
-      list-style: none; cursor: pointer; padding: 1.1rem 2rem 1.1rem 0;
-      font-weight: 600; color: var(--text-dark); position: relative;
+      list-style: none; cursor: pointer; position: relative;
+      padding: 1.1rem 2.2rem 1.1rem 0; font-weight: 800; color: var(--text-dark);
     }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after {
-      content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-      font-size: 1.6rem; color: var(--plum); transition: transform .2s;
-    }
+    .faq summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.7rem; color: var(--plum); font-weight: 600; }
     .faq details[open] summary::after { content: "–"; }
-    .faq details p { padding-bottom: .4rem; }
+    .faq details p { padding-bottom: .5rem; }
 
     /* ---------- CTA final ---------- */
-    .cta { text-align: center; }
-    .cta .lead { color: var(--rosa-pale); }
-    .cta__note { margin-top: 1rem; font-size: 1.05rem; color: var(--rosa-pale); }
-    .cta__crisis {
-      margin: 2.5rem auto 0; max-width: 560px; font-size: 1rem;
-      color: var(--rosa-pale); border-top: 1px solid var(--plum-soft); padding-top: 1.2rem;
-    }
+    .final { max-width: 40rem; margin-inline: auto; }
+    .final .form-card { margin-top: 2rem; text-align: left; }
 
     /* ---------- Pie ---------- */
-    .footer { background: var(--text-dark); color: var(--rosa-pale); padding: 2.2rem 0; font-size: 1rem; }
-    .footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
-    .footer__inner p { margin: 0; }
-    .footer__nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
-    .footer__nav a { color: var(--rosa-pale); text-decoration: none; }
-    .footer__nav a:hover { color: #fff; text-decoration: underline; }
+    .footer { background: var(--text-dark); color: var(--rosa-pale); padding: 2.4rem 0; font-size: .92rem; }
+    .footer a { color: var(--rosa-pale); }
+    .footer__top { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+    .footer .logo { font-size: 1.7rem; }
+    .footer__legal { max-width: 52rem; margin: 0 0 .6rem; opacity: .9; }
 
-    /* ---------- Móvil ---------- */
-    @media (max-width: 760px) {
-      body { font-size: 1.2rem; }
+    /* ---------- Botón fijo en móvil ---------- */
+    .sticky-cta {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+      background: rgba(74, 42, 64, .96); backdrop-filter: blur(6px);
+      transform: translateY(110%); transition: transform .25s;
+    }
+    .sticky-cta.is-visible { transform: translateY(0); }
+    .sticky-cta .btn { width: 100%; }
+    @media (min-width: 920px) { .sticky-cta { display: none; } }
+    @media (max-width: 919px) { .footer { padding-bottom: 6rem; } }
 
-      .nav-toggle { display: block; }
-      .nav {
-        position: absolute; top: 68px; left: 0; right: 0;
-        flex-direction: column; align-items: flex-start; gap: 1rem;
-        padding: 1.4rem 1.25rem 1.8rem;
-        background: var(--cream); border-bottom: 1px solid var(--rosa-pale);
-        display: none;
-      }
-      .nav.is-open { display: flex; }
-
-      .two-cols { grid-template-columns: 1fr; }
+    @media (max-width: 520px) {
       .about__photo { float: none; display: block; margin: 0 0 1.2rem; }
-      .footer__inner { flex-direction: column; align-items: flex-start; }
+      .price__amount { font-size: 4.2rem; }
     }
 
-    /* ---------- Accesibilidad: menos movimiento ---------- */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; }
@@ -309,174 +329,195 @@
   <header class="header">
     <div class="container header__inner">
       <a class="logo" href="https://www.serelpis.com">SerElpis</a>
-
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav id="menu" class="nav" aria-label="Principal">
-        <a href="#te-suena">¿Te suena?</a>
-        <a href="#como-trabajo">Cómo trabajo</a>
-        <a href="#sesiones">Sesiones</a>
-        <a href="#faq">Preguntas</a>
-        <a class="btn btn--small" href="#contacto">Contactar</a>
-      </nav>
+      <a class="btn btn--accent btn--small" href="#formulario">Cuéntame qué necesitas</a>
     </div>
   </header>
 
   <main id="contenido">
 
-    <!-- ========== HERO ========== -->
+    <!-- ========== HERO + FORMULARIO ========== -->
     <section class="hero">
-      <div class="container hero__inner">
-        <p class="eyebrow">Terapia online · Rumia y pensamientos intrusivos</p>
-        <h1>Cuando tu mente no para de <em>dar vueltas</em></h1>
-        <p class="hero__lead">
-          Acompañamiento individual online para esos pensamientos que se repiten,
-          se cuelan sin avisar y te dejan agotada. Sin protocolos rígidos:
-          construimos juntas algo que tenga sentido para tu vida.
-        </p>
-        <div class="hero__actions">
-          <a class="btn" href="#contacto">Cuéntame qué necesitas →</a>
-          <a class="btn btn--ghost" href="#como-trabajo">Cómo trabajo</a>
+      <div class="container hero__grid">
+
+        <div>
+          <span class="eyebrow">Terapia online · Rumia y pensamientos intrusivos</span>
+          <h1>¿Tu mente no para de <em>dar vueltas</em>?</h1>
+          <p class="hero__lead">
+            Acompañamiento individual online para esos pensamientos que se repiten,
+            se cuelan sin avisar y te dejan agotada. Lo construimos juntas, a tu medida.
+          </p>
+
+          <ul class="checks">
+            <li>Sesiones por videollamada de 40–45 minutos</li>
+            <li>40 € por sesión</li>
+            <li>Enfoque contextual, adaptado a ti: sin protocolos rígidos</li>
+            <li>Tú decides cuántas sesiones necesitas</li>
+          </ul>
+
+          <a class="btn btn--accent hero__cta-mobile" href="#formulario">Cuéntame qué necesitas →</a>
         </div>
-        <p class="hero__note">Sesiones por videollamada · 40–45 min · 40 €</p>
+
+        <!-- Formulario principal -->
+        <div class="form-card" id="formulario">
+          <h2>Cuéntame qué necesitas</h2>
+          <p class="form-card__sub">Escríbeme sin prisa. No hace falta tener las palabras exactas.</p>
+
+          <form class="lead-form" method="POST" action="https://formspree.io/f/TU_ID">
+            <label>Tu nombre
+              <input type="text" name="nombre" autocomplete="given-name" required>
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>¿Qué te gustaría trabajar? <span class="opt">(opcional)</span>
+              <textarea name="mensaje" rows="3"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consentimiento" required>
+              <span>He leído y acepto la <a href="https://www.serelpis.com/privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn--primary btn--block" type="submit">Pedir información →</button>
+            <p class="form-micro">Respondo en menos de 48 h · Sin compromiso</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
       </div>
     </section>
 
-    <!-- ========== ¿TE SUENA? ========== -->
-    <section id="te-suena" class="section section--blush">
-      <div class="container container--narrow">
-        <p class="eyebrow">¿Te suena?</p>
-        <h2>A veces la cabeza va <em>por libre</em></h2>
-
-        <ul class="list">
-          <li>Repasas una conversación una y otra vez, buscando qué hiciste mal.</li>
-          <li>Te preguntas "¿por qué me pasa esto?" y ninguna respuesta te deja tranquila.</li>
-          <li>Aparece un pensamiento que no querías, y cuanto más intentas apartarlo, más fuerte vuelve.</li>
-          <li>Estás con otras personas, pero tu cabeza sigue en otro sitio.</li>
-          <li>Llegas a la noche cansada de pensar y aun así no consigues parar.</li>
+    <!-- ========== FRANJA DE CONFIANZA ========== -->
+    <div class="trust">
+      <div class="container">
+        <ul class="trust__list">
+          <li>Enfoque contextual basado en evidencia</li>
+          <li>Sesiones online de 40–45 min</li>
+          <li>Confidencial, conforme al RGPD</li>
+          <li>Respuesta en menos de 48 h</li>
         </ul>
+      </div>
+    </div>
 
-        <p class="lead">
-          Si te reconoces en alguna, no estás rota ni lo estás haciendo mal.
+    <!-- ========== ¿TE SUENA? ========== -->
+    <section class="section section--blush">
+      <div class="container">
+        <div class="section__head center">
+          <h2>¿Te suena alguna de <em>estas frases</em>?</h2>
+        </div>
+
+        <div class="cards">
+          <div class="quote">"Repaso conversaciones una y otra vez buscando qué hice mal."</div>
+          <div class="quote">"Me pregunto «¿por qué me pasa esto?» y ninguna respuesta me tranquiliza."</div>
+          <div class="quote">"Me vienen pensamientos que no quiero y, cuanto más los aparto, más vuelven."</div>
+          <div class="quote">"Estoy con gente, pero mi cabeza está en otro sitio."</div>
+          <div class="quote">"Llego a la noche agotada de pensar y no consigo parar."</div>
+          <div class="quote">"Algunos pensamientos que aparecen sin avisar me asustan o me avergüenzan."</div>
+        </div>
+
+        <p class="reassure">
+          Si te reconoces, <strong>no estás rota ni lo estás haciendo mal</strong>.
           Muchas veces la mente le da vueltas justo a lo que más nos importa.
           El problema aparece cuando esas vueltas nos quitan la vida que queremos tener.
         </p>
+        <div class="cta-row"><a class="btn btn--primary" href="#contacto">Quiero hablar contigo →</a></div>
       </div>
     </section>
 
-    <!-- ========== QUÉ ES ========== -->
+    <!-- ========== ENFOQUE ========== -->
     <section class="section">
-      <div class="container container--narrow">
-        <p class="eyebrow">Para ponerle nombre</p>
-        <h2>Rumia y pensamientos intrusivos, <em>sin tecnicismos</em></h2>
+      <div class="container split">
+        <div>
+          <h2>No se trata de <em>"dejar de pensar"</em></h2>
+          <p>
+            Intentar no pensar en algo suele hacer que vuelva con más fuerza.
+            Por eso aquí no te voy a pedir que pienses en positivo ni que
+            calles tu mente.
+          </p>
+          <p>
+            Trabajamos otra cosa: <strong>cómo te relacionas con esos pensamientos</strong>,
+            para que pesen menos, no decidan por ti y tengas más espacio para
+            lo que de verdad te importa.
+          </p>
+          <p>
+            Trabajo desde un enfoque contextual: miro qué hay detrás de tu
+            malestar, cuándo aparece y qué te está costando. Dos personas
+            pueden parecer tener el mismo problema y necesitar procesos muy distintos.
+          </p>
+        </div>
 
-        <div class="two-cols">
-          <article class="card">
-            <h3>La rumia</h3>
-            <p>
-              Es darle vueltas a lo mismo una y otra vez: lo que pasó, lo que
-              podría pasar, lo que "debería" haber hecho. Parece que pensar
-              más nos va a llevar a una solución, pero muchas veces solo nos
-              deja más cansadas.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Los pensamientos intrusivos</h3>
-            <p>
-              Son pensamientos, imágenes o ideas que aparecen de repente y que
-              no encajan con lo que tú eres o quieres. Pelearnos con ellos
-              suele hacerlos más pesados. Aprender a relacionarnos con ellos
-              de otra forma puede cambiar mucho cómo los vivimos.
-            </p>
-          </article>
+        <div class="principles">
+          <div class="principle">
+            <h3>Rigor sin rigidez</h3>
+            <p>Uso estrategias con respaldo científico, pero las adapto a ti, no al revés.</p>
+          </div>
+          <div class="principle">
+            <h3>Sin juicio, con dirección</h3>
+            <p>No hay pensamientos ni emociones incorrectas. Hay formas de relacionarnos con ellos que abren posibilidades y otras que las cierran.</p>
+          </div>
+          <div class="principle">
+            <h3>Tú en el centro</h3>
+            <p>Las sesiones no siguen un guion fijo: parten de lo que traes y de hacia dónde quieres ir.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== CÓMO TRABAJO ========== -->
-    <section id="como-trabajo" class="section section--rosa">
-      <div class="container container--narrow">
-        <p class="eyebrow">Cómo trabajo</p>
-        <h2>Un enfoque riguroso, <em>una mirada humana</em></h2>
-
-        <p class="lead">
-          Trabajo desde un enfoque contextual: en lugar de aplicar el mismo
-          método a todo el mundo, miro qué hay detrás de tu malestar, en qué
-          momentos aparece y qué te está costando. Dos personas pueden parecer
-          tener el mismo problema y necesitar procesos muy distintos.
-        </p>
+    <!-- ========== CÓMO EMPEZAR ========== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head center">
+          <h2>Empezar es <em>más sencillo</em> de lo que parece</h2>
+        </div>
 
         <ol class="steps">
           <li>
-            <span class="steps__num">01</span>
-            <div>
-              <h3>Entendemos qué te pasa</h3>
-              <p>Cuándo aparecen los pensamientos, qué los dispara y qué haces cuando llegan.</p>
-            </div>
+            <h3>Cuéntame qué necesitas</h3>
+            <p>Rellena el formulario con lo que quieras contarme. Con dos líneas es suficiente.</p>
           </li>
           <li>
-            <span class="steps__num">02</span>
-            <div>
-              <h3>Miramos qué te cuesta</h3>
-              <p>Vemos qué te está quitando esa rumia: descanso, presencia, relaciones, tiempo para lo que te importa.</p>
-            </div>
+            <h3>Te respondo en menos de 48 h</h3>
+            <p>Resuelvo tus dudas y buscamos juntas un hueco para la primera sesión.</p>
           </li>
           <li>
-            <span class="steps__num">03</span>
-            <div>
-              <h3>Probamos otras formas de responder</h3>
-              <p>Sin pelearte con tus pensamientos y sin obedecerlos. Practicamos herramientas que se adaptan a ti, también entre sesiones.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__num">04</span>
-            <div>
-              <h3>Volvemos a lo que importa</h3>
-              <p>Aclaramos hacia dónde quieres ir, para que tus decisiones partan de ti y no de lo que te dicta la mente.</p>
-            </div>
+            <h3>Primera sesión online</h3>
+            <p>Exploramos qué te pasa, empezamos a trabajar y valoramos juntas qué ritmo tiene sentido para ti.</p>
           </li>
         </ol>
 
-        <p class="small-note">
-          No hay protocolo cerrado: usamos estrategias y herramientas con respaldo
-          científico, pero las adaptamos a ti, no al revés.
-        </p>
+        <div class="cta-row"><a class="btn btn--accent" href="#contacto">Dar el primer paso →</a></div>
       </div>
     </section>
 
-    <!-- ========== SESIONES ========== -->
-    <section id="sesiones" class="section">
-      <div class="container container--narrow">
-        <p class="eyebrow">Sesiones individuales</p>
-        <h2>Un espacio para ti, <em>a tu ritmo</em></h2>
+    <!-- ========== PRECIO ========== -->
+    <section class="section section--rosa">
+      <div class="container">
+        <div class="section__head center">
+          <h2>Un espacio para ti, <em>a tu ritmo</em></h2>
+        </div>
 
-        <div class="price-card">
-          <div class="price-card__price">
-            <span class="price-card__amount">40 €</span>
-            <span class="price-card__unit">por sesión</span>
-          </div>
-          <ul class="price-card__list">
-            <li>Videollamada individual de unos 40–45 minutos</li>
+        <div class="price">
+          <div class="price__amount">40 €</div>
+          <span class="price__unit">por sesión individual</span>
+          <ul class="checks">
+            <li>Videollamada de 40–45 minutos</li>
             <li>Desde donde estés, sin desplazamientos</li>
             <li>Sin guion fijo: cada sesión parte de lo que traes</li>
-            <li>No hay un número de sesiones establecido: lo vamos hablando juntas</li>
+            <li>No hay un número de sesiones establecido</li>
             <li>Confidencial, conforme al RGPD</li>
           </ul>
-          <a class="btn" href="#contacto">Quiero empezar →</a>
+          <a class="btn btn--primary btn--block" href="#contacto">Quiero empezar →</a>
         </div>
       </div>
     </section>
 
     <!-- ========== SOBRE MÍ ========== -->
-    <section class="section section--blush">
-      <div class="container container--narrow">
-        <p class="eyebrow">Sobre mí</p>
+    <section class="section">
+      <div class="container about">
         <h2>Hola, soy <em>Vanessa</em></h2>
 
         <!-- Cuando tengas foto, descomenta y pon la ruta:
-        <img class="about__photo" src="assets/vanessa.jpg" alt="Vanessa Luque, terapeuta contextual" width="320" height="400" loading="lazy">
+        <img class="about__photo" src="assets/vanessa.jpg" alt="Vanessa Luque, terapeuta contextual" width="190" height="238" loading="lazy">
         -->
 
         <p>
@@ -486,28 +527,33 @@
           persona es diferente y que no hay una única forma de acompañar.
         </p>
         <p>
-          Por eso no trabajo con recetas. Me interesa entender qué hay detrás de
-          lo que sientes y construir contigo algo que encaje con tu vida.
+          Por eso no trabajo con recetas: me interesa entender qué hay detrás de
+          lo que sientes y construir contigo algo que tenga sentido para tu vida.
         </p>
-        <p><a class="link" href="https://www.serelpis.com/sobre-mi.html">Conocer más sobre mí →</a></p>
+
+        <ul class="tags">
+          <li>Educadora social</li>
+          <li>Terapeuta contextual</li>
+          <li>Enfoque basado en evidencia</li>
+        </ul>
       </div>
     </section>
 
     <!-- ========== FAQ ========== -->
-    <section id="faq" class="section">
-      <div class="container container--narrow">
-        <p class="eyebrow">Preguntas frecuentes</p>
-        <h2>Lo que necesitas <em>saber antes de empezar</em></h2>
+    <section class="section section--blush">
+      <div class="container">
+        <div class="section__head center">
+          <h2>Lo que quizá te estás <em>preguntando</em></h2>
+        </div>
 
         <div class="faq">
           <details>
             <summary>¿Cómo sé si es para mí?</summary>
             <p>
               Puede serlo si tus pensamientos se repiten, te cuesta soltarlos y
-              sientes que te limitan en tu día a día. No hace falta tener las
-              palabras exactas ni saber qué te pasa. Con que quieras relacionarte
-              de otra manera con lo que piensas y sientes, ya es suficiente
-              para empezar.
+              sientes que te limitan en tu día a día. No hace falta saber qué te
+              pasa ni tener las palabras exactas. Con que quieras relacionarte de
+              otra manera con lo que piensas y sientes, ya es suficiente para empezar.
             </p>
           </details>
 
@@ -525,8 +571,8 @@
             <p>
               Son por videollamada y duran entre 40 y 45 minutos. No hay guion
               fijo. En la primera sesión exploramos qué te trae y empezamos a
-              trabajar. Las siguientes se construyen a partir de lo que traes,
-              de lo que practicas entre sesiones y de hacia dónde quieres ir.
+              trabajar. Las siguientes parten de lo que traes, de lo que practicas
+              entre sesiones y de hacia dónde quieres ir.
             </p>
           </details>
 
@@ -536,14 +582,6 @@
               No hay un número fijo. Depende de ti y de lo que necesites.
               En la primera sesión valoramos juntas qué ritmo tiene sentido y
               lo vamos revisando por el camino.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Y si algo no me encaja durante una sesión?</summary>
-            <p>
-              Dímelo con total libertad. La sesión es tuya y, si algo no resuena
-              contigo, lo hablamos y lo ajustamos.
             </p>
           </details>
 
@@ -568,25 +606,40 @@
       </div>
     </section>
 
-    <!-- ========== CTA FINAL ========== -->
-    <section id="contacto" class="section section--plum">
-      <div class="container container--narrow cta">
-        <p class="eyebrow eyebrow--light">Contacto</p>
+    <!-- ========== CTA FINAL + FORMULARIO ========== -->
+    <section class="section section--dark" id="contacto">
+      <div class="container final center">
         <h2>Da el <em>primer paso</em></h2>
-        <p class="lead">
-          No hace falta saber con exactitud qué te pasa ni tener las palabras
-          perfectas. Puedes llegar con dudas, con cansancio o con ganas de hacer
-          algo diferente. Eso ya es suficiente.
+        <p class="section__head" style="margin-inline:auto;color:var(--rosa-pale);font-size:1.2rem;">
+          Puedes llegar con dudas, con cansancio o con ganas de hacer algo
+          diferente. Eso ya es suficiente.
         </p>
 
-        <!-- Cambia el enlace si usas otro formulario, Calendly, email, etc. -->
-        <a class="btn btn--light" href="https://www.serelpis.com/#contacto">Escríbeme →</a>
-        <p class="cta__note">Respondo en menos de 48 h.</p>
+        <div class="form-card">
+          <h2>Cuéntame qué necesitas</h2>
+          <p class="form-card__sub">Te respondo en menos de 48 h.</p>
 
-        <p class="cta__crisis">
-          Si estás pasando por un momento de crisis, no esperes: llama al 112.
-          Si tienes pensamientos de hacerte daño, puedes llamar al 024.
-        </p>
+          <form class="lead-form" method="POST" action="https://formspree.io/f/TU_ID">
+            <label>Tu nombre
+              <input type="text" name="nombre" autocomplete="given-name" required>
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>¿Qué te gustaría trabajar? <span class="opt">(opcional)</span>
+              <textarea name="mensaje" rows="3"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consentimiento" required>
+              <span>He leído y acepto la <a href="https://www.serelpis.com/privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn--primary btn--block" type="submit">Pedir información →</button>
+            <p class="form-micro">Sin compromiso · Tus datos no se comparten con nadie</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -594,40 +647,106 @@
 
   <!-- ========== PIE ========== -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a class="logo logo--light" href="https://www.serelpis.com">SerElpis</a>
-      <nav class="footer__nav" aria-label="Pie">
-        <a href="https://www.serelpis.com/sobre-mi.html">Sobre mí</a>
-        <a href="#sesiones">Sesiones</a>
-        <a href="#faq">Preguntas</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+    <div class="container">
+      <div class="footer__top">
+        <a class="logo" href="https://www.serelpis.com">SerElpis</a>
+        <span>
+          <a href="https://www.serelpis.com">Web</a> ·
+          <a href="https://www.serelpis.com/privacidad">Política de privacidad</a>
+        </span>
+      </div>
+      <p class="footer__legal">
+        SerElpis ofrece acompañamiento y entrenamiento en habilidades emocionales.
+        No es un servicio de urgencias ni sustituye a la atención sanitaria.
+        Si estás en una situación de crisis, llama al 112. Si tienes pensamientos
+        de hacerte daño, puedes llamar al 024.
+      </p>
       <p>© <span id="year">2026</span> SerElpis</p>
     </div>
   </footer>
 
-  <!-- ========== JAVASCRIPT (menú móvil y año del pie) ========== -->
+  <!-- Botón fijo en móvil -->
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn--accent" href="#contacto">Cuéntame qué necesitas →</a>
+  </div>
+
+  <!-- ==========================================================
+       JAVASCRIPT
+       Configura aquí tu formulario y tu conversión de Google Ads
+       ========================================================== -->
   <script>
+    const CONFIG = {
+      // 1) Tu endpoint de Formspree (https://formspree.io/f/xxxxxxx)
+      FORM_ENDPOINT: 'https://formspree.io/f/TU_ID',
+      // 2) Tu conversión de Google Ads, con el formato 'AW-XXXXXXXXX/YYYYYYYYYYYY'
+      //    (déjalo vacío hasta que la tengas)
+      ADS_CONVERSION: ''
+    };
+
     (function () {
-      const toggle = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('menu');
+      const forms = document.querySelectorAll('.lead-form');
 
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const open = menu.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(open));
-        });
+      // ----- Envío del formulario -----
+      forms.forEach((form) => {
+        form.action = CONFIG.FORM_ENDPOINT;
 
-        menu.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            menu.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-          });
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const status = form.querySelector('.form-status');
+          const btn = form.querySelector('button[type="submit"]');
+          const setStatus = (msg, cls) => { status.textContent = msg; status.className = 'form-status ' + cls; };
+
+          if (CONFIG.FORM_ENDPOINT.includes('TU_ID')) {
+            setStatus('Falta configurar el formulario (FORM_ENDPOINT en el script).', 'is-error');
+            return;
+          }
+
+          const label = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = 'Enviando…';
+
+          try {
+            const res = await fetch(CONFIG.FORM_ENDPOINT, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { Accept: 'application/json' }
+            });
+            if (!res.ok) throw new Error('Error de envío');
+
+            form.reset();
+            setStatus('¡Gracias por escribirme! Te responderé en breve :)', 'is-ok');
+
+            // Medición de conversión (solo si has pegado la etiqueta de Google arriba)
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead');
+              if (CONFIG.ADS_CONVERSION) gtag('event', 'conversion', { send_to: CONFIG.ADS_CONVERSION });
+            }
+          } catch (err) {
+            setStatus('No se ha podido enviar. Inténtalo de nuevo o escríbeme por correo.', 'is-error');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = label;
+          }
         });
+      });
+
+      // ----- Botón fijo en móvil: aparece al bajar y se oculta cuando hay un formulario a la vista -----
+      const sticky = document.getElementById('stickyCta');
+      const inView = new Set();
+      const update = () => sticky.classList.toggle('is-visible', window.scrollY > 500 && inView.size === 0);
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => en.isIntersecting ? inView.add(en.target) : inView.delete(en.target));
+          update();
+        });
+        document.querySelectorAll('.form-card').forEach((f) => io.observe(f));
       }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
 
-      const year = document.getElementById('year');
-      if (year) year.textContent = new Date().getFullYear();
+      // ----- Año del pie -----
+      document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
 </body>
