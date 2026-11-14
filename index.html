@@ -513,18 +513,14 @@
       color: var(--rosa-sello);
     }
 
-    .folder-tabs-wrapper {
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
     /* Pista visual con texto manuscrito y flecha curva */
     .tab-hint-container {
+      max-width: 920px;
+      margin: 0 auto 0.35rem;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       gap: 0.5rem;
-      margin-bottom: 0.35rem;
       padding-left: 0.5rem;
       font-family: var(--font-hand);
       font-size: 1.65rem;
@@ -542,6 +538,11 @@
       stroke-linecap: round;
       stroke-linejoin: round;
       margin-top: 0.25rem;
+    }
+
+    .folder-tabs-wrapper {
+      max-width: 920px;
+      margin: 0 auto;
     }
 
     .folder-tablist {
@@ -1106,7 +1107,7 @@
         text-align: right;
         padding-left: 0;
         padding-right: 0.25rem;
-        margin-bottom: 0.45rem;
+        margin: 0 auto 0.45rem;
         font-size: 1.45rem;
       }
 
@@ -1239,16 +1240,16 @@
           <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
         </div>
 
-        <div class="folder-tabs-wrapper">
-          <!-- Indicador visual con texto y flecha curva apuntando hacia abajo -->
-          <div class="tab-hint-container">
-            <span>Selecciona las pestañas para ver cada servicio</span>
-            <svg class="tab-hint-arrow" viewBox="0 0 48 40" aria-hidden="true">
-              <path d="M 4 8 Q 34 6, 36 32" />
-              <path d="M 28 24 L 36 33 L 43 23" />
-            </svg>
-          </div>
+        <!-- Indicador visual con texto y flecha curva apuntando hacia abajo -->
+        <div class="tab-hint-container">
+          <span>Selecciona las pestañas para ver cada servicio</span>
+          <svg class="tab-hint-arrow" viewBox="0 0 48 40" aria-hidden="true">
+            <path d="M 4 8 Q 34 6, 36 32" />
+            <path d="M 28 24 L 36 33 L 43 23" />
+          </svg>
+        </div>
 
+        <div class="folder-tabs-wrapper">
           <!-- Pestañas clicables (4 servicios principales) -->
           <div class="folder-tablist" role="tablist" aria-label="Servicios de sesiones individuales">
             <button type="button" class="folder-tab" role="tab" aria-selected="true" aria-controls="panel-emociones" id="tab-emociones" data-color="butter">
