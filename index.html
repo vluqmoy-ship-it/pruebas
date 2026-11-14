@@ -492,7 +492,6 @@
     /* Pista visual con texto manuscrito y flecha */
     .tab-hint-container {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1rem;
@@ -1023,8 +1022,13 @@
     }
 
     @media (max-width: 768px) {
+      .header-inner {
+        position: relative;
+      }
+
       .menu-toggle {
         display: inline-block;
+        margin-left: auto;
       }
 
       .nav-list {
@@ -1063,16 +1067,17 @@
         align-self: center;
       }
 
-      /* Pista visual orientada a la derecha en móvil */
+      /* Pista visual en móvil: alineada a la izquierda, flecha señalando a la derecha */
       .tab-hint-container {
-        justify-content: flex-end;
+        justify-content: flex-start;
+        margin-left: 0.2rem;
         font-size: 1.35rem;
-        margin-right: 0.5rem;
       }
 
       .tab-hint-arrow {
         width: 35px;
         height: 20px;
+        transform: none;
       }
 
       /* Adaptación móvil de pestañas tipo agenda lateral */
@@ -1122,14 +1127,14 @@
       }
     }
 
-    /* En escritorio la pista visual se alinea a la derecha pero apunta hacia arriba */
+    /* En escritorio (PC): alineado a la izquierda, flecha señalando hacia abajo */
     @media (min-width: 769px) {
       .tab-hint-container {
-        justify-content: flex-end;
-        margin-bottom: 0.5rem;
+        justify-content: flex-start;
+        margin-left: 0.2rem;
       }
       .tab-hint-arrow {
-        transform: scaleX(-1) rotate(-90deg);
+        transform: rotate(90deg);
       }
     }
   </style>
@@ -1369,7 +1374,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
-              <p>Las sesiones duran aproximadamente 50-55 minutos y se realizan por videollamada. No hay un guion fijo. En la primera sesión exploraremos tu situación y empezamos a trabajar. Las sesiones siguientes se construyen a partir de lo que traes, los que te pasa o lo que practicas entre sesiones y hacia dónde quieres ir.</p>
+              <p>Las sesiones duran aproximadamente 50-55 minutos y se realizan por videollamada. No hay un guion fijo. En la primera sesión exploraremos tu situación y empezamos a trabajar. Las sesiones siguientes se construyen a partir de lo que traes, lo que te pasa o lo que practicas entre sesiones y hacia dónde quieres ir.</p>
             </div>
           </details>
 
@@ -1379,7 +1384,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
-              <p>Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar what necesites. No hay protocolos rígidos que cumplir.</p>
+              <p>Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar lo que necesites. No hay protocolos rígidos que cumplir.</p>
             </div>
           </details>
 
