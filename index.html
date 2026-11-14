@@ -157,8 +157,8 @@
       --font-body: 'IBM Plex Mono', monospace;
       --font-hand: 'Reenie Beanie', cursive;
 
-      --radius-sm: 4px;
-      --radius-md: 8px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
       --shadow-dark: 0 10px 25px rgba(0, 0, 0, 0.28);
       --shadow-light: 0 8px 22px rgba(46, 26, 43, 0.08);
     }
@@ -186,7 +186,6 @@
       overflow-x: hidden;
     }
 
-    /* Fondos alternos de alto contraste */
     .section-dark {
       background-color: var(--ciruela-noche);
       background-image: radial-gradient(rgba(243, 233, 216, 0.2) 1.3px, transparent 1.3px);
@@ -244,12 +243,23 @@
       margin-bottom: 0.75rem;
     }
 
+    /* Marcador rosa pintado a mano tras la palabra clave */
     .marker-pink {
-      background-color: var(--rosa-sello);
-      color: var(--ciruela-noche);
-      padding: 0.04em 0.35em;
-      border-radius: 3px;
+      position: relative;
       display: inline-block;
+      color: var(--ciruela-noche);
+      padding: 0 0.25em;
+      z-index: 1;
+    }
+
+    .marker-pink-stroke {
+      position: absolute;
+      left: -4%;
+      top: 6%;
+      width: 108%;
+      height: 92%;
+      z-index: -1;
+      pointer-events: none;
     }
 
     .tag-label {
@@ -287,28 +297,34 @@
       transform: translateX(-50%) rotate(4deg);
     }
 
-    /* Botones */
+    /* Botones con borde y sombra sólida estilo papelería */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
       font-size: 1rem;
-      padding: 0.9rem 1.75rem;
+      padding: 0.85rem 1.75rem;
       border-radius: var(--radius-sm);
       border: 2px solid var(--ciruela-noche);
       cursor: pointer;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
     }
 
     .btn-yellow {
       background-color: var(--mantequilla);
       color: var(--ciruela-noche);
+      box-shadow: 4px 4px 0 var(--ciruela-noche);
     }
 
     .btn-yellow:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(46, 26, 43, 0.18);
+      transform: translate(-1px, -1px);
+      box-shadow: 6px 6px 0 var(--ciruela-noche);
+    }
+
+    .btn-yellow:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--ciruela-noche);
     }
 
     .btn-link {
@@ -317,6 +333,7 @@
       border-bottom: 2px solid var(--rosa-sello);
       padding: 0.4rem 0.1rem;
       border-radius: 0;
+      box-shadow: none;
     }
 
     .btn-link:hover {
@@ -347,6 +364,12 @@
       min-width: 120px;
       max-width: 155px;
       padding: 0.25rem 0;
+      flex-shrink: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
     }
 
     .nav-list {
@@ -387,9 +410,10 @@
     .menu-toggle {
       display: none;
       background: none;
-      border: 1px solid var(--papel-carta);
+      border: 1.5px solid var(--papel-carta);
       color: var(--papel-carta);
       font-family: var(--font-display);
+      font-weight: 700;
       font-size: 0.9rem;
       padding: 0.45rem 0.85rem;
       border-radius: var(--radius-sm);
@@ -425,7 +449,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     .areas-board {
@@ -478,7 +502,7 @@
 
     .section-header {
       max-width: 68ch;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .section-lead {
@@ -489,31 +513,35 @@
       color: var(--rosa-sello);
     }
 
-    /* Pista visual con texto manuscrito y flecha */
-    .tab-hint-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-      font-family: var(--font-hand);
-      font-size: 1.6rem;
-      color: var(--mantequilla);
-      line-height: 1;
-    }
-
-    .tab-hint-arrow {
-      width: 45px;
-      height: 24px;
-      fill: none;
-      stroke: var(--mantequilla);
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
     .folder-tabs-wrapper {
       max-width: 920px;
       margin: 0 auto;
+    }
+
+    /* Pista visual con texto manuscrito y flecha curva */
+    .tab-hint-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      padding-left: 0.5rem;
+      font-family: var(--font-hand);
+      font-size: 1.65rem;
+      color: var(--mantequilla);
+      line-height: 1.1;
+    }
+
+    .tab-hint-arrow {
+      width: 44px;
+      height: 36px;
+      flex-shrink: 0;
+      fill: none;
+      stroke: var(--mantequilla);
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-top: 0.25rem;
     }
 
     .folder-tablist {
@@ -531,13 +559,15 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--ciruela-noche);
-      border: none;
+      border: 1.5px solid rgba(46, 26, 43, 0.45);
+      border-bottom: none;
       border-radius: 10px 10px 0 0;
       padding: 0.85rem 1.25rem;
       cursor: pointer;
-      transition: transform 0.18s ease, padding-bottom 0.18s ease, filter 0.18s ease;
+      transition: transform 0.18s ease, padding-bottom 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
       position: relative;
-      opacity: 0.86;
+      opacity: 0.92;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.18);
     }
 
     .folder-tab:hover {
@@ -562,12 +592,14 @@
       padding-top: 1.05rem;
       padding-bottom: 1.05rem;
       z-index: 3;
-      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.18);
+      border-color: var(--ciruela-noche);
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
     }
 
     .folder-sheet {
       background-color: var(--mantequilla);
       color: var(--ciruela-noche);
+      border: 1.5px solid var(--ciruela-noche);
       border-radius: 0 12px 12px 12px;
       padding: 2.75rem 2.5rem;
       box-shadow: var(--shadow-dark);
@@ -1022,8 +1054,9 @@
     }
 
     @media (max-width: 768px) {
-      .header-inner {
-        position: relative;
+      /* Botón de menú pegado a la esquina superior derecha */
+      .site-nav {
+        display: contents;
       }
 
       .menu-toggle {
@@ -1067,17 +1100,24 @@
         align-self: center;
       }
 
-      /* Pista visual en móvil: alineada a la izquierda, flecha señalando a la derecha */
+      /* En móvil: pista alineada a la derecha apuntando hacia la primera pestaña lateral */
       .tab-hint-container {
-        justify-content: flex-start;
-        margin-left: 0.2rem;
-        font-size: 1.35rem;
+        justify-content: flex-end;
+        text-align: right;
+        padding-left: 0;
+        padding-right: 0.25rem;
+        margin-bottom: 0.45rem;
+        font-size: 1.45rem;
+      }
+
+      .tab-hint-container span {
+        max-width: 14rem;
       }
 
       .tab-hint-arrow {
-        width: 35px;
-        height: 20px;
-        transform: none;
+        width: 40px;
+        height: 32px;
+        margin-top: 0.4rem;
       }
 
       /* Adaptación móvil de pestañas tipo agenda lateral */
@@ -1099,6 +1139,8 @@
       .folder-tab {
         writing-mode: vertical-rl;
         text-orientation: mixed;
+        border: 1.5px solid rgba(46, 26, 43, 0.45);
+        border-left: none;
         border-radius: 0 10px 10px 0;
         padding: 0.9rem 0.45rem;
         font-size: 0.72rem;
@@ -1108,11 +1150,13 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.18);
       }
 
       .folder-tab[aria-selected="true"] {
         padding: 0.9rem 0.65rem 0.9rem 0.55rem;
-        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.22);
+        border-color: var(--ciruela-noche);
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
       }
 
       .folder-sheet {
@@ -1124,17 +1168,6 @@
 
       .contact-card {
         padding: 1.75rem 1.25rem;
-      }
-    }
-
-    /* En escritorio (PC): alineado a la izquierda, flecha señalando hacia abajo */
-    @media (min-width: 769px) {
-      .tab-hint-container {
-        justify-content: flex-start;
-        margin-left: 0.2rem;
-      }
-      .tab-hint-arrow {
-        transform: rotate(90deg);
       }
     }
   </style>
@@ -1153,7 +1186,7 @@
         Menú
       </button>
 
-      <nav aria-label="Navegación principal">
+      <nav class="site-nav" aria-label="Navegación principal">
         <ul class="nav-list" id="mainNav">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sesiones">Sesiones</a></li>
@@ -1170,7 +1203,13 @@
     <section id="inicio" class="hero-section section-light">
       <div class="container hero-grid">
         <div>
-          <h1>Construye una vida con <span class="marker-pink">sentido</span></h1>
+          <h1>Construye una vida con
+            <span class="marker-pink">sentido
+              <svg class="marker-pink-stroke" viewBox="0 0 220 72" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M8,22 C55,14 155,13 212,19 C216,20 214,29 208,30 C148,33 52,32 5,36 C2,36 4,47 11,47 C72,46 158,44 214,49 C218,50 215,61 206,61 C145,62 60,60 12,63" fill="none" stroke="#E8AABB" stroke-width="19" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+              </svg>
+            </span>
+          </h1>
           <p class="hero-subtitle">Acompañamiento terapéutico y entrenamiento en habilidades emocionales</p>
           <div class="hero-actions">
             <a href="#contacta" class="btn btn-yellow">Contacto</a>
@@ -1200,15 +1239,16 @@
           <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
         </div>
 
-        <!-- Indicador visual con texto y flecha -->
-        <div class="tab-hint-container">
-          <span>Selecciona las pestañas para ver cada servicio</span>
-          <svg class="tab-hint-arrow" viewBox="0 0 50 30" aria-hidden="true">
-            <path d="M5 5 Q 25 25, 45 15 M 35 8 L 45 15 L 37 23" />
-          </svg>
-        </div>
-
         <div class="folder-tabs-wrapper">
+          <!-- Indicador visual con texto y flecha curva apuntando hacia abajo -->
+          <div class="tab-hint-container">
+            <span>Selecciona las pestañas para ver cada servicio</span>
+            <svg class="tab-hint-arrow" viewBox="0 0 48 40" aria-hidden="true">
+              <path d="M 4 8 Q 34 6, 36 32" />
+              <path d="M 28 24 L 36 33 L 43 23" />
+            </svg>
+          </div>
+
           <!-- Pestañas clicables (4 servicios principales) -->
           <div class="folder-tablist" role="tablist" aria-label="Servicios de sesiones individuales">
             <button type="button" class="folder-tab" role="tab" aria-selected="true" aria-controls="panel-emociones" id="tab-emociones" data-color="butter">
