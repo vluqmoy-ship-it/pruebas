@@ -141,8 +141,8 @@
 
   <style>
     /* ==========================================================================
-        VARIABLES DE MARCA
-        ========================================================================== */
+       VARIABLES DE MARCA
+       ========================================================================== */
     :root {
       --ciruela-noche: #2E1A2B;
       --ciruela-media: #3B2338;
@@ -164,8 +164,8 @@
     }
 
     /* ==========================================================================
-        RESET Y BASE
-        ========================================================================== */
+       RESET Y BASE
+       ========================================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -218,8 +218,8 @@
     }
 
     /* ==========================================================================
-        TIPOGRAFÍA Y ELEMENTOS DE PAPELERÍA
-        ========================================================================== */
+       TIPOGRAFÍA Y ELEMENTOS DE PAPELERÍA
+       ========================================================================== */
     h1, h2, h3, .btn {
       font-family: var(--font-display);
       font-weight: 700;
@@ -342,8 +342,8 @@
     }
 
     /* ==========================================================================
-        CABECERA Y NAVEGACIÓN
-        ========================================================================== */
+       CABECERA Y NAVEGACIÓN
+       ========================================================================== */
     .site-header {
       padding: 1.2rem 0;
       position: sticky;
@@ -409,20 +409,26 @@
 
     .menu-toggle {
       display: none;
-      background: none;
-      border: 1.5px solid var(--papel-carta);
-      color: var(--papel-carta);
+      background-color: var(--mantequilla);
+      border: 1.5px solid var(--ciruela-noche);
+      color: var(--ciruela-noche);
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.9rem;
-      padding: 0.45rem 0.85rem;
+      padding: 0.45rem 0.9rem;
       border-radius: var(--radius-sm);
       cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle[aria-expanded="true"] {
+      background-color: var(--rosa-sello);
     }
 
     /* ==========================================================================
-        SECCIÓN 1: HERO
-        ========================================================================== */
+       SECCIÓN 1: HERO
+       ========================================================================== */
     .hero-section {
       padding: 5rem 0 5.5rem;
       border-bottom: 2px solid var(--rosa-sello);
@@ -494,8 +500,8 @@
     }
 
     /* ==========================================================================
-        SECCIÓN 2: SESIONES INDIVIDUALES Y PESTAÑAS
-        ========================================================================== */
+       SECCIÓN 2: SESIONES INDIVIDUALES Y PESTAÑAS
+       ========================================================================== */
     .sessions-section {
       padding: 5.5rem 0;
     }
@@ -660,8 +666,8 @@
     }
 
     /* ==========================================================================
-        RESTO DE SECCIONES (SOBRE MÍ, FAQ, CONTACTO, FOOTER)
-        ========================================================================== */
+       RESTO DE SECCIONES (SOBRE MÍ, FAQ, CONTACTO, FOOTER)
+       ========================================================================== */
     .about-section {
       padding: 5.5rem 0;
       border-top: 2px solid var(--rosa-sello);
@@ -777,11 +783,25 @@
       margin-bottom: 1rem;
     }
 
+    /* Bloque de metodología y tarjetas numeradas */
+    .pillars-wrapper {
+      margin-top: 4rem;
+    }
+
+    .pillars-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    .pillars-heading h3 {
+      font-size: 1.4rem;
+      color: var(--ciruela-noche);
+      margin-bottom: 0;
+    }
+
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
-      margin-top: 4rem;
     }
 
     .pillar-card {
@@ -804,9 +824,13 @@
       margin-bottom: 0.6rem;
     }
 
-    .pillar-card h3 {
+    .pillar-card h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
       color: var(--ciruela-noche);
       font-size: 1.15rem;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
     }
 
     .pillar-card p {
@@ -815,6 +839,9 @@
       color: rgba(46, 26, 43, 0.9);
     }
 
+    /* ==========================================================================
+       SECCIÓN 4: PREGUNTAS FRECUENTES
+       ========================================================================== */
     .faq-section {
       padding: 5.5rem 0;
     }
@@ -832,6 +859,12 @@
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-dark);
       overflow: hidden;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .faq-item[open] {
+      background-color: var(--papel-carta);
+      border-color: var(--ciruela-noche);
     }
 
     .faq-item summary {
@@ -846,6 +879,11 @@
       align-items: center;
       gap: 1rem;
       color: var(--papel-carta);
+      transition: color 0.25s ease;
+    }
+
+    .faq-item[open] summary {
+      color: var(--ciruela-noche);
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -870,13 +908,14 @@
     .faq-item[open] .faq-icon {
       transform: rotate(45deg);
       background-color: var(--mantequilla);
+      border: 1px solid var(--ciruela-noche);
     }
 
     .faq-answer {
       padding: 0 1.5rem 1.5rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.2);
+      border-top: 1px dashed rgba(46, 26, 43, 0.25);
       padding-top: 1rem;
-      color: var(--papel-carta);
+      color: var(--ciruela-noche);
     }
 
     .faq-answer p + p {
@@ -1037,8 +1076,8 @@
     }
 
     /* ==========================================================================
-        ADAPTACIÓN RESPONSIVE (TABLETS Y MÓVILES)
-        ========================================================================== */
+       ADAPTACIÓN RESPONSIVE (TABLETS Y MÓVILES)
+       ========================================================================== */
     @media (max-width: 960px) {
       .hero-grid,
       .about-grid,
@@ -1068,7 +1107,8 @@
       .nav-list {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
+        text-align: right;
         position: absolute;
         top: 100%;
         left: 0;
@@ -1076,7 +1116,7 @@
         background-color: var(--ciruela-media);
         padding: 1.25rem 1.5rem;
         border-bottom: 2px solid var(--rosa-sello);
-        gap: 1rem;
+        gap: 1.1rem;
       }
 
       .nav-list.is-open {
@@ -1350,31 +1390,37 @@
           </div>
         </div>
 
-        <!-- 4 Pilares -->
-        <div class="pillars-grid">
-          <article class="pillar-card">
-            <span class="pillar-number">01</span>
-            <h3>Rigor sin rigidez</h3>
-            <p>El trabajo emocional tiene base científica. Uso modelos con evidencia, pero los adapto a ti, no al revés.</p>
-          </article>
+        <!-- 4 Pilares con título de sección -->
+        <div class="pillars-wrapper">
+          <div class="pillars-heading">
+            <span class="tag-label tag-label--butter">Claves de mi metodología</span>
+          </div>
 
-          <article class="pillar-card">
-            <span class="pillar-number">02</span>
-            <h3>Sin juicio, con dirección</h3>
-            <p>No hay emociones incorrectas. Hay formas de relacionarse con ellas que abren posibilidades y formas que las cierran.</p>
-          </article>
+          <div class="pillars-grid">
+            <article class="pillar-card">
+              <span class="pillar-number">01</span>
+              <h4>Rigor sin rigidez</h4>
+              <p>El trabajo emocional tiene base científica. Uso modelos con evidencia, pero los adapto a ti, no al revés.</p>
+            </article>
 
-          <article class="pillar-card">
-            <span class="pillar-number">03</span>
-            <h3>Tú en el centro</h3>
-            <p>Las sesiones no siguen un guion fijo. Se construyen a partir de lo que traes, de lo que necesitas y de hacia dónde quieres ir.</p>
-          </article>
+            <article class="pillar-card">
+              <span class="pillar-number">02</span>
+              <h4>Sin juicio, con dirección</h4>
+              <p>No hay emociones incorrectas. Hay formas de relacionarse con ellas que abren posibilidades y formas que las cierran.</p>
+            </article>
 
-          <article class="pillar-card">
-            <span class="pillar-number">04</span>
-            <h3>Online, a tu ritmo</h3>
-            <p>Sesiones individuales por videollamada. Sin desplazamientos ni barreras geográficas.</p>
-          </article>
+            <article class="pillar-card">
+              <span class="pillar-number">03</span>
+              <h4>Tú en el centro</h4>
+              <p>Las sesiones no siguen un guion fijo. Se construyen a partir de lo que traes, de lo que necesitas y de hacia dónde quieres ir.</p>
+            </article>
+
+            <article class="pillar-card">
+              <span class="pillar-number">04</span>
+              <h4>Online, a tu ritmo</h4>
+              <p>Sesiones individuales por videollamada. Sin desplazamientos ni barreras geográficas.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
