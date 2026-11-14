@@ -1072,30 +1072,47 @@
         align-self: center;
       }
 
-      /* Adaptación móvil de pestañas */
+      /* Adaptación móvil de pestañas tipo agenda lateral */
+      .folder-tabs-wrapper {
+        display: flex;
+        flex-direction: row-reverse; /* Coloca las pestañas a la derecha y la hoja a la izquierda */
+        align-items: stretch;
+      }
+
       .folder-tablist {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         gap: 4px;
+        padding: 12px 0; /* Deja margen arriba y abajo respecto a las esquinas redondeadas */
+        flex-shrink: 0;
       }
 
       .folder-tab {
-        font-size: 0.75rem;
-        padding: 0.7rem 0.85rem;
-        flex: 1 1 auto;
+        writing-mode: vertical-rl; /* Texto vertical leyendo de arriba hacia abajo */
+        text-orientation: mixed;
+        border-radius: 0 10px 10px 0; /* Redondeo en el borde exterior derecho */
+        padding: 0.9rem 0.45rem;
+        font-size: 0.72rem;
+        line-height: 1.15;
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
       }
 
-      .folder-sheet {
-        border-radius: 0 0 12px 12px;
-        padding: 2rem 1.35rem;
+      .folder-tab[aria-selected="true"] {
+        padding: 0.9rem 0.65rem 0.9rem 0.55rem; /* Sobresale ligeramente hacia la derecha */
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.22);
       }
 
-      .contact-card {
-        padding: 1.75rem 1.25rem;
+      .folder-sheet {
+        flex: 1;
+        min-width: 0;
+        border-radius: 12px;
+        padding: 2rem 1.35rem;
       }
-    }
-  </style>
-</head>
-<body>
 
   <!-- CABECERA (OSCURA) -->
   <header class="site-header">
@@ -1167,19 +1184,51 @@
             <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-autocuidado" id="tab-autocuidado" data-color="pink">
               AUTOCUIDADO
             </button>
-            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-mindfulness" id="tab-mindfulness" data-color="paper">
-              MINDFULNESS
-            </button>
             <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-rumia" id="tab-rumia" data-color="butter">
               RUMIA
             </button>
-            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-crisis" id="tab-crisis" data-color="pink">
-              CRISIS PERSONALES
-            </button>
             <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-tecnologia" id="tab-tecnologia" data-color="paper">
-              TECNOLOGÍA
+              HÁBITOS DIGITALES
             </button>
           </div>
+
+          <!-- Hoja de contenido que cambia de color según la pestaña activa -->
+          <div class="folder-sheet is-butter" id="folderSheet">
+            
+            <!-- Pestaña 1: Gestión de emociones -->
+            <div class="tab-panel is-active" id="panel-emociones" role="tabpanel" aria-labelledby="tab-emociones">
+              <h3>Gestión de emociones</h3>
+              <p>A veces podemos sentir que las emociones nos desbordan y controlan nuestras vidas, como si fuéramos un barco a la deriva a merced de las olas. Trabajaremos para identificar cómo y por qué te están afectando esas emociones, y buscaremos nuevas formas de responder a ellas para que no paralicen tu vida.</p>
+              <p>Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
+              <p class="tab-handnote">sin juicio, con dirección</p>
+            </div>
+
+            <!-- Pestaña 2: Autocuidado y autoestima -->
+            <div class="tab-panel" id="panel-autocuidado" role="tabpanel" aria-labelledby="tab-autocuidado">
+              <h3>Autocuidado y autoestima</h3>
+              <p>Si llevas mucho tiempo viviendo en base a lo que el resto del mundo espera de ti, es posible que te cueste reconocer tus propias necesidades o elegir el tipo de vida que quieres llevar. Trabajaremos para descubrir el tipo de persona que quieres ser y para encontrar un equilibrio entre tus necesidades y las de los demás.</p>
+              <p>Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
+              <p class="tab-handnote">tú en el centro</p>
+            </div>
+
+            <!-- Pestaña 3: Reducción de la rumia -->
+            <div class="tab-panel" id="panel-rumia" role="tabpanel" aria-labelledby="tab-rumia">
+              <h3>Reducción de la rumia y pensamientos intrusivos</h3>
+              <p>[Texto pendiente de completar: Cuando la mente entra en bucle dando vueltas una y otra vez a lo mismo, es fácil quedarse atrapada en el análisis y desconectada del presente. En estas sesiones exploramos qué función cumple esa rumia y entrenamos formas distintas de relacionarte con tus pensamientos.]</p>
+              <p>[Entrenamos herramientas prácticas para salir del piloto automático mental y recuperar espacio para actuar hacia lo que te importa.]</p>
+              <p class="tab-handnote">sin guion, a tu ritmo</p>
+            </div>
+
+            <!-- Pestaña 4: Hábitos digitales -->
+            <div class="tab-panel" id="panel-tecnologia" role="tabpanel" aria-labelledby="tab-tecnologia">
+              <h3>Uso problemático de tecnología (redes sociales, videojuegos...)</h3>
+              <p>[Texto pendiente de completar: A veces las pantallas, las redes sociales o los videojuegos pasan de ser un espacio de disfrute o descanso a convertirse en una vía automática para escapar del malestar o llenar vacíos.]</p>
+              <p>[Analizamos qué lugar ocupa la tecnología en tu día a día y diseñamos ajustes concretos en tu entorno y tus hábitos para recuperar una relación consciente con ella.]</p>
+              <p class="tab-handnote">construye una vida con sentido</p>
+            </div>
+
+          </div>
+        </div>
 
           <!-- Hoja de contenido que cambia de color según la pestaña activa -->
           <div class="folder-sheet is-butter" id="folderSheet">
