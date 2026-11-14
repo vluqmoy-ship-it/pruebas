@@ -541,11 +541,24 @@
     }
 
     .photo-caption {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1rem;
       text-align: center;
       color: var(--ciruela-noche);
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .caption-name {
+      font-family: var(--font-display); /* Courier Prime Bold */
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .caption-role {
+      font-family: var(--font-body); /* IBM Plex Mono */
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--ciruela-media);
     }
 
     .training-note {
@@ -1105,7 +1118,10 @@
             <figure class="photo-card">
               <div class="washi-tape washi-tape--pink" aria-hidden="true"></div>
               <img src="vanessa-luque.jpg" alt="Vanessa Luque Terapeuta">
-              <figcaption class="photo-caption">Vanessa Luque Terapeuta</figcaption>
+               <figcaption class="photo-caption">
+               <span class="caption-name">Vanessa Luque</span>
+               <span class="caption-role">Terapeuta</span>
+             </figcaption>            
             </figure>
 
             <div class="training-note">
@@ -1117,7 +1133,7 @@
                 <li>Psicoterapia Analítico Funcional</li>
                 <li>Educación social</li>
                 <li>Educación emocional</li>
-                <li>Análisis de conducta.</li>
+                <li>Análisis de conducta</li>
               </ul>
             </div>
           </div>
