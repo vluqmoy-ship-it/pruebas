@@ -78,7 +78,7 @@
           "Regulación y gestión emocional",
           "Autocuidado y autoestima",
           "Reducción de la rumia",
-          "Mindfulness cotidiano"
+          "Hábitos digitales"
         ]
       },
       {
@@ -141,8 +141,8 @@
 
   <style>
     /* ==========================================================================
-       VARIABLES DE MARCA
-       ========================================================================== */
+        VARIABLES DE MARCA
+        ========================================================================== */
     :root {
       --ciruela-noche: #2E1A2B;
       --ciruela-media: #3B2338;
@@ -164,8 +164,8 @@
     }
 
     /* ==========================================================================
-       RESET Y BASE
-       ========================================================================== */
+        RESET Y BASE
+        ========================================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -219,15 +219,15 @@
     }
 
     /* ==========================================================================
-       TIPOGRAFÍA Y ELEMENTOS DE PAPELERÍA
-       ========================================================================== */
+        TIPOGRAFÍA Y ELEMENTOS DE PAPELERÍA
+        ========================================================================== */
     h1, h2, h3, .btn {
       font-family: var(--font-display);
       font-weight: 700;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 5.5vw, 3.6rem); /* Más grande y protagonista */
+      font-size: clamp(2.6rem, 5.5vw, 3.6rem);
       line-height: 1.14;
       margin-bottom: 1.25rem;
     }
@@ -244,7 +244,6 @@
       margin-bottom: 0.75rem;
     }
 
-    /* Marcador rosa tras la palabra clave */
     .marker-pink {
       background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
@@ -253,7 +252,6 @@
       display: inline-block;
     }
 
-    /* Etiqueta estilo papelería */
     .tag-label {
       display: inline-block;
       font-family: var(--font-display);
@@ -272,7 +270,6 @@
       background-color: var(--mantequilla);
     }
 
-    /* Cinta Washi decorativa */
     .washi-tape {
       position: absolute;
       width: 90px;
@@ -328,8 +325,8 @@
     }
 
     /* ==========================================================================
-       CABECERA Y NAVEGACIÓN (PARTE SUPERIOR OSCURA)
-       ========================================================================== */
+        CABECERA Y NAVEGACIÓN
+        ========================================================================== */
     .site-header {
       padding: 1.2rem 0;
       position: sticky;
@@ -400,8 +397,8 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 1: HERO (FONDO CLARO #FAF3F4)
-       ========================================================================== */
+        SECCIÓN 1: HERO
+        ========================================================================== */
     .hero-section {
       padding: 5rem 0 5.5rem;
       border-bottom: 2px solid var(--rosa-sello);
@@ -431,7 +428,6 @@
       gap: 1.5rem;
     }
 
-    /* Panel Terapia Online en Ciruela oscuro */
     .areas-board {
       background-color: var(--ciruela-noche);
       border: 1px dashed rgba(243, 233, 216, 0.35);
@@ -474,8 +470,8 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 2: SESIONES INDIVIDUALES CON PESTAÑAS DE ÍNDICE (OSCURA #2E1A2B)
-       ========================================================================== */
+        SECCIÓN 2: SESIONES INDIVIDUALES Y PESTAÑAS
+        ========================================================================== */
     .sessions-section {
       padding: 5.5rem 0;
     }
@@ -490,17 +486,32 @@
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 1rem;
-    }
-
-    .section-dark .section-lead {
       color: var(--rosa-sello);
     }
 
-    .section-light .section-lead {
-      color: var(--ciruela-media);
+    /* Pista visual con texto manuscrito y flecha */
+    .tab-hint-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-family: var(--font-hand);
+      font-size: 1.6rem;
+      color: var(--mantequilla);
+      line-height: 1;
     }
 
-    /* Sistema de Pestañas de Índice (Fichero de papelería) */
+    .tab-hint-arrow {
+      width: 45px;
+      height: 24px;
+      fill: none;
+      stroke: var(--mantequilla);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .folder-tabs-wrapper {
       max-width: 920px;
       margin: 0 auto;
@@ -535,7 +546,6 @@
       filter: brightness(1.03);
     }
 
-    /* Colores de pestañas según la guía de marca */
     .folder-tab[data-color="butter"] {
       background-color: var(--mantequilla);
     }
@@ -548,7 +558,6 @@
       background-color: var(--papel-carta);
     }
 
-    /* Pestaña activa se fusiona con el cuerpo de la ficha */
     .folder-tab[aria-selected="true"] {
       opacity: 1;
       padding-top: 1.05rem;
@@ -557,7 +566,6 @@
       box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.18);
     }
 
-    /* Hoja principal que toma el color de la pestaña activa */
     .folder-sheet {
       background-color: var(--mantequilla);
       color: var(--ciruela-noche);
@@ -602,13 +610,6 @@
       color: var(--ciruela-noche);
     }
 
-    .tab-modality {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      color: rgba(46, 26, 43, 0.85);
-      margin-bottom: 1.5rem;
-    }
-
     .tab-panel p {
       margin-bottom: 1.15rem;
       max-width: 66ch;
@@ -617,7 +618,7 @@
 
     p.tab-handnote {
       font-family: var(--font-hand);
-      font-size: 2.35rem; /* Aprox. 37px, muy legible */
+      font-size: 2.35rem;
       font-weight: 600;
       color: var(--ciruela-noche);
       margin-top: 1.5rem;
@@ -627,8 +628,8 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 3: SOBRE MÍ / SOBRE SERELPIS (FONDO CLARO #FAF3F4)
-       ========================================================================== */
+        RESTO DE SECCIONES (SOBRE MÍ, FAQ, CONTACTO, FOOTER)
+        ========================================================================== */
     .about-section {
       padding: 5.5rem 0;
       border-top: 2px solid var(--rosa-sello);
@@ -677,13 +678,13 @@
     }
 
     .caption-name {
-      font-family: var(--font-display); /* Courier Prime Bold */
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 1.05rem;
     }
 
     .caption-role {
-      font-family: var(--font-body); /* IBM Plex Mono */
+      font-family: var(--font-body);
       font-weight: 400;
       font-size: 0.85rem;
       color: var(--ciruela-media);
@@ -744,7 +745,6 @@
       margin-bottom: 1rem;
     }
 
-    /* Los 4 Pilares sobre fondo claro */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -783,9 +783,6 @@
       color: rgba(46, 26, 43, 0.9);
     }
 
-    /* ==========================================================================
-       SECCIÓN 4: PREGUNTAS FRECUENTES (FONDO OSCURO #2E1A2B)
-       ========================================================================== */
     .faq-section {
       padding: 5.5rem 0;
     }
@@ -854,9 +851,6 @@
       margin-top: 0.9rem;
     }
 
-    /* ==========================================================================
-       SECCIÓN 5: CONTACTO (FONDO CLARO #FAF3F4)
-       ========================================================================== */
     .contact-section {
       padding: 5.5rem 0;
       border-top: 2px solid var(--rosa-sello);
@@ -962,9 +956,6 @@
       margin-bottom: 1.5rem;
     }
 
-    /* ==========================================================================
-       FOOTER (PARTE INFERIOR DEL TODO OSCURA)
-       ========================================================================== */
     .site-footer {
       background-color: var(--ciruela-footer);
       padding: 3.25rem 0 2.25rem;
@@ -1014,8 +1005,8 @@
     }
 
     /* ==========================================================================
-       ADAPTACIÓN A SMARTPHONES Y TABLETS (RESPONSIVE)
-       ========================================================================== */
+        ADAPTACIÓN RESPONSIVE (TABLETS Y MÓVILES)
+        ========================================================================== */
     @media (max-width: 960px) {
       .hero-grid,
       .about-grid,
@@ -1072,10 +1063,22 @@
         align-self: center;
       }
 
+      /* Pista visual orientada a la derecha en móvil */
+      .tab-hint-container {
+        justify-content: flex-end;
+        font-size: 1.35rem;
+        margin-right: 0.5rem;
+      }
+
+      .tab-hint-arrow {
+        width: 35px;
+        height: 20px;
+      }
+
       /* Adaptación móvil de pestañas tipo agenda lateral */
       .folder-tabs-wrapper {
         display: flex;
-        flex-direction: row-reverse; /* Coloca las pestañas a la derecha y la hoja a la izquierda */
+        flex-direction: row-reverse;
         align-items: stretch;
       }
 
@@ -1084,14 +1087,14 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 4px;
-        padding: 12px 0; /* Deja margen arriba y abajo respecto a las esquinas redondeadas */
+        padding: 12px 0;
         flex-shrink: 0;
       }
 
       .folder-tab {
-        writing-mode: vertical-rl; /* Texto vertical leyendo de arriba hacia abajo */
+        writing-mode: vertical-rl;
         text-orientation: mixed;
-        border-radius: 0 10px 10px 0; /* Redondeo en el borde exterior derecho */
+        border-radius: 0 10px 10px 0;
         padding: 0.9rem 0.45rem;
         font-size: 0.72rem;
         line-height: 1.15;
@@ -1103,7 +1106,7 @@
       }
 
       .folder-tab[aria-selected="true"] {
-        padding: 0.9rem 0.65rem 0.9rem 0.55rem; /* Sobresale ligeramente hacia la derecha */
+        padding: 0.9rem 0.65rem 0.9rem 0.55rem;
         box-shadow: 4px 0 12px rgba(0, 0, 0, 0.22);
       }
 
@@ -1118,11 +1121,20 @@
         padding: 1.75rem 1.25rem;
       }
     }
+
+    /* En escritorio la pista visual se alinea a la derecha pero apunta hacia arriba */
+    @media (min-width: 769px) {
+      .tab-hint-container {
+        justify-content: flex-end;
+        margin-bottom: 0.5rem;
+      }
+      .tab-hint-arrow {
+        transform: scaleX(-1) rotate(-90deg);
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- CABECERA (OSCURA) -->
 
   <!-- CABECERA (OSCURA) -->
   <header class="site-header">
@@ -1168,15 +1180,13 @@
             <li>Gestión de emociones</li>
             <li>Autocuidado y autoestima</li>
             <li>Reducción de la rumia y pensamientos intrusivos</li>
-            <li>Afrontamiento de crisis personales (cambios vitales, duelos...)</li>
-            <li>Mindfulness para la vida cotidiana</li>
             <li>Uso problemático de tecnología (redes sociales, videojuegos...)</li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <!-- 2. SECCIÓN SESIONES INDIVIDUALES CON PESTAÑAS DE ÍNDICE (FONDO OSCURO #2E1A2B) -->
+    <!-- 2. SECCIÓN SESIONES INDIVIDUALES (FONDO OSCURO #2E1A2B) -->
     <section id="sesiones" class="sessions-section section-dark">
       <div class="container">
         <div class="section-header">
@@ -1185,8 +1195,16 @@
           <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
         </div>
 
+        <!-- Indicador visual con texto y flecha -->
+        <div class="tab-hint-container">
+          <span>Selecciona las pestañas para ver cada servicio</span>
+          <svg class="tab-hint-arrow" viewBox="0 0 50 30" aria-hidden="true">
+            <path d="M5 5 Q 25 25, 45 15 M 35 8 L 45 15 L 37 23" />
+          </svg>
+        </div>
+
         <div class="folder-tabs-wrapper">
-          <!-- Pestañas clicables -->
+          <!-- Pestañas clicables (4 servicios principales) -->
           <div class="folder-tablist" role="tablist" aria-label="Servicios de sesiones individuales">
             <button type="button" class="folder-tab" role="tab" aria-selected="true" aria-controls="panel-emociones" id="tab-emociones" data-color="butter">
               EMOCIONES
@@ -1361,7 +1379,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
-              <p>Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar lo que necesites. No hay protocolos rígidos que cumplir.</p>
+              <p>Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar what necesites. No hay protocolos rígidos que cumplir.</p>
             </div>
           </details>
 
@@ -1479,16 +1497,13 @@
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Desactivar todas las pestañas y paneles
         tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
         panels.forEach(p => p.classList.remove('is-active'));
 
-        // Activar la pestaña pulsada y su panel correspondiente
         tab.setAttribute('aria-selected', 'true');
         const targetId = tab.getAttribute('aria-controls');
         document.getElementById(targetId).classList.add('is-active');
 
-        // Cambiar el color de fondo de la hoja para que coincida con la pestaña activa
         const color = tab.getAttribute('data-color');
         folderSheet.classList.remove('is-butter', 'is-pink', 'is-paper');
         folderSheet.classList.add(`is-${color}`);
