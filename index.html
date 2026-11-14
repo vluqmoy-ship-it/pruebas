@@ -16,15 +16,16 @@
 
   <style>
     /* ==========================================================================
-       VARIABLES DE MARCA (SerElpis Guía de Marca v1.0)
+       VARIABLES DE MARCA (Con fondo claro #FAF3F4 y acento rosa #E8AABB)
        ========================================================================== */
     :root {
       --ciruela-noche: #2E1A2B;
       --ciruela-media: #3B2338;
       --papel-carta: #F3E9D8;
-      --rosa-sello: #F4A6BC;
+      --rosa-fondo-claro: #FAF3F4; /* Rosa muy suave de tu captura */
+      --rosa-sello: #E8AABB;       /* Rosa empolvado de los detalles de tu captura */
       --mantequilla: #F0DE88;
-      --rosa-intenso: #E8708F;
+      --rosa-intenso: #D87A93;
 
       --font-display: 'Courier Prime', monospace;
       --font-body: 'IBM Plex Mono', monospace;
@@ -32,7 +33,8 @@
 
       --radius-sm: 4px;
       --radius-md: 8px;
-      --shadow-paper: 0 10px 25px rgba(0, 0, 0, 0.28);
+      --shadow-dark: 0 10px 25px rgba(0, 0, 0, 0.28);
+      --shadow-light: 0 8px 22px rgba(46, 26, 43, 0.08);
     }
 
     /* ==========================================================================
@@ -51,14 +53,26 @@
 
     body {
       background-color: var(--ciruela-noche);
-      /* Patrón de puntos: 1.3px cada 22px en color papel al 20% */
+      color: var(--papel-carta);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    /* Fondos alternos de alto contraste */
+    .section-dark {
+      background-color: var(--ciruela-noche);
       background-image: radial-gradient(rgba(243, 233, 216, 0.2) 1.3px, transparent 1.3px);
       background-size: 22px 22px;
       color: var(--papel-carta);
-      font-family: var(--font-body);
-      font-size: 0.95rem; /* 15.2px */
-      line-height: 1.55;
-      overflow-x: hidden;
+    }
+
+    .section-light {
+      background-color: var(--rosa-fondo-claro);
+      background-image: radial-gradient(rgba(46, 26, 43, 0.12) 1.3px, transparent 1.3px);
+      background-size: 22px 22px;
+      color: var(--ciruela-noche);
     }
 
     img {
@@ -71,7 +85,6 @@
       text-decoration: none;
     }
 
-    /* Contenedor principal con ancho óptimo de lectura */
     .container {
       width: 100%;
       max-width: 1120px;
@@ -88,13 +101,13 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.125rem); /* 42px - 50px en desktop */
+      font-size: clamp(2.2rem, 5vw, 3.125rem);
       line-height: 1.18;
       margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.125rem); /* ~34px */
+      font-size: clamp(1.75rem, 3.5vw, 2.125rem);
       line-height: 1.25;
       margin-bottom: 1rem;
     }
@@ -105,7 +118,7 @@
       margin-bottom: 0.75rem;
     }
 
-    /* Marcador rosa tras la palabra clave (uno por titular) */
+    /* Marcador rosa tras la palabra clave */
     .marker-pink {
       background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
@@ -133,10 +146,6 @@
       background-color: var(--mantequilla);
     }
 
-    .tag-label--paper {
-      background-color: var(--papel-carta);
-    }
-
     /* Cinta Washi decorativa */
     .washi-tape {
       position: absolute;
@@ -151,7 +160,7 @@
     }
 
     .washi-tape--pink {
-      background-color: rgba(244, 166, 188, 0.92);
+      background-color: rgba(232, 170, 187, 0.92);
       transform: translateX(-50%) rotate(4deg);
     }
 
@@ -198,9 +207,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(46, 26, 43, 0.94);
+      background-color: rgba(46, 26, 43, 0.96);
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(243, 233, 216, 0.12);
+      border-bottom: 1px solid rgba(243, 233, 216, 0.14);
     }
 
     .header-inner {
@@ -250,10 +259,10 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 1: HERO & ÁREAS DE TERAPIA ONLINE
+       SECCIÓN 1: HERO & ÁREAS DE TERAPIA ONLINE (OSCURA)
        ========================================================================== */
     .hero-section {
-      padding: 4.5rem 0 5rem;
+      padding: 4.5rem 0 5.5rem;
     }
 
     .hero-grid {
@@ -279,14 +288,13 @@
       margin-top: 2rem;
     }
 
-    /* Bloque Terapia Online (Grid de áreas sin inventar texto) */
     .areas-board {
       background-color: var(--ciruela-media);
       border: 1px dashed rgba(243, 233, 216, 0.35);
       border-radius: var(--radius-md);
       padding: 2rem 1.75rem;
       position: relative;
-      box-shadow: var(--shadow-paper);
+      box-shadow: var(--shadow-dark);
     }
 
     .areas-title {
@@ -306,7 +314,7 @@
     }
 
     .areas-list li {
-      background-color: var(--papel-carta);
+      background-color: var(--rosa-fondo-claro);
       color: var(--ciruela-noche);
       font-family: var(--font-display);
       font-weight: 700;
@@ -322,13 +330,12 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (VANESSA LUQUE)
+       SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (CLARA - ROSA SUAVE #FAF3F4)
        ========================================================================== */
     .about-section {
-      padding: 5rem 0;
-      background-color: var(--ciruela-media);
-      border-top: 1px dashed rgba(243, 233, 216, 0.18);
-      border-bottom: 1px dashed rgba(243, 233, 216, 0.18);
+      padding: 5.5rem 0;
+      border-top: 2px solid var(--rosa-sello);
+      border-bottom: 2px solid var(--rosa-sello);
     }
 
     .about-grid {
@@ -338,7 +345,6 @@
       align-items: start;
     }
 
-    /* Columna Foto + Formación */
     .about-sidebar {
       display: flex;
       flex-direction: column;
@@ -346,11 +352,12 @@
     }
 
     .photo-card {
-      background-color: var(--papel-carta);
+      background-color: #FFFFFF;
       color: var(--ciruela-noche);
       padding: 1rem 1rem 1.35rem;
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-paper);
+      border: 1px solid rgba(46, 26, 43, 0.12);
+      box-shadow: var(--shadow-light);
       position: relative;
       transform: rotate(-1.5deg);
     }
@@ -361,7 +368,7 @@
       object-fit: cover;
       border-radius: 2px;
       margin-bottom: 0.9rem;
-      background-color: #d8cbb8;
+      background-color: #ebdadd;
     }
 
     .photo-caption {
@@ -372,13 +379,14 @@
       color: var(--ciruela-noche);
     }
 
-    /* Hoja de libreta para formación */
+    /* Hoja de libreta para formación sobre fondo claro */
     .training-note {
       background-color: var(--papel-carta);
       color: var(--ciruela-noche);
       padding: 1.75rem 1.5rem;
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-paper);
+      border: 1px solid rgba(46, 26, 43, 0.14);
+      box-shadow: var(--shadow-light);
       position: relative;
     }
 
@@ -410,7 +418,6 @@
       font-weight: bold;
     }
 
-    /* Columna Texto Bio */
     .about-content p {
       margin-bottom: 1.25rem;
       max-width: 65ch;
@@ -419,16 +426,16 @@
     .outside-office {
       margin-top: 2.25rem;
       padding-top: 2rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.28);
+      border-top: 1px dashed rgba(46, 26, 43, 0.25);
     }
 
     .outside-office h3 {
-      color: var(--mantequilla);
+      color: var(--ciruela-noche);
       font-size: 1.3rem;
       margin-bottom: 1rem;
     }
 
-    /* Los 4 Pilares (Grid 2x2 estilo Post-it / Fichas) */
+    /* Los 4 Pilares (Tarjetas blancas/papel con alto contraste sobre fondo rosa suave) */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -437,36 +444,41 @@
     }
 
     .pillar-card {
-      background-color: var(--ciruela-noche);
-      border: 1px dashed rgba(243, 233, 216, 0.35);
+      background-color: #FFFFFF;
+      border: 1px dashed rgba(46, 26, 43, 0.3);
       border-radius: var(--radius-md);
       padding: 1.75rem;
+      box-shadow: var(--shadow-light);
     }
 
     .pillar-number {
+      display: inline-block;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--rosa-sello);
-      display: block;
-      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+      background-color: var(--rosa-sello);
+      color: var(--ciruela-noche);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
     }
 
     .pillar-card h3 {
-      color: var(--mantequilla);
+      color: var(--ciruela-noche);
       font-size: 1.15rem;
     }
 
     .pillar-card p {
       font-size: 0.92rem;
       margin-bottom: 0;
+      color: rgba(46, 26, 43, 0.9);
     }
 
     /* ==========================================================================
-       SECCIÓN 3: SESIONES INDIVIDUALES
+       SECCIÓN 3: SESIONES INDIVIDUALES (OSCURA)
        ========================================================================== */
     .sessions-section {
-      padding: 5rem 0;
+      padding: 5.5rem 0;
     }
 
     .section-header {
@@ -481,6 +493,11 @@
       margin-bottom: 1rem;
     }
 
+    .section-light .section-lead {
+      color: var(--ciruela-media);
+      font-weight: 700;
+    }
+
     .sessions-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -489,11 +506,11 @@
     }
 
     .session-card {
-      background-color: var(--papel-carta);
+      background-color: var(--rosa-fondo-claro);
       color: var(--ciruela-noche);
       border-radius: var(--radius-md);
       padding: 2rem 1.65rem;
-      box-shadow: var(--shadow-paper);
+      box-shadow: var(--shadow-dark);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -505,7 +522,7 @@
     }
 
     .session-card:nth-child(3) {
-      border-top-color: var(--ciruela-media);
+      border-top-color: var(--papel-carta);
     }
 
     .session-card h3 {
@@ -528,13 +545,12 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 4: PREGUNTAS FRECUENTES (Acordeón)
+       SECCIÓN 4: PREGUNTAS FRECUENTES (CLARA - ROSA SUAVE #FAF3F4)
        ========================================================================== */
     .faq-section {
-      padding: 5rem 0;
-      background-color: var(--ciruela-media);
-      border-top: 1px dashed rgba(243, 233, 216, 0.18);
-      border-bottom: 1px dashed rgba(243, 233, 216, 0.18);
+      padding: 5.5rem 0;
+      border-top: 2px solid var(--rosa-sello);
+      border-bottom: 2px solid var(--rosa-sello);
     }
 
     .faq-list {
@@ -545,9 +561,10 @@
     }
 
     .faq-item {
-      background-color: var(--ciruela-noche);
-      border: 1px solid rgba(243, 233, 216, 0.22);
+      background-color: #FFFFFF;
+      border: 1px solid rgba(46, 26, 43, 0.18);
       border-radius: var(--radius-md);
+      box-shadow: var(--shadow-light);
       overflow: hidden;
     }
 
@@ -562,7 +579,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      color: var(--papel-carta);
+      color: var(--ciruela-noche);
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -570,21 +587,30 @@
     }
 
     .faq-icon {
-      color: var(--mantequilla);
-      font-size: 1.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: var(--rosa-sello);
+      color: var(--ciruela-noche);
+      font-size: 1.25rem;
       line-height: 1;
-      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
     .faq-item[open] .faq-icon {
       transform: rotate(45deg);
-      color: var(--rosa-sello);
+      background-color: var(--mantequilla);
     }
 
     .faq-answer {
       padding: 0 1.5rem 1.5rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.15);
+      border-top: 1px dashed rgba(46, 26, 43, 0.16);
       padding-top: 1rem;
+      color: rgba(46, 26, 43, 0.92);
     }
 
     .faq-answer p + p {
@@ -592,10 +618,10 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 5: CONTACTO
+       SECCIÓN 5: CONTACTO (OSCURA)
        ========================================================================== */
     .contact-section {
-      padding: 5rem 0;
+      padding: 5.5rem 0;
     }
 
     .contact-grid {
@@ -627,13 +653,12 @@
       text-decoration: underline;
     }
 
-    /* Formulario en tarjeta Papel Carta */
     .contact-card {
-      background-color: var(--papel-carta);
+      background-color: var(--rosa-fondo-claro);
       color: var(--ciruela-noche);
       padding: 2.25rem 2rem;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-paper);
+      box-shadow: var(--shadow-dark);
       position: relative;
     }
 
@@ -655,9 +680,9 @@
       font-family: var(--font-body);
       font-size: 0.95rem;
       padding: 0.75rem 0.9rem;
-      border: 1.5px solid rgba(46, 26, 43, 0.35);
+      border: 1.5px solid rgba(46, 26, 43, 0.3);
       border-radius: var(--radius-sm);
-      background-color: #FAF4EA;
+      background-color: #FFFFFF;
       color: var(--ciruela-noche);
     }
 
@@ -665,7 +690,7 @@
     .form-group textarea:focus {
       outline: none;
       border-color: var(--ciruela-noche);
-      box-shadow: 0 0 0 3px rgba(244, 166, 188, 0.45);
+      box-shadow: 0 0 0 3px rgba(232, 170, 187, 0.55);
     }
 
     .form-privacy {
@@ -679,7 +704,6 @@
       border: 2px solid var(--ciruela-noche);
     }
 
-    /* Confirmación de mensaje */
     .form-confirmation {
       display: none;
       text-align: center;
@@ -700,13 +724,14 @@
     }
 
     /* ==========================================================================
-       FOOTER
+       FOOTER (OSCURO)
        ========================================================================== */
     .site-footer {
       background-color: #221220;
       padding: 3rem 0 2rem;
       border-top: 1px solid rgba(243, 233, 216, 0.15);
       font-size: 0.88rem;
+      color: var(--papel-carta);
     }
 
     .footer-top {
@@ -824,7 +849,6 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#inicio" class="brand-logo" aria-label="SerElpis Inicio">
-        <!-- Usa tu archivo SVG oficial. Si no lo encuentra, muestra el respaldo tipográfico fiel al logo -->
         <img src="serelpis-logo-fondo-oscuro.svg" alt="SerElpis" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
         <span style="display:none; font-family: Georgia, serif; font-size: 1.75rem; font-weight: bold; color: #F3E9D8;">SerElpis</span>
       </a>
@@ -846,8 +870,8 @@
   </header>
 
   <main>
-    <!-- SECCIÓN HERO -->
-    <section id="inicio" class="hero-section">
+    <!-- SECCIÓN 1: HERO (FONDO OSCURO) -->
+    <section id="inicio" class="hero-section section-dark">
       <div class="container hero-grid">
         <div>
           <p class="hero-subtitle">Acompañamiento y entrenamiento en habilidades emocionales</p>
@@ -873,8 +897,8 @@
       </div>
     </section>
 
-    <!-- SECCIÓN SOBRE SERELPIS / SOBRE MÍ -->
-    <section id="sobre-serelpis" class="about-section">
+    <!-- SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (FONDO CLARO #FAF3F4) -->
+    <section id="sobre-serelpis" class="about-section section-light">
       <div class="container">
         <div class="about-grid">
           <!-- Columna Izquierda: Foto y Formación -->
@@ -943,8 +967,8 @@
       </div>
     </section>
 
-    <!-- SECCIÓN SESIONES INDIVIDUALES -->
-    <section id="sesiones" class="sessions-section">
+    <!-- SECCIÓN 3: SESIONES INDIVIDUALES (FONDO OSCURO) -->
+    <section id="sesiones" class="sessions-section section-dark">
       <div class="container">
         <div class="section-header">
           <h2>Sesiones individuales</h2>
@@ -980,8 +1004,8 @@
       </div>
     </section>
 
-    <!-- SECCIÓN PREGUNTAS FRECUENTES -->
-    <section id="preguntas-frecuentes" class="faq-section">
+    <!-- SECCIÓN 4: PREGUNTAS FRECUENTES (FONDO CLARO #FAF3F4) -->
+    <section id="preguntas-frecuentes" class="faq-section section-light">
       <div class="container">
         <div class="section-header">
           <h2>Preguntas frecuentes</h2>
@@ -1043,8 +1067,8 @@
       </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacta" class="contact-section">
+    <!-- SECCIÓN 5: CONTACTO (FONDO OSCURO) -->
+    <section id="contacta" class="contact-section section-dark">
       <div class="container contact-grid">
         <div>
           <span class="tag-label tag-label--butter">Contacto</span>
@@ -1111,7 +1135,6 @@
 
       <div class="footer-bottom">
         <span>2026 SerElpis</span>
-        <!-- Espacio reservado para los enlaces legales pendientes de completar según la guía de marca -->
         <div class="legal-links">
           <a href="#aviso-legal">Aviso legal</a>
           <a href="#politica-privacidad">Política de privacidad</a>
@@ -1122,7 +1145,6 @@
 
   <!-- SCRIPTS DE INTERACCIÓN -->
   <script>
-    // Menú móvil
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
 
@@ -1131,7 +1153,6 @@
       menuToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Cerrar menú móvil al pulsar un enlace
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mainNav.classList.remove('is-open');
@@ -1139,7 +1160,6 @@
       });
     });
 
-    // Simulación visual de envío del formulario (para conectar luego con Formspree / EmailJS / backend)
     const contactForm = document.getElementById('contactForm');
     const formConfirmation = document.getElementById('formConfirmation');
     const resetFormBtn = document.getElementById('resetFormBtn');
