@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SerElpis — Acompañamiento y entrenamiento en habilidades emocionales</title>
-  <meta name="description" content="Acompañamiento y entrenamiento en habilidades emocionales. Construye una vida con sentido. Sesiones individuales online a tu ritmo.">
+  <title>SerElpis — Acompañamiento terapéutico y entrenamiento en habilidades emocionales</title>
+  <meta name="description" content="Construye una vida con sentido. Acompañamiento terapéutico y entrenamiento en habilidades emocionales. Sesiones individuales online a tu ritmo.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="serelpis-icono.svg">
@@ -16,15 +16,15 @@
 
   <style>
     /* ==========================================================================
-       VARIABLES DE MARCA (Alternancia Claro #FAF3F4 / Oscuro #2E1A2B)
+       VARIABLES DE MARCA
        ========================================================================== */
     :root {
       --ciruela-noche: #2E1A2B;
       --ciruela-media: #3B2338;
       --ciruela-footer: #221220;
       --papel-carta: #F3E9D8;
-      --rosa-fondo-claro: #FAF3F4; /* Rosa muy suave de tu captura */
-      --rosa-sello: #E8AABB;       /* Rosa empolvado de los detalles de tu captura */
+      --rosa-fondo-claro: #FAF3F4;
+      --rosa-sello: #E8AABB;
       --mantequilla: #F0DE88;
       --rosa-intenso: #D87A93;
 
@@ -102,13 +102,13 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.125rem);
-      line-height: 1.18;
-      margin-bottom: 1.5rem;
+      font-size: clamp(2.6rem, 5.5vw, 3.6rem); /* Más grande y protagonista */
+      line-height: 1.14;
+      margin-bottom: 1.25rem;
     }
 
     h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.125rem);
+      font-size: clamp(1.75rem, 3.5vw, 2.15rem);
       line-height: 1.25;
       margin-bottom: 1rem;
     }
@@ -123,7 +123,7 @@
     .marker-pink {
       background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
-      padding: 0.05em 0.35em;
+      padding: 0.04em 0.35em;
       border-radius: 3px;
       display: inline-block;
     }
@@ -171,38 +171,26 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      font-size: 0.95rem;
-      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      padding: 0.9rem 1.75rem;
       border-radius: var(--radius-sm);
-      border: 2px solid transparent;
+      border: 2px solid var(--ciruela-noche);
       cursor: pointer;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
     }
 
-    .btn-primary {
+    .btn-yellow {
       background-color: var(--mantequilla);
       color: var(--ciruela-noche);
-      border-color: var(--ciruela-noche);
     }
 
-    .btn-primary:hover {
+    .btn-yellow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(46, 26, 43, 0.16);
-    }
-
-    /* Botón oscuro para secciones claras */
-    .btn-dark {
-      background-color: var(--ciruela-noche);
-      color: var(--papel-carta);
-    }
-
-    .btn-dark:hover {
-      background-color: var(--ciruela-media);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(46, 26, 43, 0.2);
+      box-shadow: 0 6px 16px rgba(46, 26, 43, 0.18);
     }
 
     .btn-link {
+      border: none;
       color: var(--ciruela-noche);
       border-bottom: 2px solid var(--rosa-sello);
       padding: 0.4rem 0.1rem;
@@ -260,9 +248,8 @@
       border-bottom-color: var(--rosa-sello);
     }
 
-    /* Destacado sutil para el enlace Contacta del menú como en tu captura */
     .nav-list .nav-cta {
-      background-color: var(--rosa-sello);
+      background-color: var(--mantequilla);
       color: var(--ciruela-noche);
       font-weight: 700;
       padding: 0.4rem 0.95rem;
@@ -271,7 +258,7 @@
     }
 
     .nav-list .nav-cta:hover {
-      background-color: var(--mantequilla);
+      background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
     }
 
@@ -288,10 +275,10 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 1: HERO & ÁREAS DE TERAPIA ONLINE (FONDO CLARO #FAF3F4)
+       SECCIÓN 1: HERO (FONDO CLARO #FAF3F4)
        ========================================================================== */
     .hero-section {
-      padding: 4.5rem 0 5.5rem;
+      padding: 5rem 0 5.5rem;
       border-bottom: 2px solid var(--rosa-sello);
     }
 
@@ -304,11 +291,12 @@
 
     .hero-subtitle {
       font-family: var(--font-body);
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 1.12rem;
+      font-weight: 500;
       color: var(--ciruela-media);
-      margin-bottom: 1rem;
-      max-width: 52ch;
+      margin-bottom: 2rem;
+      max-width: 50ch;
+      line-height: 1.6;
     }
 
     .hero-actions {
@@ -316,10 +304,9 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 1.5rem;
-      margin-top: 2rem;
     }
 
-    /* Panel Terapia Online en Ciruela oscuro para contrastar con el Hero claro */
+    /* Panel Terapia Online en Ciruela oscuro */
     .areas-board {
       background-color: var(--ciruela-noche);
       border: 1px dashed rgba(243, 233, 216, 0.35);
@@ -362,10 +349,162 @@
     }
 
     /* ==========================================================================
-       SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (FONDO OSCURO #2E1A2B)
+       SECCIÓN 2: SESIONES INDIVIDUALES CON PESTAÑAS DE ÍNDICE (OSCURA #2E1A2B)
+       ========================================================================== */
+    .sessions-section {
+      padding: 5.5rem 0;
+    }
+
+    .section-header {
+      max-width: 68ch;
+      margin-bottom: 3rem;
+    }
+
+    .section-lead {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-dark .section-lead {
+      color: var(--rosa-sello);
+    }
+
+    .section-light .section-lead {
+      color: var(--ciruela-media);
+    }
+
+    /* Sistema de Pestañas de Índice (Fichero de papelería) */
+    .folder-tabs-wrapper {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .folder-tablist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: flex-end;
+      padding: 0 4px;
+    }
+
+    .folder-tab {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ciruela-noche);
+      border: none;
+      border-radius: 10px 10px 0 0;
+      padding: 0.85rem 1.25rem;
+      cursor: pointer;
+      transition: transform 0.18s ease, padding-bottom 0.18s ease, filter 0.18s ease;
+      position: relative;
+      opacity: 0.86;
+    }
+
+    .folder-tab:hover {
+      opacity: 1;
+      filter: brightness(1.03);
+    }
+
+    /* Colores de pestañas según la guía de marca */
+    .folder-tab[data-color="butter"] {
+      background-color: var(--mantequilla);
+    }
+
+    .folder-tab[data-color="pink"] {
+      background-color: var(--rosa-sello);
+    }
+
+    .folder-tab[data-color="paper"] {
+      background-color: var(--papel-carta);
+    }
+
+    /* Pestaña activa se fusiona con el cuerpo de la ficha */
+    .folder-tab[aria-selected="true"] {
+      opacity: 1;
+      padding-top: 1.05rem;
+      padding-bottom: 1.05rem;
+      z-index: 3;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Hoja principal que toma el color de la pestaña activa */
+    .folder-sheet {
+      background-color: var(--mantequilla);
+      color: var(--ciruela-noche);
+      border-radius: 0 12px 12px 12px;
+      padding: 2.75rem 2.5rem;
+      box-shadow: var(--shadow-dark);
+      position: relative;
+      z-index: 2;
+      transition: background-color 0.25s ease;
+      min-height: 290px;
+    }
+
+    .folder-sheet.is-butter {
+      background-color: var(--mantequilla);
+    }
+
+    .folder-sheet.is-pink {
+      background-color: var(--rosa-sello);
+    }
+
+    .folder-sheet.is-paper {
+      background-color: var(--papel-carta);
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeInSheet 0.25s ease;
+    }
+
+    .tab-panel.is-active {
+      display: block;
+    }
+
+    @keyframes fadeInSheet {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tab-panel h3 {
+      font-size: 1.55rem;
+      margin-bottom: 0.35rem;
+      color: var(--ciruela-noche);
+    }
+
+    .tab-modality {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: rgba(46, 26, 43, 0.85);
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-panel p {
+      margin-bottom: 1.15rem;
+      max-width: 66ch;
+      font-size: 0.96rem;
+    }
+
+    .tab-handnote {
+      font-family: var(--font-hand);
+      font-size: 1.9rem;
+      color: var(--ciruela-noche);
+      margin-top: 1.5rem;
+      line-height: 1.2;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 3: SOBRE MÍ / SOBRE SERELPIS (FONDO CLARO #FAF3F4)
        ========================================================================== */
     .about-section {
       padding: 5.5rem 0;
+      border-top: 2px solid var(--rosa-sello);
+      border-bottom: 2px solid var(--rosa-sello);
     }
 
     .about-grid {
@@ -382,11 +521,12 @@
     }
 
     .photo-card {
-      background-color: var(--rosa-fondo-claro);
+      background-color: #FFFFFF;
       color: var(--ciruela-noche);
       padding: 1rem 1rem 1.35rem;
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-dark);
+      border: 1px solid rgba(46, 26, 43, 0.14);
+      box-shadow: var(--shadow-light);
       position: relative;
       transform: rotate(-1.5deg);
     }
@@ -413,7 +553,8 @@
       color: var(--ciruela-noche);
       padding: 1.75rem 1.5rem;
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-dark);
+      border: 1px solid rgba(46, 26, 43, 0.14);
+      box-shadow: var(--shadow-light);
       position: relative;
     }
 
@@ -453,16 +594,16 @@
     .outside-office {
       margin-top: 2.25rem;
       padding-top: 2rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.28);
+      border-top: 1px dashed rgba(46, 26, 43, 0.28);
     }
 
     .outside-office h3 {
-      color: var(--mantequilla);
+      color: var(--ciruela-noche);
       font-size: 1.3rem;
       margin-bottom: 1rem;
     }
 
-    /* Los 4 Pilares sobre fondo oscuro */
+    /* Los 4 Pilares sobre fondo claro */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -471,11 +612,11 @@
     }
 
     .pillar-card {
-      background-color: var(--ciruela-media);
-      border: 1px dashed rgba(243, 233, 216, 0.35);
+      background-color: #FFFFFF;
+      border: 1px dashed rgba(46, 26, 43, 0.3);
       border-radius: var(--radius-md);
       padding: 1.75rem;
-      box-shadow: var(--shadow-dark);
+      box-shadow: var(--shadow-light);
     }
 
     .pillar-number {
@@ -491,90 +632,14 @@
     }
 
     .pillar-card h3 {
-      color: var(--mantequilla);
+      color: var(--ciruela-noche);
       font-size: 1.15rem;
     }
 
     .pillar-card p {
       font-size: 0.92rem;
       margin-bottom: 0;
-      color: var(--papel-carta);
-    }
-
-    /* ==========================================================================
-       SECCIÓN 3: SESIONES INDIVIDUALES (FONDO CLARO #FAF3F4)
-       ========================================================================== */
-    .sessions-section {
-      padding: 5.5rem 0;
-      border-top: 2px solid var(--rosa-sello);
-      border-bottom: 2px solid var(--rosa-sello);
-    }
-
-    .section-header {
-      max-width: 66ch;
-      margin-bottom: 3rem;
-    }
-
-    .section-lead {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .section-light .section-lead {
-      color: var(--ciruela-media);
-    }
-
-    .section-dark .section-lead {
-      color: var(--rosa-sello);
-    }
-
-    .sessions-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      align-items: stretch;
-    }
-
-    .session-card {
-      background-color: #FFFFFF;
-      color: var(--ciruela-noche);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.65rem;
-      border: 1px solid rgba(46, 26, 43, 0.14);
-      box-shadow: var(--shadow-light);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-top: 8px solid var(--mantequilla);
-    }
-
-    .session-card:nth-child(2) {
-      border-top-color: var(--rosa-sello);
-    }
-
-    .session-card:nth-child(3) {
-      border-top-color: var(--ciruela-noche);
-    }
-
-    .session-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      color: var(--ciruela-noche);
-    }
-
-    .session-card p {
-      font-size: 0.92rem;
-      margin-bottom: 1rem;
-    }
-
-    .session-summary {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px dashed rgba(46, 26, 43, 0.25);
-      font-weight: 500;
-      font-size: 0.9rem;
+      color: rgba(46, 26, 43, 0.9);
     }
 
     /* ==========================================================================
@@ -733,7 +798,7 @@
       color: rgba(46, 26, 43, 0.85);
     }
 
-    .contact-card .btn-primary {
+    .contact-card .btn-yellow {
       width: 100%;
     }
 
@@ -818,10 +883,6 @@
         gap: 2.5rem;
       }
 
-      .sessions-grid {
-        grid-template-columns: 1fr;
-      }
-
       .about-sidebar {
         max-width: 420px;
         margin: 0 auto;
@@ -853,7 +914,7 @@
       }
 
       .hero-section {
-        padding: 3rem 0 3.5rem;
+        padding: 3.25rem 0 3.75rem;
       }
 
       .pillars-grid {
@@ -868,6 +929,23 @@
       .hero-actions .btn-link {
         text-align: center;
         align-self: center;
+      }
+
+      /* Adaptación móvil de pestañas */
+      .folder-tablist {
+        gap: 4px;
+      }
+
+      .folder-tab {
+        font-size: 0.75rem;
+        padding: 0.7rem 0.85rem;
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .folder-sheet {
+        border-radius: 0 0 12px 12px;
+        padding: 2rem 1.35rem;
       }
 
       .contact-card {
@@ -894,8 +972,8 @@
         <ul class="nav-list" id="mainNav">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sesiones">Sesiones</a></li>
+          <li><a href="#sobre-serelpis">Sobre mí</a></li>
           <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
-          <li><a href="#sobre-serelpis">Sobre SerElpis</a></li>
           <li><a href="#contacta" class="nav-cta">Contacta</a></li>
         </ul>
       </nav>
@@ -903,15 +981,15 @@
   </header>
 
   <main>
-    <!-- SECCIÓN 1: HERO (FONDO CLARO #FAF3F4) -->
+    <!-- 1. SECCIÓN HERO (FONDO CLARO #FAF3F4) -->
     <section id="inicio" class="hero-section section-light">
       <div class="container hero-grid">
         <div>
-          <p class="hero-subtitle">Acompañamiento y entrenamiento en habilidades emocionales</p>
           <h1>Construye una vida con <span class="marker-pink">sentido</span></h1>
+          <p class="hero-subtitle">Acompañamiento terapéutico y entrenamiento en habilidades emocionales</p>
           <div class="hero-actions">
-            <a href="#contacta" class="btn btn-dark">Cuéntame qué necesitas →</a>
-            <a href="#sobre-serelpis" class="btn btn-link">Conocer más</a>
+            <a href="#contacta" class="btn btn-yellow">Contacto</a>
+            <a href="#sesiones" class="btn btn-link">Conocer más</a>
           </div>
         </div>
 
@@ -930,8 +1008,102 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (FONDO OSCURO #2E1A2B) -->
-    <section id="sobre-serelpis" class="about-section section-dark">
+    <!-- 2. SECCIÓN SESIONES INDIVIDUALES CON PESTAÑAS DE ÍNDICE (FONDO OSCURO #2E1A2B) -->
+    <section id="sesiones" class="sessions-section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sesiones individuales</h2>
+          <p class="section-lead">Un espacio para ti, adaptado a lo que necesites</p>
+          <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
+        </div>
+
+        <div class="folder-tabs-wrapper">
+          <!-- Pestañas clicables -->
+          <div class="folder-tablist" role="tablist" aria-label="Servicios de sesiones individuales">
+            <button type="button" class="folder-tab" role="tab" aria-selected="true" aria-controls="panel-emociones" id="tab-emociones" data-color="butter">
+              EMOCIONES
+            </button>
+            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-autocuidado" id="tab-autocuidado" data-color="pink">
+              AUTOCUIDADO
+            </button>
+            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-mindfulness" id="tab-mindfulness" data-color="paper">
+              MINDFULNESS
+            </button>
+            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-rumia" id="tab-rumia" data-color="butter">
+              RUMIA
+            </button>
+            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-crisis" id="tab-crisis" data-color="pink">
+              CRISIS PERSONALES
+            </button>
+            <button type="button" class="folder-tab" role="tab" aria-selected="false" aria-controls="panel-tecnologia" id="tab-tecnologia" data-color="paper">
+              TECNOLOGÍA
+            </button>
+          </div>
+
+          <!-- Hoja de contenido que cambia de color según la pestaña activa -->
+          <div class="folder-sheet is-butter" id="folderSheet">
+            
+            <!-- Pestaña 1: Gestión de emociones -->
+            <div class="tab-panel is-active" id="panel-emociones" role="tabpanel" aria-labelledby="tab-emociones">
+              <h3>Gestión de emociones</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>A veces podemos sentir que las emociones nos desbordan y controlan nuestras vidas, como si fuéramos un barco a la deriva a merced de las olas. Trabajaremos para identificar cómo y por qué te están afectando esas emociones, y buscaremos nuevas formas de responder a ellas para que no paralicen tu vida.</p>
+              <p>Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
+              <p class="tab-handnote">sin juicio, con dirección</p>
+            </div>
+
+            <!-- Pestaña 2: Autocuidado y autoestima -->
+            <div class="tab-panel" id="panel-autocuidado" role="tabpanel" aria-labelledby="tab-autocuidado">
+              <h3>Autocuidado y autoestima</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>Si llevas mucho tiempo viviendo en base a lo que el resto del mundo espera de ti, es posible que te cueste reconocer tus propias necesidades o elegir el tipo de vida que quieres llevar. Trabajaremos para descubrir el tipo de persona que quieres ser y para encontrar un equilibrio entre tus necesidades y las de los demás.</p>
+              <p>Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
+              <p class="tab-handnote">tú en el centro</p>
+            </div>
+
+            <!-- Pestaña 3: Mindfulness cotidiano -->
+            <div class="tab-panel" id="panel-mindfulness" role="tabpanel" aria-labelledby="tab-mindfulness">
+              <h3>Mindfulness para la vida cotidiana</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>El ritmo de vida actual nos empuja a vivir en piloto automático y esto nos puede hacer sentir que sólo estamos sobreviviendo. El mindfulness te puede ayudar a vivir con una mayor presencia con doble objetivo: apreciar las cosas agradables de tu día a día, y notar las desagradables para decidir si son necesarias o si quieres hacer algo para cambiarlas.</p>
+              <p>Practicamos una atención más consciente para apreciar lo positivo y decidir qué hacer con lo que no funciona.</p>
+              <p class="tab-handnote">a tu ritmo</p>
+            </div>
+
+            <!-- Pestaña 4: Reducción de la rumia (Texto provisional para editar) -->
+            <div class="tab-panel" id="panel-rumia" role="tabpanel" aria-labelledby="tab-rumia">
+              <h3>Reducción de la rumia y pensamientos intrusivos</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>[Texto pendiente de completar: Cuando la mente entra en bucle dando vueltas una y otra vez a lo mismo, es fácil quedarse atrapada en el análisis y desconectada del presente. En estas sesiones exploramos qué función cumple esa rumia y entrenamos formas distintas de relacionarte con tus pensamientos.]</p>
+              <p>[Entrenamos herramientas prácticas para salir del piloto automático mental y recuperar espacio para actuar hacia lo que te importa.]</p>
+              <p class="tab-handnote">sin guion, a tu ritmo</p>
+            </div>
+
+            <!-- Pestaña 5: Afrontamiento de crisis personales (Texto provisional para editar) -->
+            <div class="tab-panel" id="panel-crisis" role="tabpanel" aria-labelledby="tab-crisis">
+              <h3>Afrontamiento de crisis personales (cambios vitales, duelos...)</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>[Texto pendiente de completar: Los cambios vitales inesperados, las pérdidas o los momentos de transición pueden descolocar tus referencias habituales. Creamos un espacio seguro donde sostener lo que estás viviendo sin exigirte respuestas inmediatas.]</p>
+              <p>[Acompañamos el proceso paso a paso para ir reconstruyendo una dirección con sentido en esta nueva etapa.]</p>
+              <p class="tab-handnote">paso a paso</p>
+            </div>
+
+            <!-- Pestaña 6: Uso problemático de tecnología (Texto provisional para editar) -->
+            <div class="tab-panel" id="panel-tecnologia" role="tabpanel" aria-labelledby="tab-tecnologia">
+              <h3>Uso problemático de tecnología (redes sociales, videojuegos...)</h3>
+              <p class="tab-modality">Sesión individual online</p>
+              <p>[Texto pendiente de completar: A veces las pantallas, las redes sociales o los videojuegos pasan de ser un espacio de disfrute o descanso a convertirse en una vía automática para escapar del malestar o llenar vacíos.]</p>
+              <p>[Analizamos qué lugar ocupa la tecnología en tu día a día y diseñamos ajustes concretos en tu entorno y tus hábitos para recuperar una relación consciente con ella.]</p>
+              <p class="tab-handnote">construye una vida con sentido</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECCIÓN SOBRE MÍ / SOBRE SERELPIS (FONDO CLARO #FAF3F4) -->
+    <section id="sobre-serelpis" class="about-section section-light">
       <div class="container">
         <div class="about-grid">
           <!-- Columna Izquierda: Foto y Formación -->
@@ -1000,44 +1172,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 3: SESIONES INDIVIDUALES (FONDO CLARO #FAF3F4) -->
-    <section id="sesiones" class="sessions-section section-light">
-      <div class="container">
-        <div class="section-header">
-          <h2>Sesiones individuales</h2>
-          <p class="section-lead">Un espacio para ti, adaptado a lo que necesites</p>
-          <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
-        </div>
-
-        <div class="sessions-grid">
-          <article class="session-card">
-            <div>
-              <h3>Gestión de emociones</h3>
-              <p>A veces podemos sentir que las emociones nos desbordan y controlan nuestras vidas, como si fuéramos un barco a la deriva a merced de las olas. Trabajaremos para identificar cómo y por qué te están afectando esas emociones, y buscaremos nuevas formas de responder a ellas para que no paralicen tu vida.</p>
-            </div>
-            <p class="session-summary">Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
-          </article>
-
-          <article class="session-card">
-            <div>
-              <h3>Autocuidado y autoestima</h3>
-              <p>Si llevas mucho tiempo viviendo en base a lo que el resto del mundo espera de ti, es posible que te cueste reconocer tus propias necesidades o elegir el tipo de vida que quieres llevar. Trabajaremos para descubrir el tipo de persona que quieres ser y para encontrar un equilibrio entre tus necesidades y las de los demás.</p>
-            </div>
-            <p class="session-summary">Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
-          </article>
-
-          <article class="session-card">
-            <div>
-              <h3>Mindfulness cotidiano</h3>
-              <p>El ritmo de vida actual nos empuja a vivir en piloto automático y esto nos puede hacer sentir que sólo estamos sobreviviendo. El mindfulness te puede ayudar a vivir con una mayor presencia con doble objetivo: apreciar las cosas agradables de tu día a día, y notar las desagradables para decidir si son necesarias o si quieres hacer algo para cambiarlas.</p>
-            </div>
-            <p class="session-summary">Practicamos una atención más consciente para apreciar lo positivo y decidir qué hacer con lo que no funciona.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 4: PREGUNTAS FRECUENTES (FONDO OSCURO #2E1A2B) -->
+    <!-- 4. SECCIÓN PREGUNTAS FRECUENTES (FONDO OSCURO #2E1A2B) -->
     <section id="preguntas-frecuentes" class="faq-section section-dark">
       <div class="container">
         <div class="section-header">
@@ -1100,7 +1235,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 5: CONTACTO (FONDO CLARO #FAF3F4) -->
+    <!-- 5. SECCIÓN CONTACTO (FONDO CLARO #FAF3F4) -->
     <section id="contacta" class="contact-section section-light">
       <div class="container contact-grid">
         <div>
@@ -1136,13 +1271,13 @@
 
             <p class="form-privacy">Tus datos no se comparten con nadie. Te escribiré para contestar tus dudas o agendar una sesión.</p>
 
-            <button type="submit" class="btn btn-primary">Pedir más información →</button>
+            <button type="submit" class="btn btn-yellow">Pedir más información →</button>
           </form>
 
           <div id="formConfirmation" class="form-confirmation" role="status" aria-live="polite">
             <h3>Mensaje enviado</h3>
             <p>Gracias por contactar, te responderé en breve :)</p>
-            <button type="button" id="resetFormBtn" class="btn btn-primary">Volver al formulario</button>
+            <button type="button" id="resetFormBtn" class="btn btn-yellow">Volver al formulario</button>
           </div>
         </div>
       </div>
@@ -1159,8 +1294,8 @@
         </a>
 
         <ul class="footer-nav">
-          <li><a href="#sobre-serelpis">Sobre mí</a></li>
           <li><a href="#sesiones">Sesiones</a></li>
+          <li><a href="#sobre-serelpis">Sobre mí</a></li>
           <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
           <li><a href="#contacta">Contacto</a></li>
         </ul>
@@ -1178,6 +1313,7 @@
 
   <!-- SCRIPTS DE INTERACCIÓN -->
   <script>
+    // 1. Menú móvil
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
 
@@ -1193,6 +1329,30 @@
       });
     });
 
+    // 2. Sistema de Pestañas de Índice (Sesiones individuales)
+    const tabs = document.querySelectorAll('.folder-tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    const folderSheet = document.getElementById('folderSheet');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Desactivar todas las pestañas y paneles
+        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        panels.forEach(p => p.classList.remove('is-active'));
+
+        // Activar la pestaña pulsada y su panel correspondiente
+        tab.setAttribute('aria-selected', 'true');
+        const targetId = tab.getAttribute('aria-controls');
+        document.getElementById(targetId).classList.add('is-active');
+
+        // Cambiar el color de fondo de la hoja para que coincida con la pestaña activa
+        const color = tab.getAttribute('data-color');
+        folderSheet.classList.remove('is-butter', 'is-pink', 'is-paper');
+        folderSheet.classList.add(`is-${color}`);
+      });
+    });
+
+    // 3. Formulario de contacto
     const contactForm = document.getElementById('contactForm');
     const formConfirmation = document.getElementById('formConfirmation');
     const resetFormBtn = document.getElementById('resetFormBtn');
