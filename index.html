@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SerElpis — Acompañamiento y entrenamiento en habilidades emocionales</title>
-  <meta name="description" content="Construye una vida con sentido. Sesiones individuales online de acompañamiento y entrenamiento en habilidades emocionales con Vanessa Luque.">
-
-  <!-- Favicon simplificado (sol y ola sin rayos finos según guía de marca) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232E1A2B'/%3E%3Cpath d='M22 36 A 12 12 0 0 1 46 36 Z' fill='%23F0DE88'/%3E%3Cpath d='M10 38 C 18 33, 24 41, 32 36 C 40 31, 46 39, 54 36' stroke='%23F4A6BC' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <meta name="description" content="Acompañamiento y entrenamiento en habilidades emocionales. Construye una vida con sentido. Sesiones individuales online a tu ritmo.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="serelpis-icono.svg">
 
   <!-- Google Fonts según Guía de Marca -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Reenie+Beanie&family=Young+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
 
   <style>
-    /* =========================================
-       VARIABLES DE MARCA (SERELPIS v1.0)
-       ========================================= */
+    /* ==========================================================================
+       VARIABLES DE MARCA (SerElpis Guía de Marca v1.0)
+       ========================================================================== */
     :root {
       --ciruela-noche: #2E1A2B;
       --ciruela-media: #3B2338;
@@ -26,19 +26,19 @@
       --mantequilla: #F0DE88;
       --rosa-intenso: #E8708F;
 
-      --dot-color: rgba(243, 233, 216, 0.14);
-      --border-subtle: rgba(243, 233, 216, 0.18);
-
-      --font-heading: 'Courier Prime', monospace;
+      --font-display: 'Courier Prime', monospace;
       --font-body: 'IBM Plex Mono', monospace;
       --font-hand: 'Reenie Beanie', cursive;
-      --font-logo: 'Young Serif', Georgia, serif;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --shadow-paper: 0 10px 25px rgba(0, 0, 0, 0.28);
     }
 
-    /* =========================================
+    /* ==========================================================================
        RESET Y BASE
-       ========================================= */
-    *, *::before, *::after {
+       ========================================================================== */
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -51,118 +51,27 @@
 
     body {
       background-color: var(--ciruela-noche);
-      background-image: radial-gradient(var(--dot-color) 1.3px, transparent 1.3px);
+      /* Patrón de puntos: 1.3px cada 22px en color papel al 20% */
+      background-image: radial-gradient(rgba(243, 233, 216, 0.2) 1.3px, transparent 1.3px);
       background-size: 22px 22px;
       color: var(--papel-carta);
       font-family: var(--font-body);
-      font-weight: 400;
-      font-size: 15.5px;
-      line-height: 1.6;
+      font-size: 0.95rem; /* 15.2px */
+      line-height: 1.55;
       overflow-x: hidden;
     }
 
-    :focus-visible {
-      outline: 3px solid var(--mantequilla);
-      outline-offset: 3px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    /* =========================================
-       TIPOGRAFÍA Y ELEMENTOS COMUNES
-       ========================================= */
-    h1, h2, h3 {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.1rem);
-      margin-bottom: 1.35rem;
-    }
-
-    h2 {
-      font-size: clamp(1.85rem, 3.2vw, 2.35rem);
-      margin-bottom: 1.25rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      max-width: 65ch;
-      margin-bottom: 1.15rem;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8125rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--mantequilla);
-      margin-bottom: 0.85rem;
-    }
-
-    .enfasis-rosa {
-      color: var(--rosa-sello);
-      font-style: italic;
-    }
-
-    .subrayado-mantequilla {
-      display: inline-block;
-      border-bottom: 4px solid var(--mantequilla);
-      padding-bottom: 0.1em;
-    }
-
-    /* Botones estilo cápsula de la captura */
-    .btn-rosa {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--rosa-sello);
-      color: var(--ciruela-noche);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.9375rem;
+    a {
+      color: inherit;
       text-decoration: none;
-      padding: 0.85rem 1.6rem;
-      border-radius: 999px;
-      border: 2px solid var(--rosa-sello);
-      cursor: pointer;
-      transition: transform 0.15s ease, background-color 0.15s ease;
-    }
-    .btn-rosa:hover {
-      transform: translateY(-2px);
-      background-color: #f7b8ca;
     }
 
-    .btn-contorno {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: rgba(243, 233, 216, 0.05);
-      color: var(--papel-carta);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.9375rem;
-      text-decoration: none;
-      padding: 0.85rem 1.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(243, 233, 216, 0.35);
-      cursor: pointer;
-      transition: transform 0.15s ease, border-color 0.15s ease;
-    }
-    .btn-contorno:hover {
-      transform: translateY(-2px);
-      border-color: var(--papel-carta);
-    }
-
-    /* =========================================
-       LAYOUT
-       ========================================= */
+    /* Contenedor principal con ancho óptimo de lectura */
     .container {
       width: 100%;
       max-width: 1120px;
@@ -170,941 +79,1081 @@
       padding: 0 1.5rem;
     }
 
-    section {
-      padding: 5rem 0;
-    }
-
-    /* =========================================
-       HEADER / NAVEGACIÓN
-       ========================================= */
-    header {
-      padding: 1.25rem 0;
-      position: sticky;
-      top: 0;
-      background-color: rgba(46, 26, 43, 0.95);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(243, 233, 216, 0.08);
-      z-index: 50;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .logo-link {
-      display: inline-block;
-      padding: 0.35rem;
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.75rem;
-    }
-
-    nav a {
-      font-family: var(--font-body);
-      font-size: 0.9375rem;
-      color: var(--papel-carta);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-
-    nav a:hover {
-      color: var(--rosa-sello);
-    }
-
-    nav a.nav-cta {
-      background-color: var(--rosa-sello);
-      color: var(--ciruela-noche);
-      font-family: var(--font-heading);
+    /* ==========================================================================
+       TIPOGRAFÍA Y ELEMENTOS DE PAPELERÍA
+       ========================================================================== */
+    h1, h2, h3, .btn {
+      font-family: var(--font-display);
       font-weight: 700;
-      padding: 0.6rem 1.35rem;
-      border-radius: 999px;
-    }
-    nav a.nav-cta:hover {
-      background-color: #f7b8ca;
-      color: var(--ciruela-noche);
     }
 
-    /* =========================================
-       1. HERO + CUADERNO ABIERTO
-       ========================================= */
-    .hero-section {
-      padding: 4.5rem 0 5.5rem;
-      border-bottom: 1px solid rgba(243, 233, 216, 0.08);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    @media (min-width: 920px) {
-      .hero-grid {
-        grid-template-columns: 1.05fr 1.15fr;
-      }
-    }
-
-    .hero-subtitulo {
-      font-size: 1.1rem;
-      color: rgba(243, 233, 216, 0.9);
-      margin-bottom: 2.25rem;
-    }
-
-    .hero-botones {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    /* Cuaderno abierto (Captura 1) */
-    .cuaderno-wrapper {
-      position: relative;
-      padding-top: 2.1rem;
-    }
-
-    .pestana-terapia {
-      position: absolute;
-      top: 0;
-      right: 2.25rem;
-      background-color: var(--rosa-sello);
-      color: var(--ciruela-noche);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.875rem;
-      padding: 0.45rem 1.35rem;
-      border-radius: 12px 12px 0 0;
-    }
-
-    .cuaderno-cubierta {
-      background-color: #1D101B;
-      padding: 12px;
-      border-radius: 18px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-    }
-
-    .cuaderno-paginas {
-      display: grid;
-      grid-template-columns: 1fr;
-      background-color: var(--papel-carta);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    @media (min-width: 600px) {
-      .cuaderno-paginas {
-        grid-template-columns: 1fr 1fr;
-      }
-      /* Pliegue central con cinta mantequilla */
-      .cuaderno-paginas::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 14px;
-        transform: translateX(-50%);
-        background: linear-gradient(90deg, rgba(46,26,43,0.12), var(--mantequilla) 35%, var(--mantequilla) 65%, rgba(46,26,43,0.12));
-      }
-    }
-
-    .pagina {
-      padding: 1.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .pagina-item {
-      font-family: var(--font-hand);
-      font-size: 1.75rem;
-      line-height: 1.15;
-      color: var(--ciruela-noche);
-      text-align: center;
-      padding: 1.15rem 0.5rem;
-      border-bottom: 1px solid rgba(46, 26, 43, 0.12);
-    }
-
-    .pagina-item:last-child {
-      border-bottom: none;
-    }
-
-    /* =========================================
-       2. SOBRE MÍ + FOTO + 4 TARJETAS (Capturas 2 y 3)
-       ========================================= */
-    .sobre-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    @media (min-width: 920px) {
-      .sobre-grid {
-        grid-template-columns: 340px 1fr;
-      }
-    }
-
-    /* Tarjeta foto terapeuta */
-    .foto-card {
-      background-color: var(--papel-carta);
-      color: var(--ciruela-noche);
-      padding: 1.25rem 1.25rem 1.75rem;
-      border-radius: 18px;
-      box-shadow: 10px 10px 0 var(--mantequilla);
-      text-align: center;
-      max-width: 340px;
-      margin: 0 auto;
-    }
-
-    .foto-marco {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 12px;
-      overflow: hidden;
-      background-color: var(--ciruela-media);
-      margin-bottom: 1.25rem;
-    }
-
-    .foto-marco img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .foto-nombre {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--ciruela-noche);
-      margin-bottom: 0.25rem;
-    }
-
-    .foto-rol {
-      font-size: 0.9rem;
-      color: var(--ciruela-media);
-    }
-
-    /* Cuadrícula 2x2 de tarjetas numeradas */
-    .pilares-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      margin-top: 2.25rem;
-    }
-
-    @media (min-width: 640px) {
-      .pilares-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .pilar-card {
-      background-color: rgba(59, 35, 56, 0.65);
-      border: 1px solid rgba(243, 233, 216, 0.16);
-      border-radius: 16px;
-      padding: 1.65rem;
-      transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .pilar-card:hover {
-      border-color: var(--rosa-sello);
-      transform: translateY(-2px);
-    }
-
-    .pilar-num {
-      display: block;
-      font-family: var(--font-heading);
-      font-style: italic;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--rosa-sello);
-      margin-bottom: 0.65rem;
-    }
-
-    .pilar-card h3 {
-      font-size: 1.15rem;
-      color: var(--papel-carta);
-      margin-bottom: 0.65rem;
-    }
-
-    .pilar-card p {
-      font-size: 0.9rem;
-      color: rgba(243, 233, 216, 0.85);
-      margin-bottom: 0;
-    }
-
-    /* =========================================
-       3. CÓMO TRABAJAMOS EN CADA ENCUENTRO (Captura 4)
-       ========================================= */
-    .encuentro-intro {
-      margin-bottom: 2.75rem;
-    }
-
-    .encuentro-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-      align-items: stretch;
-    }
-
-    @media (min-width: 860px) {
-      .encuentro-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .encuentro-card {
-      background-color: rgba(59, 35, 56, 0.65);
-      border: 1px solid rgba(243, 233, 216, 0.16);
-      border-radius: 18px;
-      padding: 2rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .encuentro-card--destacada {
-      background-color: var(--papel-carta);
-      color: var(--ciruela-noche);
-      border: none;
-      box-shadow: 10px 10px 0 var(--rosa-sello);
-    }
-
-    .pill-mantequilla {
-      display: inline-block;
-      background-color: var(--mantequilla);
-      color: var(--ciruela-noche);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 1.25rem;
-      align-self: flex-start;
-    }
-
-    .encuentro-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .encuentro-card p {
-      font-size: 0.9375rem;
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.125rem); /* 42px - 50px en desktop */
+      line-height: 1.18;
       margin-bottom: 1.5rem;
     }
 
-    .encuentro-pie {
-      padding-top: 1rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.25);
-      font-size: 0.85rem;
-      opacity: 0.9;
+    h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.125rem); /* ~34px */
+      line-height: 1.25;
+      margin-bottom: 1rem;
     }
 
-    .encuentro-card--destacada .encuentro-pie {
-      border-top-color: rgba(46, 26, 43, 0.25);
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
     }
 
-    /* =========================================
-       4. SESIONES INDIVIDUALES (Capturas 5 y 6)
-       ========================================= */
-    .sesiones-header {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 3rem;
-    }
-
-    .sesiones-header p {
-      margin: 0 auto;
-      color: rgba(243, 233, 216, 0.9);
-    }
-
-    .sesiones-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
-
-    @media (min-width: 860px) {
-      .sesiones-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .sesion-ficha {
-      background-color: var(--papel-carta);
+    /* Marcador rosa tras la palabra clave (uno por titular) */
+    .marker-pink {
+      background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
-      border-radius: 18px;
-      padding: 2.25rem 1.85rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      padding: 0.05em 0.35em;
+      border-radius: 3px;
+      display: inline-block;
     }
 
-    .sesion-ficha h3 {
-      font-size: 1.35rem;
+    /* Etiqueta estilo papelería */
+    .tag-label {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      background-color: var(--rosa-sello);
       color: var(--ciruela-noche);
       margin-bottom: 1rem;
     }
 
-    .sesion-ficha p {
-      font-size: 0.9375rem;
+    .tag-label--butter {
+      background-color: var(--mantequilla);
+    }
+
+    .tag-label--paper {
+      background-color: var(--papel-carta);
+    }
+
+    /* Cinta Washi decorativa */
+    .washi-tape {
+      position: absolute;
+      width: 90px;
+      height: 26px;
+      background-color: rgba(240, 222, 136, 0.92);
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .washi-tape--pink {
+      background-color: rgba(244, 166, 188, 0.92);
+      transform: translateX(-50%) rotate(4deg);
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-sm);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--mantequilla);
       color: var(--ciruela-noche);
     }
 
-    .sesion-cita {
-      font-style: italic;
-      color: var(--ciruela-media);
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px dashed rgba(46, 26, 43, 0.2);
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(240, 222, 136, 0.25);
+    }
+
+    .btn-link {
+      color: var(--papel-carta);
+      border-bottom: 2px solid var(--rosa-sello);
+      padding: 0.4rem 0.1rem;
+      border-radius: 0;
+    }
+
+    .btn-link:hover {
+      color: var(--rosa-sello);
+    }
+
+    /* ==========================================================================
+       CABECERA Y NAVEGACIÓN
+       ========================================================================== */
+    .site-header {
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(46, 26, 43, 0.94);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(243, 233, 216, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      min-width: 120px;
+      max-width: 155px;
+      padding: 0.25rem 0;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .nav-list a {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--papel-carta);
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-list a:hover {
+      color: var(--mantequilla);
+      border-bottom-color: var(--rosa-sello);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--papel-carta);
+      color: var(--papel-carta);
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 1: HERO & ÁREAS DE TERAPIA ONLINE
+       ========================================================================== */
+    .hero-section {
+      padding: 4.5rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--rosa-sello);
+      margin-bottom: 1rem;
+      max-width: 52ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* Bloque Terapia Online (Grid de áreas sin inventar texto) */
+    .areas-board {
+      background-color: var(--ciruela-media);
+      border: 1px dashed rgba(243, 233, 216, 0.35);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+      position: relative;
+      box-shadow: var(--shadow-paper);
+    }
+
+    .areas-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--mantequilla);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px dashed rgba(243, 233, 216, 0.25);
+    }
+
+    .areas-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .areas-list li {
+      background-color: var(--papel-carta);
+      color: var(--ciruela-noche);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      border-left: 5px solid var(--rosa-sello);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .areas-list li:nth-child(even) {
+      border-left-color: var(--mantequilla);
+    }
+
+    /* ==========================================================================
+       SECCIÓN 2: SOBRE SERELPIS / SOBRE MÍ (VANESSA LUQUE)
+       ========================================================================== */
+    .about-section {
+      padding: 5rem 0;
+      background-color: var(--ciruela-media);
+      border-top: 1px dashed rgba(243, 233, 216, 0.18);
+      border-bottom: 1px dashed rgba(243, 233, 216, 0.18);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* Columna Foto + Formación */
+    .about-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .photo-card {
+      background-color: var(--papel-carta);
+      color: var(--ciruela-noche);
+      padding: 1rem 1rem 1.35rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-paper);
+      position: relative;
+      transform: rotate(-1.5deg);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 2px;
+      margin-bottom: 0.9rem;
+      background-color: #d8cbb8;
+    }
+
+    .photo-caption {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      color: var(--ciruela-noche);
+    }
+
+    /* Hoja de libreta para formación */
+    .training-note {
+      background-color: var(--papel-carta);
+      color: var(--ciruela-noche);
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-paper);
+      position: relative;
+    }
+
+    .training-note h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--rosa-sello);
+    }
+
+    .training-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .training-list li {
+      position: relative;
+      padding-left: 1.15rem;
+    }
+
+    .training-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--rosa-intenso);
+      font-weight: bold;
+    }
+
+    /* Columna Texto Bio */
+    .about-content p {
+      margin-bottom: 1.25rem;
+      max-width: 65ch;
+    }
+
+    .outside-office {
+      margin-top: 2.25rem;
+      padding-top: 2rem;
+      border-top: 1px dashed rgba(243, 233, 216, 0.28);
+    }
+
+    .outside-office h3 {
+      color: var(--mantequilla);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Los 4 Pilares (Grid 2x2 estilo Post-it / Fichas) */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .pillar-card {
+      background-color: var(--ciruela-noche);
+      border: 1px dashed rgba(243, 233, 216, 0.35);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .pillar-number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--rosa-sello);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .pillar-card h3 {
+      color: var(--mantequilla);
+      font-size: 1.15rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.92rem;
       margin-bottom: 0;
     }
 
-    /* =========================================
-       5. PREGUNTAS FRECUENTES
-       ========================================= */
+    /* ==========================================================================
+       SECCIÓN 3: SESIONES INDIVIDUALES
+       ========================================================================== */
+    .sessions-section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      max-width: 66ch;
+      margin-bottom: 3rem;
+    }
+
+    .section-lead {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--rosa-sello);
+      margin-bottom: 1rem;
+    }
+
+    .sessions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      align-items: stretch;
+    }
+
+    .session-card {
+      background-color: var(--papel-carta);
+      color: var(--ciruela-noche);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.65rem;
+      box-shadow: var(--shadow-paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 8px solid var(--mantequilla);
+    }
+
+    .session-card:nth-child(2) {
+      border-top-color: var(--rosa-sello);
+    }
+
+    .session-card:nth-child(3) {
+      border-top-color: var(--ciruela-media);
+    }
+
+    .session-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--ciruela-noche);
+    }
+
+    .session-card p {
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    .session-summary {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed rgba(46, 26, 43, 0.25);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 4: PREGUNTAS FRECUENTES (Acordeón)
+       ========================================================================== */
+    .faq-section {
+      padding: 5rem 0;
+      background-color: var(--ciruela-media);
+      border-top: 1px dashed rgba(243, 233, 216, 0.18);
+      border-bottom: 1px dashed rgba(243, 233, 216, 0.18);
+    }
+
     .faq-list {
       max-width: 820px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
 
-    details.faq-item {
-      background-color: rgba(59, 35, 56, 0.7);
-      border: 1px solid rgba(243, 233, 216, 0.16);
-      border-radius: 14px;
-      padding: 1.35rem 1.65rem;
+    .faq-item {
+      background-color: var(--ciruela-noche);
+      border: 1px solid rgba(243, 233, 216, 0.22);
+      border-radius: var(--radius-md);
+      overflow: hidden;
     }
 
-    details.faq-item[open] {
-      border-color: var(--rosa-sello);
-    }
-
-    summary.faq-pregunta {
-      font-family: var(--font-heading);
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 1.05rem;
-      cursor: pointer;
-      list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      color: var(--papel-carta);
     }
 
-    summary.faq-pregunta::-webkit-details-marker {
+    .faq-item summary::-webkit-details-marker {
       display: none;
     }
 
-    summary.faq-pregunta::after {
-      content: "+";
-      font-family: var(--font-heading);
-      font-size: 1.45rem;
+    .faq-icon {
       color: var(--mantequilla);
-      flex-shrink: 0;
+      font-size: 1.35rem;
+      line-height: 1;
+      transition: transform 0.2s ease;
     }
 
-    details[open] summary.faq-pregunta::after {
-      content: "−";
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      color: var(--rosa-sello);
     }
 
-    .faq-respuesta {
-      margin-top: 1rem;
-      padding-top: 0.9rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.2);
-      color: rgba(243, 233, 216, 0.88);
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      border-top: 1px dashed rgba(243, 233, 216, 0.15);
+      padding-top: 1rem;
     }
 
-    /* =========================================
-       6. CONTACTO
-       ========================================= */
-    .contacto-grid {
+    .faq-answer p + p {
+      margin-top: 0.9rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 5: CONTACTO
+       ========================================================================== */
+    .contact-section {
+      padding: 5rem 0;
+    }
+
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3.5rem;
       align-items: start;
     }
 
-    @media (min-width: 860px) {
-      .contacto-grid {
-        grid-template-columns: 1fr 1.15fr;
-      }
-    }
-
-    .datos-contacto {
-      list-style: none;
-      margin-top: 1.75rem;
+    .contact-details {
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
+      padding: 1.5rem;
+      background-color: var(--ciruela-media);
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--mantequilla);
     }
 
-    .datos-contacto li {
-      font-family: var(--font-heading);
-      font-size: 0.95rem;
-    }
-
-    .datos-contacto a {
+    .contact-details a {
       color: var(--mantequilla);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .contact-details a:hover {
       text-decoration: underline;
     }
 
-    .form-card {
+    /* Formulario en tarjeta Papel Carta */
+    .contact-card {
       background-color: var(--papel-carta);
       color: var(--ciruela-noche);
       padding: 2.25rem 2rem;
-      border-radius: 18px;
-      box-shadow: 10px 10px 0 var(--rosa-sello);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-paper);
+      position: relative;
     }
 
-    .campo {
+    .form-group {
       margin-bottom: 1.25rem;
     }
 
-    .campo label {
+    .form-group label {
       display: block;
-      font-family: var(--font-heading);
+      font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       margin-bottom: 0.4rem;
     }
 
-    .campo input,
-    .campo textarea {
+    .form-group input,
+    .form-group textarea {
       width: 100%;
       font-family: var(--font-body);
       font-size: 0.95rem;
       padding: 0.75rem 0.9rem;
-      border: 2px solid var(--ciruela-noche);
-      background-color: #FAF6EE;
+      border: 1.5px solid rgba(46, 26, 43, 0.35);
+      border-radius: var(--radius-sm);
+      background-color: #FAF4EA;
       color: var(--ciruela-noche);
-      border-radius: 8px;
     }
 
-    .campo textarea {
-      min-height: 120px;
-      resize: vertical;
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--ciruela-noche);
+      box-shadow: 0 0 0 3px rgba(244, 166, 188, 0.45);
     }
 
-    .privacidad-nota {
+    .form-privacy {
       font-size: 0.85rem;
       margin-bottom: 1.35rem;
-      color: var(--ciruela-media);
+      color: rgba(46, 26, 43, 0.85);
     }
 
-    .mensaje-confirmacion {
+    .contact-card .btn-primary {
+      width: 100%;
+      border: 2px solid var(--ciruela-noche);
+    }
+
+    /* Confirmación de mensaje */
+    .form-confirmation {
       display: none;
-      padding: 1.5rem 0;
+      text-align: center;
+      padding: 2rem 1rem;
     }
 
-    /* =========================================
+    .form-confirmation.is-visible {
+      display: block;
+    }
+
+    .form-confirmation h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-confirmation p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
        FOOTER
-       ========================================= */
-    footer {
-      padding: 3rem 0;
-      border-top: 1px solid rgba(243, 233, 216, 0.12);
-      font-size: 0.9rem;
+       ========================================================================== */
+    .site-footer {
+      background-color: #221220;
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(243, 233, 216, 0.15);
+      font-size: 0.88rem;
     }
 
-    .footer-grid {
+    .footer-top {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px dashed rgba(243, 233, 216, 0.2);
     }
 
-    .footer-links {
-      list-style: none;
+    .footer-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
+      list-style: none;
+      font-family: var(--font-display);
     }
 
-    .footer-links a {
-      color: var(--papel-carta);
-      text-decoration: none;
-      font-family: var(--font-heading);
-    }
-
-    .footer-links a:hover {
+    .footer-nav a:hover {
       color: var(--rosa-sello);
     }
 
-    .footer-aviso {
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
-      border-top: 1px dashed rgba(243, 233, 216, 0.15);
-      font-size: 0.8125rem;
+    .footer-bottom {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
       color: rgba(243, 233, 216, 0.75);
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       ADAPTACIÓN A SMARTPHONES Y TABLETS (RESPONSIVE)
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .sessions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-sidebar {
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--ciruela-media);
+        padding: 1.25rem 1.5rem;
+        border-bottom: 2px solid var(--rosa-sello);
+        gap: 1rem;
+      }
+
+      .nav-list.is-open {
+        display: flex;
+      }
+
+      .hero-section {
+        padding: 3rem 0 3.5rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn-link {
+        text-align: center;
+        align-self: center;
+      }
+
+      .contact-card {
+        padding: 1.75rem 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- =========================================
-       HEADER / MENÚ
-       ========================================= -->
-  <header>
-    <div class="container nav-wrapper">
-      <a href="#inicio" class="logo-link" aria-label="SerElpis — Inicio">
-        <svg width="150" height="62" viewBox="0 0 260 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo SerElpis">
-          <path d="M138 56 A 27 27 0 0 1 192 56 Z" fill="#F0DE88"/>
-          <g fill="#F0DE88">
-            <path d="M132 51 L122 48 A 1.2 1.2 0 0 1 122.5 45.7 L132.5 49.5 Z"/>
-            <path d="M136 42 L120 32 A 1.3 1.3 0 0 1 121.5 29.8 L137.5 40.5 Z"/>
-            <path d="M144 34 L137 25 A 1.2 1.2 0 0 1 139 23.5 L145.5 33 Z"/>
-            <path d="M153 28 L146 11 A 1.3 1.3 0 0 1 148.5 10 L155 27.3 Z"/>
-            <path d="M164 25 L163 14 A 1.2 1.2 0 0 1 165.5 14 L166 25 Z"/>
-            <path d="M174 27 L180 9 A 1.3 1.3 0 0 1 182.5 9.8 L176 27.8 Z"/>
-            <path d="M183 32 L190 23 A 1.2 1.2 0 0 1 192 24.5 L184.5 33.5 Z"/>
-            <path d="M190 40 L205 28 A 1.3 1.3 0 0 1 206.6 30 L191.5 41.8 Z"/>
-            <path d="M195 49 L206 45 A 1.2 1.2 0 0 1 206.8 47.3 L195.6 51 Z"/>
-            <path d="M197 58 L216 57 A 1.3 1.3 0 0 1 216 59.6 L197 60 Z"/>
-            <path d="M195 66 L205 69 A 1.2 1.2 0 0 1 204.3 71.3 L194.4 68 Z"/>
-          </g>
-          <path d="M18 65 C 45 53, 72 72, 102 60 C 132 48, 155 52, 182 62 C 204 70, 222 69, 236 64" 
-                stroke="#F4A6BC" stroke-width="4.2" fill="none" stroke-linecap="round"/>
-          <text x="128" y="100" text-anchor="middle" fill="#F3E9D8" style="font-family: 'Young Serif', Georgia, serif; font-size: 38px;">SerElpis</text>
-        </svg>
+  <!-- CABECERA -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo" aria-label="SerElpis Inicio">
+        <!-- Usa tu archivo SVG oficial. Si no lo encuentra, muestra el respaldo tipográfico fiel al logo -->
+        <img src="serelpis-logo-fondo-oscuro.svg" alt="SerElpis" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span style="display:none; font-family: Georgia, serif; font-size: 1.75rem; font-weight: bold; color: #F3E9D8;">SerElpis</span>
       </a>
 
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+        Menú
+      </button>
+
       <nav aria-label="Navegación principal">
-        <ul>
+        <ul class="nav-list" id="mainNav">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sesiones">Sesiones</a></li>
-          <li><a href="#preguntas">Preguntas frecuentes</a></li>
-          <li><a href="#sobre-mi">Sobre SerElpis</a></li>
-          <li><a href="#contacta" class="nav-cta">Contacta</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+          <li><a href="#sobre-serelpis">Sobre SerElpis</a></li>
+          <li><a href="#contacta">Contacta</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-
-    <!-- =========================================
-         1. HERO (Captura 1)
-         ========================================= -->
+    <!-- SECCIÓN HERO -->
     <section id="inicio" class="hero-section">
       <div class="container hero-grid">
         <div>
-          <h1>Construye una <span class="subrayado-mantequilla">vida con sentido</span></h1>
-          <p class="hero-subtitulo">Acompañamiento y entrenamiento en habilidades emocionales</p>
-          <div class="hero-botones">
-            <a href="#contacta" class="btn-rosa">Cuéntame qué necesitas &rarr;</a>
-            <a href="#como-trabajamos" class="btn-contorno">Conocer más</a>
+          <p class="hero-subtitle">Acompañamiento y entrenamiento en habilidades emocionales</p>
+          <h1>Construye una vida con <span class="marker-pink">sentido</span></h1>
+          <div class="hero-actions">
+            <a href="#contacta" class="btn btn-primary">Cuéntame qué necesitas →</a>
+            <a href="#sobre-serelpis" class="btn btn-link">Conocer más</a>
           </div>
         </div>
 
-        <!-- Cuaderno abierto con "Terapia online" -->
-        <div class="cuaderno-wrapper">
-          <div class="pestana-terapia">Terapia online</div>
-          <div class="cuaderno-cubierta">
-            <div class="cuaderno-paginas">
-              <div class="pagina">
-                <div class="pagina-item">Gestión de emociones</div>
-                <div class="pagina-item">Reducción de la rumia y pensamientos intrusivos</div>
-                <div class="pagina-item">Mindfulness para la vida cotidiana</div>
-              </div>
-              <div class="pagina">
-                <div class="pagina-item">Autocuidado y autoestima</div>
-                <div class="pagina-item">Afrontamiento de crisis personales<br><small style="font-size: 1.35rem;">(cambios vitales, duelos...)</small></div>
-                <div class="pagina-item">Uso problemático de tecnología<br><small style="font-size: 1.35rem;">(redes sociales, videojuegos...)</small></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================
-         2. SOBRE MÍ + FOTO + 4 PILARES (Capturas 2 y 3)
-         ========================================= -->
-    <section id="sobre-mi">
-      <div class="container sobre-grid">
-        <!-- Ficha con foto de Vanessa -->
-        <aside class="foto-card">
-          <div class="foto-marco">
-            <!-- Sube tu foto a GitHub como vanessa.jpg (o cambia el nombre en src) -->
-            <img src="vanessa.jpg" alt="Vanessa Luque, terapeuta en SerElpis">
-          </div>
-          <div class="foto-nombre">Vanessa Luque</div>
-          <div class="foto-rol">Terapeuta</div>
+        <aside class="areas-board" aria-labelledby="titulo-terapia-online">
+          <div class="washi-tape" aria-hidden="true"></div>
+          <h2 id="titulo-terapia-online" class="areas-title">Terapia online</h2>
+          <ul class="areas-list">
+            <li>Gestión de emociones</li>
+            <li>Autocuidado y autoestima</li>
+            <li>Reducción de la rumia y pensamientos intrusivos</li>
+            <li>Afrontamiento de crisis personales (cambios vitales, duelos...)</li>
+            <li>Mindfulness para la vida cotidiana</li>
+            <li>Uso problemático de tecnología (redes sociales, videojuegos...)</li>
+          </ul>
         </aside>
+      </div>
+    </section>
 
-        <div>
-          <span class="eyebrow">— SOBRE MÍ</span>
-          <h2>Un enfoque riguroso, <span class="enfasis-rosa">una mirada humana.</span></h2>
-          <p>He trabajado y hecho múltiples voluntariados durante años con personas en situaciones muy variadas: salud mental, adicciones, personas mayores, infancia... Todas estas experiencias me han ayudado a comprender que cada persona es distinta y aunque dos personas parezcan tener una problemática similar, pueden requerir procesos muy diferentes.</p>
-          <p>Por eso mi trabajo consiste en identificar qué hay detrás del malestar de cada persona y construir con ella una intervención que tenga sentido para su vida. No trabajo con protocolos rígidos, sino con estrategias y herramientas con respaldo científico para adaptar cada sesión a la persona que tengo delante.</p>
+    <!-- SECCIÓN SOBRE SERELPIS / SOBRE MÍ -->
+    <section id="sobre-serelpis" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Columna Izquierda: Foto y Formación -->
+          <div class="about-sidebar">
+            <figure class="photo-card">
+              <div class="washi-tape washi-tape--pink" aria-hidden="true"></div>
+              <img src="vanessa-luque.jpg" alt="Vanessa Luque Terapeuta">
+              <figcaption class="photo-caption">Vanessa Luque Terapeuta</figcaption>
+            </figure>
 
-          <!-- Cuadrícula 01 a 04 -->
-          <div class="pilares-grid">
-            <article class="pilar-card">
-              <span class="pilar-num">01</span>
-              <h3>Rigor sin rigidez</h3>
-              <p>El trabajo emocional tiene base científica. Uso modelos con evidencia, pero los adapto a ti, no al revés.</p>
-            </article>
+            <div class="training-note">
+              <div class="washi-tape" aria-hidden="true"></div>
+              <h3>Tengo formación en</h3>
+              <ul class="training-list">
+                <li>Terapias contextuales y de tercera generación</li>
+                <li>Terapia de Aceptación y Compromiso</li>
+                <li>Psicoterapia Analítico Funcional</li>
+                <li>Educación social</li>
+                <li>Educación emocional</li>
+                <li>Análisis de conducta.</li>
+              </ul>
+            </div>
+          </div>
 
-            <article class="pilar-card">
-              <span class="pilar-num">02</span>
-              <h3>Sin juicio, con dirección</h3>
-              <p>No hay emociones incorrectas. Hay formas de relacionarse con ellas que abren posibilidades y formas que las cierran.</p>
-            </article>
+          <!-- Columna Derecha: Texto Biográfico -->
+          <div class="about-content">
+            <span class="tag-label">Sobre mí</span>
+            <h2>Un enfoque riguroso, una mirada humana</h2>
+            <p>He trabajado y hecho múltiples voluntariados durante años con personas en situaciones muy variadas: salud mental, adicciones, personas mayores, infancia... Todas estas experiencias me han ayudado a comprender que cada persona es distinta y aunque dos personas parezcan tener una problemática similar, pueden requerir procesos muy diferentes.</p>
+            <p>Por eso mi trabajo consiste en identificar qué hay detrás del malestar de cada persona y construir con ella una intervención que tenga sentido para su vida. No trabajo con protocolos rígidos, sino con estrategias y herramientas con respaldo científico para adaptar cada sesión a la persona que tengo delante.</p>
 
-            <article class="pilar-card">
-              <span class="pilar-num">03</span>
-              <h3>Tú en el centro</h3>
-              <p>Las sesiones no siguen un guion fijo. Se construyen a partir de lo que traes, de lo que necesitas y de hacia dónde quieres ir.</p>
-            </article>
-
-            <article class="pilar-card">
-              <span class="pilar-num">04</span>
-              <h3>Online, a tu ritmo</h3>
-              <p>Sesiones individuales por videollamada. Sin desplazamientos ni barreras geográficas.</p>
-            </article>
+            <div class="outside-office">
+              <h3>Fuera de la consulta…</h3>
+              <p>Sé que dar el primer paso puede costar, y más con alguien a quien no conoces de nada, así que para que sepas un poquito más sobre mí: soy una persona con mucha curiosidad y muchas aficiones. Me gusta leer, ver series, pasear por la naturaleza, los animales (tengo una gatita y una perrita), los juegos de mesa y los videojuegos, mirar las estrellas y planetas con mi telescopio y aprender cosas nuevas, especialmente para poder comprender y ayudar a otras personas.</p>
+              <p>Y sobre el tipo de persona que intento ser, mi norte lo marcan la amabilidad y la humildad (aunque por supuestísimo no soy perfecta y a veces meto la pata y voy en la dirección contraria, hasta que mi brújula me recuerda cuál era el norte). Pienso que la vida es eso: decidir hacia dónde quieres moverte y qué tipo de persona te gustaría ser en ese viaje, y cuando la vida te pone obstáculos o te pierdes, usar esa brújula para volver a tu camino.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- =========================================
-         3. CÓMO TRABAJAMOS EN CADA ENCUENTRO (Captura 4)
-         ========================================= -->
-    <section id="como-trabajamos">
-      <div class="container">
-        <div class="encuentro-intro">
-          <span class="eyebrow">— SESIONES</span>
-          <h2>Cómo trabajamos <span class="enfasis-rosa">en cada encuentro</span></h2>
-          <p>Un espacio seguro y práctico donde comprender qué mantiene tu malestar y entrenar habilidades concretas para tu día a día.</p>
-        </div>
-
-        <div class="encuentro-grid">
-          <article class="encuentro-card">
-            <div>
-              <span class="pill-mantequilla">Primer paso</span>
-              <h3>Primera toma de contacto</h3>
-              <p>Nos conocemos, me cuentas qué te trae aquí y valoramos juntos cómo puedo acompañarte mejor según tu momento vital.</p>
-            </div>
-            <div class="encuentro-pie">Modalidad online · Sin compromiso</div>
+        <!-- 4 Pilares -->
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <span class="pillar-number">01</span>
+            <h3>Rigor sin rigidez</h3>
+            <p>El trabajo emocional tiene base científica. Uso modelos con evidencia, pero los adapto a ti, no al revés.</p>
           </article>
 
-          <article class="encuentro-card encuentro-card--destacada">
-            <div>
-              <span class="pill-mantequilla">Acompañamiento</span>
-              <h3>Sesiones individuales</h3>
-              <p>Trabajo personalizado basado en terapias contextuales y entrenamiento en habilidades emocionales adaptadas a tus objetivos.</p>
-            </div>
-            <div class="encuentro-pie">50 – 60 minutos · Videollamada</div>
+          <article class="pillar-card">
+            <span class="pillar-number">02</span>
+            <h3>Sin juicio, con dirección</h3>
+            <p>No hay emociones incorrectas. Hay formas de relacionarse con ellas que abren posibilidades y formas que las cierran.</p>
           </article>
 
-          <article class="encuentro-card">
-            <div>
-              <span class="pill-mantequilla">Entre sesiones</span>
-              <h3>Herramientas prácticas</h3>
-              <p>Ejercicios breves, registros y recursos aplicados para que lo trabajado en consulta se traduzca en cambios reales en tu rutina.</p>
-            </div>
-            <div class="encuentro-pie">Adaptados a tu ritmo y disponibilidad</div>
+          <article class="pillar-card">
+            <span class="pillar-number">03</span>
+            <h3>Tú en el centro</h3>
+            <p>Las sesiones no siguen un guion fijo. Se construyen a partir de lo que traes, de lo que necesitas y de hacia dónde quieres ir.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-number">04</span>
+            <h3>Online, a tu ritmo</h3>
+            <p>Sesiones individuales por videollamada. Sin desplazamientos ni barreras geográficas.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================
-         4. SESIONES INDIVIDUALES (Capturas 5 y 6)
-         ========================================= -->
-    <section id="sesiones">
+    <!-- SECCIÓN SESIONES INDIVIDUALES -->
+    <section id="sesiones" class="sessions-section">
       <div class="container">
-        <div class="sesiones-header">
-          <span class="eyebrow">— Sesiones individuales</span>
-          <h2>Un espacio para ti, <span class="enfasis-rosa">adaptado a lo que necesites</span></h2>
+        <div class="section-header">
+          <h2>Sesiones individuales</h2>
+          <p class="section-lead">Un espacio para ti, adaptado a lo que necesites</p>
           <p>En cada sesión exploramos lo que necesitas con herramientas adaptadas a ti, construyendo desde donde estás hacia lo que quieres conseguir. Estos son algunos ejemplos de lo que podemos trabajar:</p>
         </div>
 
-        <div class="sesiones-grid">
-          <article class="sesion-ficha">
+        <div class="sessions-grid">
+          <article class="session-card">
             <div>
               <h3>Gestión de emociones</h3>
               <p>A veces podemos sentir que las emociones nos desbordan y controlan nuestras vidas, como si fuéramos un barco a la deriva a merced de las olas. Trabajaremos para identificar cómo y por qué te están afectando esas emociones, y buscaremos nuevas formas de responder a ellas para que no paralicen tu vida.</p>
             </div>
-            <p class="sesion-cita">Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
+            <p class="session-summary">Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
           </article>
 
-          <article class="sesion-ficha">
+          <article class="session-card">
             <div>
               <h3>Autocuidado y autoestima</h3>
               <p>Si llevas mucho tiempo viviendo en base a lo que el resto del mundo espera de ti, es posible que te cueste reconocer tus propias necesidades o elegir el tipo de vida que quieres llevar. Trabajaremos para descubrir el tipo de persona que quieres ser y para encontrar un equilibrio entre tus necesidades y las de los demás.</p>
             </div>
-            <p class="sesion-cita">Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
+            <p class="session-summary">Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
           </article>
 
-          <article class="sesion-ficha">
+          <article class="session-card">
             <div>
               <h3>Mindfulness cotidiano</h3>
               <p>El ritmo de vida actual nos empuja a vivir en piloto automático y esto nos puede hacer sentir que sólo estamos sobreviviendo. El mindfulness te puede ayudar a vivir con una mayor presencia con doble objetivo: apreciar las cosas agradables de tu día a día, y notar las desagradables para decidir si son necesarias o si quieres hacer algo para cambiarlas.</p>
             </div>
-            <p class="sesion-cita">Practicamos una atención más consciente para apreciar lo positivo y decidir qué hacer con lo que no funciona.</p>
+            <p class="session-summary">Practicamos una atención más consciente para apreciar lo positivo y decidir qué hacer con lo que no funciona.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================
-         5. PREGUNTAS FRECUENTES
-         ========================================= -->
-    <section id="preguntas">
+    <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+    <section id="preguntas-frecuentes" class="faq-section">
       <div class="container">
-        <div class="sesiones-header">
-          <span class="eyebrow">— Preguntas frecuentes</span>
-          <h2>Lo que necesitas saber <span class="enfasis-rosa">antes de empezar</span></h2>
+        <div class="section-header">
+          <h2>Preguntas frecuentes</h2>
+          <p class="section-lead">Lo que necesitas saber antes de empezar</p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cómo saber si es para mí?</summary>
-            <div class="faq-respuesta">
+            <summary>
+              <span>¿Cómo saber si es para mí?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
               <p>SerElpis es un espacio de acompañamiento y entrenamiento en habilidades emocionales desde un enfoque contextual basado en evidencia. Es un lugar donde puedes aprender herramientas concretas para relacionarte de manera diferente con tus emociones, pensamientos y creencias para actuar de una forma más consciente en lugar de reactiva o en piloto automático.</p>
-              <p style="margin-bottom: 0;">Puede ser para ti si: experimentas dificultad para regular tus emociones; sientes que tu vida no refleja lo que de verdad importa para ti; la rumia o ciertos patrones mentales te limitan; o simplemente quieres aprender a estar contigo misma de una forma más compasiva y efectiva. Lo que importa es que reconozcas que algo en tu relación con tus emociones o tu dirección en la vida necesita cambiar y que estés dispuesta a trabajarlo desde una perspectiva diferente.</p>
+              <p>Puede ser para ti si: experimentas dificultad para regular tus emociones; sientes que tu vida no refleja lo que de verdad importa para ti; la rumia o ciertos patrones mentales te limitan; o simplemente quieres aprender a estar contigo misma de una forma más compasiva y efectiva. Lo que importa es que reconozcas que algo en tu relación con tus emociones o tu dirección en la vida necesita cambiar y que estés dispuesta a trabajarlo desde una perspectiva diferente.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cuántas sesiones necesito?</summary>
-            <div class="faq-respuesta">
-              <p style="margin-bottom: 0;">No hay un número fijo. Depende completamente de ti, de lo que trabajes y de lo que necesites. Hay quienes después de 3-4 sesiones sienten que han adquirido las herramientas que buscaban. Otros prefieren un seguimiento más continuo. En la primera sesión valoramos juntas qué te trae, y de ahí hablamos sobre qué ritmo tiene sentido. El proceso no sigue un protocolo preestablecido; se construye a partir de lo que tú necesitas en cada momento.</p>
+            <summary>
+              <span>¿Cuántas sesiones necesito?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>No hay un número fijo. Depende completamente de ti, de lo que trabajes y de lo que necesites. Hay quienes después de 3-4 sesiones sienten que han adquirido las herramientas que buscaban. Otros prefieren un seguimiento más continuo. En la primera sesión valoramos juntas qué te trae, y de ahí hablamos sobre qué ritmo tiene sentido. El proceso no sigue un protocolo preestablecido; se construye a partir de lo que tú necesitas en cada momento.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cómo funcionan las sesiones?</summary>
-            <div class="faq-respuesta">
-              <p style="margin-bottom: 0;">Las sesiones duran aproximadamente 50-55 minutos y se realizan por videollamada. No hay un guion fijo. En la primera sesión exploraremos tu situación y empezamos a trabajar. Las sesiones siguientes se construyen a partir de lo que traes, los que te pasa o lo que practicas entre sesiones y hacia dónde quieres ir.</p>
+            <summary>
+              <span>¿Cómo funcionan las sesiones?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Las sesiones duran aproximadamente 50-55 minutos y se realizan por videollamada. No hay un guion fijo. En la primera sesión exploraremos tu situación y empezamos a trabajar. Las sesiones siguientes se construyen a partir de lo que traes, los que te pasa o lo que practicas entre sesiones y hacia dónde quieres ir.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Qué pasa si me siento perdida durante una sesión o algo no me encaja?</summary>
-            <div class="faq-respuesta">
-              <p style="margin-bottom: 0;">Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar lo que necesites. No hay protocolos rígidos que cumplir.</p>
+            <summary>
+              <span>¿Qué pasa si me siento perdida durante una sesión o algo no me encaja?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Si te surge cualquier duda o desacuerdo me lo puedes decir abiertamente sin ningún problema. La sesión es tuya y si algo no resuena contigo lo podemos hablar para explorarlo o ajustar lo que necesites. No hay protocolos rígidos que cumplir.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Esto es confidencial?</summary>
-            <div class="faq-respuesta">
-              <p style="margin-bottom: 0;">Sí, completamente. Todo lo que compartes conmigo está protegido conforme a la normativa RGPD y no comparto tus datos personales con nadie. La confianza y la privacidad son fundamentales para que el trabajo funcione.</p>
+            <summary>
+              <span>¿Esto es confidencial?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Sí, completamente. Todo lo que compartes conmigo está protegido conforme a la normativa RGPD y no comparto tus datos personales con nadie. La confianza y la privacidad son fundamentales para que el trabajo funcione.</p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- =========================================
-         6. CONTACTO
-         ========================================= -->
-    <section id="contacta">
-      <div class="container contacto-grid">
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacta" class="contact-section">
+      <div class="container contact-grid">
         <div>
-          <span class="eyebrow">— Contacto</span>
-          <h2>Da el <span class="enfasis-rosa">primer paso</span></h2>
+          <span class="tag-label tag-label--butter">Contacto</span>
+          <h2>Da el primer paso</h2>
           <p>No hace falta saber con exactitud qué te pasa ni tener las palabras exactas. Puedes llegar con dudas, con cansancio o con ganas de hacer algo diferente. Eso ya es suficiente para empezar.</p>
 
-          <ul class="datos-contacto">
-            <li><strong>Correo:</strong> <a href="mailto:contacto@serelpis.com">contacto@serelpis.com</a></li>
-            <li><strong>Modalidad:</strong> Sesiones online</li>
-            <li><strong>Respuesta:</strong> Respondo en menos de 48h</li>
-          </ul>
+          <div class="contact-details">
+            <a href="mailto:contacto@serelpis.com">contacto@serelpis.com</a>
+            <span>Sesiones online</span>
+            <span>Respondo en menos de 48h</span>
+          </div>
         </div>
 
-        <div class="form-card">
-          <form id="formulario-contacto">
-            <div class="campo">
+        <div class="contact-card">
+          <div class="washi-tape washi-tape--pink" aria-hidden="true"></div>
+
+          <form id="contactForm">
+            <div class="form-group">
               <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required autocomplete="name">
+              <input type="text" id="nombre" name="nombre" required>
             </div>
 
-            <div class="campo">
+            <div class="form-group">
               <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
+              <input type="email" id="email" name="email" required>
             </div>
 
-            <div class="campo">
+            <div class="form-group">
               <label for="mensaje">Tu mensaje</label>
-              <textarea id="mensaje" name="mensaje" required></textarea>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
             </div>
 
-            <p class="privacidad-nota">Tus datos no se comparten con nadie. Te escribiré para contestar tus dudas o agendar una sesión.</p>
+            <p class="form-privacy">Tus datos no se comparten con nadie. Te escribiré para contestar tus dudas o agendar una sesión.</p>
 
-            <button type="submit" class="btn-rosa">Pedir más información &rarr;</button>
+            <button type="submit" class="btn btn-primary">Pedir más información →</button>
           </form>
 
-          <div id="mensaje-confirmacion" class="mensaje-confirmacion" role="status" aria-live="polite">
+          <div id="formConfirmation" class="form-confirmation" role="status" aria-live="polite">
             <h3>Mensaje enviado</h3>
             <p>Gracias por contactar, te responderé en breve :)</p>
-            <button type="button" class="btn-rosa" id="btn-volver-form">Volver al formulario</button>
+            <button type="button" id="resetFormBtn" class="btn btn-primary">Volver al formulario</button>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
-  <footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <strong style="font-family: var(--font-heading); font-size: 1.1rem;">SerElpis</strong> · 2026 SerElpis
-        </div>
+      <div class="footer-top">
+        <a href="#inicio" class="brand-logo" aria-label="SerElpis">
+          <img src="serelpis-logo-fondo-oscuro.svg" alt="SerElpis" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+          <span style="display:none; font-family: Georgia, serif; font-size: 1.5rem; font-weight: bold; color: #F3E9D8;">SerElpis</span>
+        </a>
 
-        <ul class="footer-links">
-          <li><a href="#sobre-mi">Sobre mí</a></li>
+        <ul class="footer-nav">
+          <li><a href="#sobre-serelpis">Sobre mí</a></li>
           <li><a href="#sesiones">Sesiones</a></li>
-          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
           <li><a href="#contacta">Contacto</a></li>
         </ul>
       </div>
 
-      <p class="footer-aviso">
-        SerElpis ofrece terapia online, acompañamiento y entrenamiento en habilidades emocionales. No es un servicio de urgencias ni sustituye a la atención sanitaria. Si estás en una situación de crisis, llama al 112. Si tienes pensamientos de hacerte daño, puedes llamar al 024.
-      </p>
+      <div class="footer-bottom">
+        <span>2026 SerElpis</span>
+        <!-- Espacio reservado para los enlaces legales pendientes de completar según la guía de marca -->
+        <div class="legal-links">
+          <a href="#aviso-legal">Aviso legal</a>
+          <a href="#politica-privacidad">Política de privacidad</a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <!-- SCRIPTS DE INTERACCIÓN -->
   <script>
-    const form = document.getElementById('formulario-contacto');
-    const confirmacion = document.getElementById('mensaje-confirmacion');
-    const btnVolver = document.getElementById('btn-volver-form');
+    // Menú móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      form.style.display = 'none';
-      confirmacion.style.display = 'block';
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    btnVolver.addEventListener('click', () => {
-      form.reset();
-      confirmacion.style.display = 'none';
-      form.style.display = 'block';
+    // Cerrar menú móvil al pulsar un enlace
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Simulación visual de envío del formulario (para conectar luego con Formspree / EmailJS / backend)
+    const contactForm = document.getElementById('contactForm');
+    const formConfirmation = document.getElementById('formConfirmation');
+    const resetFormBtn = document.getElementById('resetFormBtn');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.style.display = 'none';
+      formConfirmation.classList.add('is-visible');
+    });
+
+    resetFormBtn.addEventListener('click', () => {
+      contactForm.reset();
+      formConfirmation.classList.remove('is-visible');
+      contactForm.style.display = 'block';
     });
   </script>
 </body>
