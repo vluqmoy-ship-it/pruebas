@@ -658,7 +658,10 @@
     }
 
     .tab-panel.is-active {
-      display: block;
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      column-gap: 2.25rem;
+      align-items: center;
     }
 
     @keyframes fadeInSheet {
@@ -667,26 +670,36 @@
     }
 
     .tab-panel h3 {
+      grid-column: 1 / -1;
       font-size: 1.55rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.75rem;
       color: var(--ciruela-noche);
     }
 
     .tab-panel p {
+      grid-column: 1;
       margin-bottom: 1.15rem;
-      max-width: 66ch;
+      max-width: 62ch;
       font-size: 0.96rem;
     }
 
+    .tab-panel p:last-of-type:not(.tab-handnote) {
+      margin-bottom: 0;
+    }
+
     p.tab-handnote {
+      grid-column: 2;
+      grid-row: 2 / span 2;
       font-family: var(--font-hand);
-      font-size: 2.25rem;
+      font-size: 2.15rem;
       font-weight: 600;
       color: var(--ciruela-noche);
-      margin-top: 1.5rem;
-      margin-bottom: 0;
-      line-height: 1.2;
+      margin: 0;
+      padding-left: 1.5rem;
+      border-left: 1.5px dashed rgba(46, 26, 43, 0.32);
+      line-height: 1.18;
       letter-spacing: 0.02em;
+      transform: rotate(-2deg);
     }
 
     /* ==========================================================================
@@ -1232,6 +1245,17 @@
         min-width: 0;
         border-radius: 12px;
         padding: 2rem 1.35rem;
+      }
+      
+      .tab-panel.is-active {
+        display: block;
+      }
+
+      p.tab-handnote {
+        margin-top: 1.5rem;
+        padding-left: 0;
+        border-left: none;
+        transform: none;
       }
 
       .contact-card {
