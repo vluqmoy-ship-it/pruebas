@@ -483,7 +483,11 @@
       gap: 0.75rem;
     }
 
-    .areas-list li {
+    .areas-list li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
       background-color: var(--rosa-fondo-claro);
       color: var(--ciruela-noche);
       font-family: var(--font-display);
@@ -493,10 +497,30 @@
       border-radius: var(--radius-sm);
       border-left: 5px solid var(--rosa-sello);
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
     }
 
-    .areas-list li:nth-child(even) {
+    .areas-list li:nth-child(even) a {
       border-left-color: var(--mantequilla);
+    }
+
+    .areas-list li a::after {
+      content: "→";
+      font-size: 1rem;
+      opacity: 0.65;
+      transition: transform 0.16s ease, opacity 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .areas-list li a:hover {
+      transform: translateX(4px);
+      background-color: #FFFFFF;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
+    }
+
+    .areas-list li a:hover::after {
+      transform: translateX(3px);
+      opacity: 1;
     }
 
     /* ==========================================================================
@@ -685,6 +709,8 @@
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
+      position: sticky;
+      top: 6.5rem;
     }
 
     .photo-card {
@@ -806,10 +832,10 @@
 
     .pillar-card {
       background-color: #FFFFFF;
-      border: 1px dashed rgba(46, 26, 43, 0.3);
+      border: 1.5px solid var(--ciruela-noche);
       border-radius: var(--radius-md);
       padding: 1.75rem;
-      box-shadow: var(--shadow-light);
+      box-shadow: 4px 4px 0 var(--ciruela-noche);
     }
 
     .pillar-number {
@@ -1087,6 +1113,7 @@
       }
 
       .about-sidebar {
+        position: static;
         max-width: 420px;
         margin: 0 auto;
         width: 100%;
@@ -1262,10 +1289,10 @@
           <div class="washi-tape" aria-hidden="true"></div>
           <h2 id="titulo-terapia-online" class="areas-title">Terapia online</h2>
           <ul class="areas-list">
-            <li>Gestión de emociones</li>
-            <li>Autocuidado y autoestima</li>
-            <li>Reducción de la rumia y pensamientos intrusivos</li>
-            <li>Uso problemático de tecnología (redes sociales, videojuegos...)</li>
+            <li><a href="#sesiones" data-target-tab="tab-emociones">Gestión de emociones</a></li>
+            <li><a href="#sesiones" data-target-tab="tab-autocuidado">Autocuidado y autoestima</a></li>
+            <li><a href="#sesiones" data-target-tab="tab-rumia">Reducción de la rumia y pensamientos intrusivos</a></li>
+            <li><a href="#sesiones" data-target-tab="tab-tecnologia">Uso problemático de tecnología (redes sociales, videojuegos...)</a></li>
           </ul>
         </aside>
       </div>
@@ -1587,18 +1614,29 @@
     const panels = document.querySelectorAll('.tab-panel');
     const folderSheet = document.getElementById('folderSheet');
 
+    function activateTab(tab) {
+      if (!tab) return;
+      tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+      panels.forEach(p => p.classList.remove('is-active'));
+
+      tab.setAttribute('aria-selected', 'true');
+      const targetId = tab.getAttribute('aria-controls');
+      document.getElementById(targetId).classList.add('is-active');
+
+      const color = tab.getAttribute('data-color');
+      folderSheet.classList.remove('is-butter', 'is-pink', 'is-paper');
+      folderSheet.classList.add(`is-${color}`);
+    }
+
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
-        panels.forEach(p => p.classList.remove('is-active'));
+      tab.addEventListener('click', () => activateTab(tab));
+    });
 
-        tab.setAttribute('aria-selected', 'true');
-        const targetId = tab.getAttribute('aria-controls');
-        document.getElementById(targetId).classList.add('is-active');
-
-        const color = tab.getAttribute('data-color');
-        folderSheet.classList.remove('is-butter', 'is-pink', 'is-paper');
-        folderSheet.classList.add(`is-${color}`);
+    // Enlaces interactivos desde la tarjeta del Hero hacia cada pestaña
+    document.querySelectorAll('.areas-list a[data-target-tab]').forEach(link => {
+      link.addEventListener('click', () => {
+        const targetTab = document.getElementById(link.getAttribute('data-target-tab'));
+        activateTab(targetTab);
       });
     });
 
