@@ -694,26 +694,27 @@
       grid-column: 2;
       grid-row: 2 / span 2;
       font-family: var(--font-hand);
-      font-size: 2.15rem;
+      font-size: 2.65rem;
       font-weight: 600;
       color: var(--ciruela-noche);
       margin: 0;
       padding: 0;
-      line-height: 1.32;
+      line-height: 1.42;
       letter-spacing: 0.02em;
       transform: rotate(-1.5deg);
     }
 
     p.tab-handnote span {
-      background: linear-gradient(transparent 52%, var(--rosa-sello) 52%, var(--rosa-sello) 92%, transparent 92%);
-      padding: 0 0.25rem;
+      background: linear-gradient(transparent 14%, var(--rosa-sello) 14%, var(--rosa-sello) 94%, transparent 94%);
+      padding: 0.05rem 0.45rem;
+      border-radius: 6px;
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
     }
 
-    /* En la pestaña rosa, el subrayado pasa a amarillo mantequilla */
+    /* En la pestaña rosa, el resaltador pasa a amarillo mantequilla */
     .folder-sheet.is-pink p.tab-handnote span {
-      background: linear-gradient(transparent 52%, var(--mantequilla) 52%, var(--mantequilla) 92%, transparent 92%);
+      background: linear-gradient(transparent 14%, var(--mantequilla) 14%, var(--mantequilla) 94%, transparent 94%);
     }
 
     /* ==========================================================================
@@ -1267,9 +1268,8 @@
 
       p.tab-handnote {
         margin-top: 1.5rem;
-        padding-left: 0;
-        border-left: none;
-        transform: none;
+        transform: rotate(-1deg);
+        font-size: 2.25rem;
       }
 
       .contact-card {
