@@ -657,7 +657,6 @@
       animation: fadeInSheet 0.25s ease;
     }
 
-
     @keyframes fadeInSheet {
       from { opacity: 0; transform: translateY(4px); }
       to { opacity: 1; transform: translateY(0); }
@@ -690,7 +689,7 @@
     }
 
     /* Estilo del texto subrayado con rotulador manuscrito */
-   p.tab-handnote {
+    p.tab-handnote {
       grid-column: 2;
       grid-row: 2 / span 2;
       font-family: var(--font-hand);
@@ -704,6 +703,7 @@
       transform: rotate(-1.5deg);
     }
 
+    /* Trazo rosa peonía (#E8AABB) por defecto (para pestañas amarillas y crema) */
     p.tab-handnote span {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 72' preserveAspectRatio='none'%3E%3Cpath d='M8,22 C55,14 155,13 212,19 C216,20 214,29 208,30 C148,33 52,32 5,36 C2,36 4,47 11,47 C72,46 158,44 214,49 C218,50 215,61 206,61 C145,62 60,60 12,63' fill='none' stroke='%23E8AABB' stroke-width='20' stroke-linecap='round' stroke-linejoin='round' opacity='0.94'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
@@ -714,9 +714,10 @@
       -webkit-box-decoration-break: clone;
     }
 
-    /* En la pestaña rosa, el trazo del rotulador cambia a amarillo mantequilla */
+    /* En la pestaña rosa (Autocuidado), el trazo cambia a crema claro (#FAF3F4) */
     .folder-sheet.is-pink p.tab-handnote span {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 72' preserveAspectRatio='none'%3E%3Cpath d='M8,22 C55,14 155,13 212,19 C216,20 214,29 208,30 C148,33 52,32 5,36 C2,36 4,47
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 72' preserveAspectRatio='none'%3E%3Cpath d='M8,22 C55,14 155,13 212,19 C216,20 214,29 208,30 C148,33 52,32 5,36 C2,36 4,47 11,47 C72,46 158,44 214,49 C218,50 215,61 206,61 C145,62 60,60 12,63' fill='none' stroke='%23FAF3F4' stroke-width='20' stroke-linecap='round' stroke-linejoin='round' opacity='0.95'/%3E%3C/svg%3E");
+    }
 
     /* ==========================================================================
        RESTO DE SECCIONES (SOBRE MÍ, FAQ, CONTACTO, FOOTER)
